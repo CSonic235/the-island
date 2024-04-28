@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3h3bn2flhts2"]
+
+[ext_resource type="Script" path="res://UI/survivorpanel.gd" id="1_xfweo"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_right = -82.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.5
+offset_top = -265.5
+offset_right = 237.5
+offset_bottom = 265.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xfweo")
+
+[node name="name" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 6.5
+offset_top = 60.5
+offset_right = 118.5
+offset_bottom = 100.5
+scale = Vector2(3.19454, 2.65432)
+text = "survivor name"
+fit_content = true
+autowrap_mode = 0
+
+[node name="info" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 148.5
+offset_right = 370.5
+offset_bottom = 482.5
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 400.5
+offset_top = 0.5
+offset_right = 417.5
+offset_bottom = 31.5
+scale = Vector2(4.26667, 2.6718)
+text = "x"
+
+[connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed"]

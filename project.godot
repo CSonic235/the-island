@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="the island game"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+run/main_scene="res://UI/MainMenu.tscn"
+config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/subwindows/embed_subwindows=false
 
 [dotnet]
 
