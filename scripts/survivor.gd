@@ -4,20 +4,30 @@ var  survivor_Name = "Steve"
 var carrying_capacity :float =10
 var movement_speed:float = 30
 var backstory:String = ""
+var conditions:Array
+var is_dead :bool = false
+var working:bool = false
 
 var has_screen = false
 var speed:int = 30
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	input_pickable = true
+	$AnimatedSprite2D.play("front_idle")
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-
-	move_and_slide()
-
+	if not is_dead:
+		move_and_slide()
+		if velocity == Vector2(0,0):
+			$AnimatedSprite2D.play("front_idle")
+	else:
+		$AnimatedSprite2D.play("dying")
+		if $AnimatedSprite2D.get_frame() == 5:
+			$AnimatedSprite2D.pause()
+		
 
 
 func _on_input_event(_viewport:Node, event:InputEvent, _shape_idx:int):
@@ -28,23 +38,36 @@ func _on_input_event(_viewport:Node, event:InputEvent, _shape_idx:int):
 		
 
 func move( direction: String):
-
+	var anim = $AnimatedSprite2D
 	match direction:
 		"Left":
 				velocity.x = -movement_speed
-				velocity.y = 0			
+				velocity.y = 0		
+				anim.flip_h = true
+				anim.play("side_walk")	
 		"Right":
 				velocity.x = movement_speed
 				velocity.y = 0
+				anim.flip_h = false
+				anim.play("side_walk")
 		"Up":
 				velocity.x = 0
-				velocity.y = movement_speed	
+				velocity.y = -movement_speed	
+				anim.flip_h = false
+				anim.play("back_walk")
 		"Down":
 				velocity.x = 0
-				velocity.y = -movement_speed
+				velocity.y = movement_speed
+				anim.flip_h = false
+				anim.play("front_walk")
 		"Stop":
 				velocity.x = 0
 				velocity.y = 0		
+				anim.flip_h = false
+				if working:
+					anim.play("working")
+				else:
+					anim.play("front_idle")
 	
 	
 func set_has_screen():
@@ -58,3 +81,6 @@ func update_details(info:Dictionary):
 	carrying_capacity  =info.get("carrying_capacity")
 	movement_speed =info.get("movement_speed")
 	backstory = info.get("backstory")
+
+func add_condition(condition:Condition):
+	conditions.append(condition)

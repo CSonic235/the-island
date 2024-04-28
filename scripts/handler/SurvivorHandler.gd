@@ -10,7 +10,8 @@ func _ready():
 	number_of_survivors = get_parent().get_number_of_survivors()
 	self.load_survivors(number_of_survivors)
 	print("survivors loaded")
-	self.get_child(0).move("Up")
+	self.get_child(0).move("Right")
+	self.get_child(1).is_dead = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

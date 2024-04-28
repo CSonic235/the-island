@@ -1,11 +1,62 @@
-[{"name":"Steve" ,"carrying_capacity":10,"backstory":"","movement_speed":30},
-{"name":"John" ,"carrying_capacity":10,"backstory":"","movement_speed":30},
-{"name":"Ryan" ,"carrying_capacity":10,"backstory":"","movement_speed":30},
-{"name":"Jenny" ,"carrying_capacity":7,"backstory":"","movement_speed":40},
-{"name":"Alice" ,"carrying_capacity":7,"backstory":"","movement_speed":40},
-{"name":"Bob" ,"carrying_capacity":10,"backstory":"","movement_speed":30},
-{"name":"Heidi" ,"carrying_capacity":7,"backstory":"","movement_speed":40},
-{"name":"Wendy" ,"carrying_capacity":7,"backstory":"","movement_speed":40},
-{"name":"Charlie" ,"carrying_capacity":10,"backstory":"","movement_speed":30},
-{"name":"Carol" ,"carrying_capacity":7,"backstory":"","movement_speed":40}
+[
+    {
+        "name": "Steve",
+        "carrying_capacity": 10,
+        "backstory": "",
+        "movement_speed": 30
+    },
+    {
+        "name": "John",
+        "carrying_capacity": 10,
+        "backstory": "",
+        "movement_speed": 30
+    },
+    {
+        "name": "Ryan",
+        "carrying_capacity": 10,
+        "backstory": "",
+        "movement_speed": 30
+    },
+    {
+        "name": "Jenny",
+        "carrying_capacity": 7,
+        "backstory": "",
+        "movement_speed": 40
+    },
+    {
+        "name": "Alice",
+        "carrying_capacity": 7,
+        "backstory": "",
+        "movement_speed": 40
+    },
+    {
+        "name": "Bob",
+        "carrying_capacity": 10,
+        "backstory": "",
+        "movement_speed": 30
+    },
+    {
+        "name": "Heidi",
+        "carrying_capacity": 7,
+        "backstory": "",
+        "movement_speed": 40
+    },
+    {
+        "name": "Wendy",
+        "carrying_capacity": 7,
+        "backstory": "",
+        "movement_speed": 40
+    },
+    {
+        "name": "Charlie",
+        "carrying_capacity": 10,
+        "backstory": "",
+        "movement_speed": 30
+    },
+    {
+        "name": "Carol",
+        "carrying_capacity": 7,
+        "backstory": "",
+        "movement_speed": 40
+    }
 ]

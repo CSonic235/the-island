@@ -1,0 +1,20 @@
+[
+    {
+        "condition_name": "dehydrated",
+        "condition_type": "",
+        "is_negative_condition": true,
+        "is_stackable": true
+    },
+    {
+        "condition_name": "stabbed",
+        "condition_type": "injury",
+        "is_negative_condition": true,
+        "is_stackable": false
+    },
+    {
+        "condition_name": "burned",
+        "condition_type": "injury",
+        "is_negative_condition": true,
+        "is_stackable": false
+    }
+]

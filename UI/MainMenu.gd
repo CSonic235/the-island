@@ -14,6 +14,9 @@ func _process(delta):
 func _on_button_pressed():
 	if  ! has_window:
 		var settings_window = game_start.instantiate()
+		for x in get_children():
+			x.hide()
 		add_child(settings_window)
 		has_window = true
+		settings_window.show()
 		

@@ -9,6 +9,3 @@ script = ExtResource("1_dvoc4")
 [node name="SurvivorHandler" type="Node2D" parent="."]
 position = Vector2(614, 346)
 script = ExtResource("2_gxx8l")
-
-[node name="TileMap" type="TileMap" parent="."]
-format = 2
