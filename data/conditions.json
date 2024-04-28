@@ -6,7 +6,13 @@
         "is_stackable": true
     },
     {
-        "condition_name": "stabbed",
+        "condition_name": "malnutritioned",
+        "condition_type": "",
+        "is_negative_condition": true,
+        "is_stackable": true
+    },
+    {
+        "condition_name": "leg_wound",
         "condition_type": "injury",
         "is_negative_condition": true,
         "is_stackable": false

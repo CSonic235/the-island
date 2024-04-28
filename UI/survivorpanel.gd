@@ -31,5 +31,5 @@ func update_info(survivor:Survivor):
 	name_box.clear()
 	info_box.clear()
 	name_box.append_text(survivor.get_survivor_name())
-	info_box.append_text("movement_speed: "+str(survivor.movement_speed))
+	info_box.append_text("movement_speed: "+str(survivor.base_movement_speed))
 	info_box.append_text("\ncarrying_capacity: "+str(survivor.carrying_capacity))

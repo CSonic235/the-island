@@ -334,8 +334,8 @@ shape = SubResource("CircleShape2D_lkpl3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -9)
 sprite_frames = SubResource("SpriteFrames_t3tce")
-animation = &"dying"
-frame = 5
-frame_progress = 0.397805
+animation = &"back_walk"
+frame = 3
+frame_progress = 0.957946
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

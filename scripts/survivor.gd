@@ -2,9 +2,11 @@ extends CharacterBody2D
 class_name Survivor
 var  survivor_Name = "Steve"
 var carrying_capacity :float =10
-var movement_speed:float = 30
+var carry_multiplier:float =1
+var base_movement_speed:float = 30
+var movement_multiplier:float = 1
 var backstory:String = ""
-var conditions:Array
+var conditions:Array = []
 var is_dead :bool = false
 var working:bool = false
 
@@ -19,6 +21,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	check_conditions()
 	if not is_dead:
 		move_and_slide()
 		if velocity == Vector2(0,0):
@@ -41,23 +44,23 @@ func move( direction: String):
 	var anim = $AnimatedSprite2D
 	match direction:
 		"Left":
-				velocity.x = -movement_speed
+				velocity.x = -base_movement_speed
 				velocity.y = 0		
 				anim.flip_h = true
 				anim.play("side_walk")	
 		"Right":
-				velocity.x = movement_speed
+				velocity.x = base_movement_speed
 				velocity.y = 0
 				anim.flip_h = false
 				anim.play("side_walk")
 		"Up":
 				velocity.x = 0
-				velocity.y = -movement_speed	
+				velocity.y = -base_movement_speed	
 				anim.flip_h = false
 				anim.play("back_walk")
 		"Down":
 				velocity.x = 0
-				velocity.y = movement_speed
+				velocity.y = base_movement_speed
 				anim.flip_h = false
 				anim.play("front_walk")
 		"Stop":
@@ -79,8 +82,25 @@ func get_survivor_name():
 func update_details(info:Dictionary):
 	survivor_Name = info.get("name")
 	carrying_capacity  =info.get("carrying_capacity")
-	movement_speed =info.get("movement_speed")
+	base_movement_speed =info.get("movement_speed")
 	backstory = info.get("backstory")
 
 func add_condition(condition:Condition):
 	conditions.append(condition)
+
+func check_conditions():
+	
+	for x in conditions:
+		var condition:String = x.condition_name
+		match condition:
+			"dehydrated":
+				if x.stack_count ==3:
+					is_dead = true
+			"malnutritioned":
+				if x.stack_count == 7:
+					is_dead = true
+			"leg_wound":
+				movement_multiplier = 0.75*x.stack_count
+			"arm_wound":
+				carry_multiplier = 0.75*x.stack_count
+				
