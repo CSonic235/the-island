@@ -18,15 +18,12 @@ func setup_tile():
         TileTypes.GRASS:
             is_passable = true
             decide_trees()
-            load_visual("res://path/to/grass_texture.png")
             load_visual(Color(0, 1, 0))  # Green for grass
         TileTypes.MOUNTAINS:
             is_passable = false
-            load_visual("res://path/to/mountain_texture.png")
             load_visual(Color(1, 0, 0))  # Red for mountains
         TileTypes.SAND:
             is_passable = true
-            load_visual("res://path/to/sand_texture.png")
             load_visual(Color(1, 1, 0))  # Yellow for sand
 
 func decide_trees():
@@ -38,7 +35,6 @@ func decide_trees():
 func add_trees():
     # Function to handle the addition of trees, e.g., changing the visual
     var tree_sprite = Sprite2D.new()
-    tree_sprite.texture = load("res://path/to/tree_texture.png")
     add_child(tree_sprite)
     tree_sprite.position = Vector2(0, 0)  # Center the tree sprite on the tile
 
