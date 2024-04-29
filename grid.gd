@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 const TILE_COUNT = 1000
 
