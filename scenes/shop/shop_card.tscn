@@ -53,20 +53,60 @@ grow_vertical = 2
 mouse_filter = 1
 color = Color(0.164706, 0.705882, 0.411765, 1)
 
-[node name="card_name" type="Label" parent="color"]
+[node name="card_name" type="RichTextLabel" parent="color"]
 layout_mode = 0
-offset_left = 0.934469
-offset_top = 0.252829
-offset_right = 85.9345
-offset_bottom = 23.2528
+offset_left = 0.776317
+offset_top = -0.207704
+offset_right = 89.7763
+offset_bottom = 16.7923
 scale = Vector2(0.246575, 0.246575)
+theme_override_font_sizes/normal_font_size = 12
 text = "card_name"
+scroll_active = false
+autowrap_mode = 0
+tab_size = 2
 
-[node name="card_art" type="Sprite2D" parent="color"]
-position = Vector2(11.1519, 14.1353)
+[node name="BoxContainer" type="BoxContainer" parent="color"]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 23.0
+offset_bottom = 22.0
+
+[node name="card_art" type="Sprite2D" parent="color/BoxContainer"]
+position = Vector2(11.1912, 7.40437)
 rotation = 3.14159
-scale = Vector2(0.15217, -0.117368)
+scale = Vector2(0.163652, -0.110977)
 texture = ExtResource("2_ycktv")
+
+[node name="card_cost" type="Label" parent="color"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 29.0
+offset_right = 22.0
+offset_bottom = 52.0
+scale = Vector2(0.12903, 0.127013)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "2"
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="color"]
+layout_mode = 0
+offset_left = 0.776317
+offset_top = 18.6864
+offset_right = 23.7763
+offset_bottom = 28.6864
+scale = Vector2(0.863577, 0.863577)
+
+[node name="card_description" type="RichTextLabel" parent="color/ColorRect"]
+layout_mode = 0
+offset_left = 1.1245
+offset_top = 0.786068
+offset_right = 188.124
+offset_bottom = 82.7861
+scale = Vector2(0.112387, 0.112387)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "card description"
+tab_size = 2
 
 [node name="area2d" type="Area2D" parent="."]
 
