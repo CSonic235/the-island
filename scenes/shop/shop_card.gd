@@ -23,12 +23,12 @@ func buy():
 	$area2d.hide()
 	$color.hide()
 	border_color.show()
-	
+
 func update_card_info(c:card):
 	card_name= c.card_name
 	description = c.card_description
 	cost = c.cost
-
+	card_displayed = c
 func change_display():
 	description_box.clear()
 	description_box.add_text(description)
@@ -45,6 +45,4 @@ func _on_area_2d_mouse_exited():
 	buy_button.hide()
 
 func _on_buy_button_pressed():
-	$area2d.hide()
-	$color.hide()
-	border_color.show()
+	get_parent().buy_card(self)
