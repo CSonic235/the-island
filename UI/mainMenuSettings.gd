@@ -19,7 +19,7 @@ func _on_option_button_item_selected(index:int):
 
 func _on_button_pressed():
 	
-	var game = load("res://game_map/game_map.tscn")
+	var game = load("res://game_instance/game_instance.tscn")
 	var game_instance = game.instantiate()
 	game_instance.set_number_of_survivors(number_of_survivors)
 	get_tree().root.add_child(game_instance)
