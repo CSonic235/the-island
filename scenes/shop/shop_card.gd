@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 
 @onready var border_color = $border 
 @onready var buy_button = $area2d/buy_button
@@ -32,3 +32,25 @@ func _on_area_2d_input_event(viewport:Node, event:InputEvent, shape_idx:int):
 		print("Mouse button pressed")
 
 
+
+
+
+
+
+
+
+
+func _on_area_2d_mouse_entered():
+	print("entered")  
+	border_color.show()
+	buy_button.show()
+
+func _on_area_2d_mouse_exited():
+	print("exited")  
+	border_color.hide()
+	buy_button.hide()
+
+func _on_buy_button_pressed():
+	$area2d.hide()
+	$color.hide()
+	border_color.show()

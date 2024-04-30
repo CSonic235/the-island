@@ -1,23 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxmaml3wms6c"]
+[gd_scene load_steps=4 format=3 uid="uid://bxmaml3wms6c"]
 
 [ext_resource type="Script" path="res://scenes/shop/shop_card.gd" id="1_wu8yf"]
+[ext_resource type="Texture2D" uid="uid://csj4807inqm0h" path="res://icon.svg" id="2_ycktv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w442a"]
 size = Vector2(23.0016, 27.9346)
 
-[node name="ShopCard" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 131.0
-offset_top = 146.0
-offset_right = 131.0
-offset_bottom = 146.0
-scale = Vector2(6.70961, 6.70961)
-mouse_filter = 2
+[node name="ShopCard" type="Node2D"]
+position = Vector2(128, 119)
+scale = Vector2(8.23813, 8.83873)
 script = ExtResource("1_wu8yf")
 
 [node name="border" type="ColorRect" parent="."]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -33,9 +27,18 @@ scale = Vector2(0.64455, 0.787959)
 size_flags_horizontal = 4
 mouse_filter = 1
 
+[node name="bought_label" type="Label" parent="."]
+offset_left = -11.3764
+offset_top = 6.84089
+offset_right = 82.6236
+offset_bottom = 29.8409
+rotation = -0.865415
+scale = Vector2(0.294212, 0.294212)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "card bought"
+
 [node name="color" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(20, 20)
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -50,20 +53,36 @@ grow_vertical = 2
 mouse_filter = 1
 color = Color(0.164706, 0.705882, 0.411765, 1)
 
+[node name="card_name" type="Label" parent="color"]
+layout_mode = 0
+offset_left = 0.934469
+offset_top = 0.252829
+offset_right = 85.9345
+offset_bottom = 23.2528
+scale = Vector2(0.246575, 0.246575)
+text = "card_name"
+
+[node name="card_art" type="Sprite2D" parent="color"]
+position = Vector2(11.1519, 14.1353)
+rotation = 3.14159
+scale = Vector2(0.15217, -0.117368)
+texture = ExtResource("2_ycktv")
+
 [node name="area2d" type="Area2D" parent="."]
-scale = Vector2(1, 1)
 
 [node name="buy_button" type="Button" parent="area2d"]
-offset_left = -8.0
-offset_top = -4.0
-offset_right = 8.0
-offset_bottom = 4.0
+offset_left = -8.99104
+offset_top = -3.24942
+offset_right = 66.009
+offset_bottom = 27.7506
+scale = Vector2(0.217246, 0.217246)
+text = "buy card"
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area2d"]
 position = Vector2(-0.443146, 0.0327148)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_w442a")
 
-[connection signal="gui_input" from="." to="." method="_on_gui_input"]
-[connection signal="mouse_entered" from="color" to="." method="_on_color_mouse_entered"]
-[connection signal="mouse_exited" from="color" to="." method="_on_color_mouse_exited"]
+[connection signal="mouse_entered" from="area2d" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="area2d" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="pressed" from="area2d/buy_button" to="." method="_on_buy_button_pressed"]

@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://qp2msb7unnp5"]
+[gd_scene load_steps=2 format=3 uid="uid://qp2msb7unnp5"]
+
+[ext_resource type="Script" path="res://scenes/shop/shop.gd" id="1_27as7"]
 
 [node name="shop" type="CanvasLayer"]
 follow_viewport_enabled = true
@@ -15,8 +17,10 @@ offset_right = 547.5
 offset_bottom = 287.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_27as7")
 
-[node name="Button" type="Button" parent="Panel"]
+[node name="hide_button" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 1017.0
 offset_right = 1093.0
@@ -25,9 +29,7 @@ text = "Hide"
 
 [node name="BoxContainer" type="BoxContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 38.0
-offset_right = 846.0
-offset_bottom = 543.0
-
-[connection signal="pressed" from="Panel/Button" to="Panel" method="_on_quit_button_pressed"]
+offset_left = 47.5
+offset_top = 31.5
+offset_right = 862.5
+offset_bottom = 536.5
