@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxmaml3wms6c"]
+
+[ext_resource type="Script" path="res://scenes/shop/shop_card.gd" id="1_wu8yf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w442a"]
+size = Vector2(23.0016, 27.9346)
+
+[node name="ShopCard" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 131.0
+offset_top = 146.0
+offset_right = 131.0
+offset_bottom = 146.0
+scale = Vector2(6.70961, 6.70961)
+mouse_filter = 2
+script = ExtResource("1_wu8yf")
+
+[node name="border" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -15.0
+offset_right = 26.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.64455, 0.787959)
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="color" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.9439
+offset_top = -13.9346
+offset_right = 11.0561
+offset_bottom = 14.0654
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.164706, 0.705882, 0.411765, 1)
+
+[node name="area2d" type="Area2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="buy_button" type="Button" parent="area2d"]
+offset_left = -8.0
+offset_top = -4.0
+offset_right = 8.0
+offset_bottom = 4.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area2d"]
+position = Vector2(-0.443146, 0.0327148)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_w442a")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="color" to="." method="_on_color_mouse_entered"]
+[connection signal="mouse_exited" from="color" to="." method="_on_color_mouse_exited"]
