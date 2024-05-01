@@ -4,7 +4,7 @@ const Active_area = 100
 
 
 @export var zoom_in_limit := 2.0
-@export var zoom_out_limit := 0.5
+@export var zoom_out_limit := 0.7
 @export var zoom_speed := 1.25
 var move_camera :bool = false 
 var zoom_level = 1.0
@@ -28,10 +28,8 @@ func _input(event: InputEvent) -> void:
 		elif InputEventMouseButton and event.pressed and event.button_index == 2:
 			initial_camera_pos = position
 			drag_start = get_viewport().get_mouse_position()
-			print("pressed right button")
 			move_camera = true
 		elif InputEventMouseButton and !event.pressed and event.button_index == 2:
-			print("released right button")
 			move_camera = false
 		zoom_level = clamp(zoom_level, zoom_out_limit, zoom_in_limit)
 		self.zoom = Vector2(zoom_level, zoom_level)
