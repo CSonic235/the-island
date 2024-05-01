@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dm68p4v6vrmv2"]
+[gd_scene load_steps=3 format=3 uid="uid://dm68p4v6vrmv2"]
 
 [ext_resource type="Script" path="res://game_map/game_map.gd" id="1_dvoc4"]
 [ext_resource type="Script" path="res://scripts/handler/SurvivorHandler.gd" id="2_gxx8l"]
-[ext_resource type="Script" path="res://game_map/Camera2D.gd" id="4_hdky0"]
 
 [node name="GameMap" type="Node2D"]
 script = ExtResource("1_dvoc4")
@@ -10,6 +9,3 @@ script = ExtResource("1_dvoc4")
 [node name="SurvivorHandler" type="Node2D" parent="."]
 position = Vector2(614, 346)
 script = ExtResource("2_gxx8l")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource("4_hdky0")
