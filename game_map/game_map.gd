@@ -9,11 +9,11 @@ func _ready():
 	create_shop()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-    pass
+	pass
 
 func set_number_of_survivors(amount:int):
-    number_of_survivors = amount
-    print("amount of survivors set")
+	number_of_survivors = amount
+	print("amount of survivors set")
 func get_number_of_survivors():
 	
 	return self.number_of_survivors
