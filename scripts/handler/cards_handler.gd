@@ -55,3 +55,10 @@ func draw_cards(x:int):
 func play_card(i:int):
 	var card_played:card = play_area.play_card(i)
 	return card_played
+
+func get_card_in_hand(index:int):
+	if index <play_area.hand.size():
+		return play_area.hand[index]
+
+func get_hand():
+	return play_area.hand

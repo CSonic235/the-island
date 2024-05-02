@@ -26,12 +26,20 @@ script = ExtResource("3_nrnae")
 [node name="UI" type="CanvasLayer" parent="Camera2D"]
 script = ExtResource("4_x7lqh")
 
-[node name="Button" type="Button" parent="Camera2D/UI"]
+[node name="show_hand_button" type="Button" parent="Camera2D/UI"]
 offset_left = 1.0
 offset_top = 618.0
-offset_right = 91.0
+offset_right = 97.0
 offset_bottom = 649.0
-text = "Hide Hand"
+text = "Show Hand"
+
+[node name="hand" type="Panel" parent="Camera2D/UI"]
+offset_left = 168.0
+offset_top = 455.0
+offset_right = 1058.0
+offset_bottom = 651.0
 
 [node name="cards_handler" type="Node2D" parent="."]
 script = ExtResource("5_vwk5h")
+
+[connection signal="pressed" from="Camera2D/UI/show_hand_button" to="Camera2D/UI" method="_on_button_pressed"]
