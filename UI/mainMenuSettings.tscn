@@ -47,11 +47,12 @@ popup/item_6/id = 6
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 15.0
-offset_right = 80.0
-offset_bottom = 45.0
-theme_override_font_sizes/normal_font_size = 10
+offset_left = 3.27377
+offset_top = 23.8076
+offset_right = 520.274
+offset_bottom = 165.808
+scale = Vector2(0.155471, 0.155471)
+theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
 text = "Number of survivors"
 
@@ -62,11 +63,14 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -92.0
-offset_top = -31.0
+offset_left = -96.0024
+offset_top = -26.3153
+offset_right = 173.998
+offset_bottom = 50.6847
 grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(0.58373, 0.58373)
+scale = Vector2(0.282934, 0.282934)
+theme_override_font_sizes/font_size = 50
 text = "start game"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -74,11 +78,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -30.5
-offset_right = 30.5
-offset_bottom = 40.0
+offset_left = -31.3057
+offset_right = 197.694
+offset_bottom = 83.0
 grow_horizontal = 2
-scale = Vector2(0.643343, 0.643343)
+scale = Vector2(0.245447, 0.245447)
+theme_override_font_sizes/normal_font_size = 60
 text = "settings"
 fit_content = true
 autowrap_mode = 0
