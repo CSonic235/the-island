@@ -1,10 +1,11 @@
-extends Node2D
+extends Control
 class_name SurvivorHandler
 var number_of_survivors:int = 5
 var survivor_info_displayed:bool = false
 var possible_survivors:Array = create_possible_survivors()
 var survivorUI = preload("res://UI/survivorPanel.tscn")
 var window = survivorUI.instantiate()
+signal show_survivor_panel(s:Survivor)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	number_of_survivors = get_parent().get_number_of_survivors()
@@ -13,9 +14,6 @@ func _ready():
 	self.get_child(0).move("Up")
 	self.get_child(1).move("Up")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 
 func get_survivor(index:int):
@@ -41,16 +39,8 @@ func create_survivor(survivor):
 		survivor_instance.update_details(info)
 		return survivor_instance
 func display_survivor_info(survivor :Survivor):
-	if window.get_child(0).panel_is_hidden():
-		window.get_child(0).show_panel()
-	if survivor_info_displayed == false:
-		
-
-		window.get_child(0).update_info(survivor)
-		add_child(window)
-		survivor_info_displayed = true
-	else:
-		window.get_child(0).update_info(survivor)
+	show_survivor_panel.emit(survivor)
+	print("signal sent")
 		
 
 func set_has_screen():
