@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=5 format=3 uid="uid://byspa4s7forer"]
 
 [ext_resource type="Script" path="res://game_map/game_map.gd" id="1_dvoc4"]
@@ -5,8 +6,10 @@
 [ext_resource type="Script" path="res://game_map/Camera2D.gd" id="3_nrnae"]
 [ext_resource type="Script" path="res://UI/UI.gd" id="4_x7lqh"]
 
-[node name="GameMap" type="Node2D"]
-script = ExtResource("1_dvoc4")
+
+[node name="GameInstance" type="Node2D"]
+script = ExtResource("1_0d1ln")
+
 
 [node name="SurvivorHandler" type="Control" parent="."]
 visibility_layer = 2
