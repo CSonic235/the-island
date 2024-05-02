@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/shop/shop.gd" id="1_27as7"]
 
-[node name="shop" type="CanvasLayer"]
-follow_viewport_enabled = true
+[node name="shop" type="Node"]
 
 [node name="shop_panel" type="Panel" parent="."]
 anchors_preset = 8
