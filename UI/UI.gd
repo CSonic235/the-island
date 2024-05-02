@@ -2,10 +2,12 @@ extends CanvasLayer
 
 var survivorUI = preload("res://UI/survivorPanel.tscn")
 var window = survivorUI.instantiate()
+
 var survivor_info_displayed:bool = false
+var shop = preload("res://scenes/shop/shop.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	add_child(window)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,3 +27,6 @@ func display_survivor_info(survivor :Survivor):
 	else:
 		window.get_child(0).update_info(survivor)
 		
+func create_shop():
+	var shopinstance = shop.instantiate()
+	add_child(shopinstance)
