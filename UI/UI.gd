@@ -7,7 +7,7 @@ var survivor_info_displayed:bool = false
 var shop = preload("res://scenes/shop/shop.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	add_child(window)
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
