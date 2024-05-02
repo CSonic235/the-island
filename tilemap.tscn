@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=3 uid="uid://qyxd0t3xor3t"]
+
+[ext_resource type="Texture2D" uid="uid://ddfahvw04778e" path="res://island_tiles/Grassfull.png" id="1_ni7ho"]
+[ext_resource type="Texture2D" uid="uid://bcrtg57ufjcp6" path="res://island_tiles/Sandfull.png" id="2_ebqp6"]
+[ext_resource type="Texture2D" uid="uid://bqh11442q8pp" path="res://island_tiles/Waterfull.png" id="3_bv3pp"]
+[ext_resource type="Texture2D" uid="uid://2uqseuj0rtsb" path="res://island_tiles/Mountainfull.png" id="4_27td1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xx3m4"]
+texture = ExtResource("1_ni7ho")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pxsds"]
+texture = ExtResource("2_ebqp6")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xoip8"]
+texture = ExtResource("3_bv3pp")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xutm3"]
+texture = ExtResource("4_27td1")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hpgjh"]
+tile_shape = 3
+tile_offset_axis = 1
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_xx3m4")
+sources/2 = SubResource("TileSetAtlasSource_pxsds")
+sources/3 = SubResource("TileSetAtlasSource_xoip8")
+sources/4 = SubResource("TileSetAtlasSource_xutm3")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_hpgjh")
+format = 2
+layer_0/tile_data = PackedInt32Array(65537, 1, 0, 3, 2, 0, 65538, 3, 0, 65539, 3, 0, 131074, 1, 0, 131073, 4, 0, 196608, 4, 0, 196607, 4, 0, 131072, 1, 0, 131071, 1, 0, 65536, 2, 0, 1, 3, 0, 65535, 2, 0, 0, 2, 0)

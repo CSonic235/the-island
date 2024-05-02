@@ -13,3 +13,5 @@ script = ExtResource("2_gxx8l")
 
 [node name="Grid" type="Node2D" parent="."]
 script = ExtResource("3_mnu41")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
