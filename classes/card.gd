@@ -20,3 +20,6 @@ func _init(info:Dictionary):
 	cost = info.get("cost")
 	in_shop = info.get("in_shop")
 	card_id = info.get("card_id")
+
+func _to_string():
+	return card_name
