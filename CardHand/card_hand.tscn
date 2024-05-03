@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq0vs6kvkt1lu"]
+
+[ext_resource type="Script" path="res://scenes/CardHand/card_hand.gd" id="1_cd4ui"]
+[ext_resource type="PackedScene" uid="uid://b0pkhpj3p5oos" path="res://scenes/CardHand/card.tscn" id="2_pknc3"]
+
+[node name="CardHand" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 157.0
+offset_top = 440.0
+offset_right = -87.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cd4ui")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 54.0
+offset_right = 756.0
+offset_bottom = 204.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -82.0
+offset_right = 5.0
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CardContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="card" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
+position = Vector2(150, 16)
+scale = Vector2(4, 4)
+
+[node name="card2" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
+position = Vector2(250, 16)
+scale = Vector2(4, 4)
+
+[node name="card3" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
+position = Vector2(350, 16)
+scale = Vector2(4, 4)
+
+[node name="card4" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
+position = Vector2(450, 17)
+scale = Vector2(4, 4)
+
+[node name="card5" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
+position = Vector2(550, 17)
+scale = Vector2(4, 4)
+
+[node name="card6" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
+position = Vector2(650, 16)
+scale = Vector2(4, 4)
