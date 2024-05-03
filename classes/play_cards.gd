@@ -34,6 +34,7 @@ func put_card_on_bottom(place_card:card):
 func play_card(hand_index:int):
 	var card_played:card = hand.pop_at(hand_index)
 	discard_pile.push_back(card_played)
+	return card_played
 
 func add_card(c:card):
 	discard_pile.push_back(c)

@@ -7,9 +7,7 @@ var number_of_survivors:int = 8
 func _ready():
 	get_node("SurvivorHandler").show_survivor_panel.connect(_on_survivor_handler_show_survivor_panel)
 	create_shop()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+
 
 func set_number_of_survivors(amount:int):
 	number_of_survivors = amount
