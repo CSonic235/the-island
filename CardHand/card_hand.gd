@@ -28,12 +28,6 @@ func _ready():
 			add_child(card_instance) 
 			card_hand.append(card_instance)
 
-		# Add a button to show the card hand
-		var openButton = Button.new()
-		openButton.text = "Show Card Hand"
-		add_child(openButton)
-		openButton.rect_position = Vector2(0, card_height + spacing) # Position the button below the card hand
-		openButton.connect("pressed", self, "_on_button_pressed") # Connect the button's pressed signal to _on_button_pressed
 
 	else:
 		print("JSON file not found:", json_file_path)
