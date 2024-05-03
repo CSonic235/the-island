@@ -18,7 +18,7 @@ func draw():
 	if card_drawn ==null:
 		reshuffle()
 		card_drawn = cards_in_deck.pop_back ()
-	if card_drawn ==null:
+	if card_drawn !=null:
 		hand.append(card_drawn)
 
 func reshuffle():
@@ -48,5 +48,10 @@ func reset_deck():
 
 func discard(i:int):
 	for x in range(i):
-		var card_played:card = hand.pop_at(0)
+		var card_played:card = hand.pop_front()
 		discard_pile.push_back(card_played)
+		print("discarded")
+func remove(i:int):
+	for x in range(i):
+		hand.remove_at (0)
+

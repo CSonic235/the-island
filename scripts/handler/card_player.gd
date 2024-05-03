@@ -1,6 +1,6 @@
 extends Node
-signal affects_deck
-signal affects_world
+signal affects_deck(attribute:Dictionary)
+signal affects_world(attribute:Dictionary)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,7 +11,11 @@ func _ready():
 func play_card(c:card):
 	if c.card_type==0:
 		var attributes = c.action_attributes
-		if c.action_attributes.get("affects_deck"):
-				affects_deck.emit(attributes)
-		elif  c.action_attributes.get( "affects_world"):
-				affects_world.emit(attributes)
+		if attributes.get("affects_deck"):
+				affects_deck.emit(attributes.get("affects_deck"))
+				print("signal sent")
+		elif  attributes.get("affects_world"):
+				print(attributes.get("affects_world"))
+				affects_world.emit(attributes.get("affects_world"))
+				print("signal sent")
+

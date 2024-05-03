@@ -1,107 +1,180 @@
 [
-	{
-		"card_id": 1,
-		"card_name": "Brainstorm",
-		"card_type": 0,
-		"card_description": "Draw 3 cards then put 2 back on top of your deck",
-		"rarity": 2,
-		"cost": 3,
-		"image_path":"",
-		"in_shop":true,
-		"action_attributes":{"affects_deck":true,"target":"none","script_path":"","draw_cards":3,"put_cards_back":2}
-	}
-	,    {
-		"card_id": 2,
-		"card_name": "Wall of Omens",
-		"card_type": 0,
-		"card_description": "place a wall on a tile, surrvivors can not move past it",
-		"rarity": 0,
-		"cost": 1,
-		"image_path":"",
-		"in_shop":true,
-		"action_attributes":{"affects_world":true,"target":"tile","script_path":"","place_body":"wall"}
-	},    {
-		"card_id": 3,
-		"card_name": "looting",
-		"card_type": 0,
-		"card_description": "Draw 2 cards then discard the 2 leftmost cards",
-		"rarity": 0,
-		"cost": 1,
-		"image_path":"",
-		"in_shop":true,
-		"action_attributes":{"affects_deck":{"draw_cards":2,"discard_cards":2},"target":"none","script_path":""}
-	},    {
-		"card_id": 4,
-		"card_name": "Fireball",
-		"card_type": 0,
-		"card_description": "Immolate the area destroying all objects in the area and turning the tiles burned. Survivors in the area get the burned condition",
-		"rarity": 3,
-		"cost": 5,
-		"image_path":"",
-		"in_shop":true,
-		"action_attributes":{"affects_world":true,"target":"area", "radius":5, "script_path":"area_effect","area_effect":"Immolate"}
-	},    {
-		"card_id": 5,
-		"card_name": "Divination",
-		"card_type": 0,
-		"card_description": "Draw 2 cards",
-		"rarity": 3,
-		"cost": 5,
-		"image_path":"",
-		"in_shop":true,
-		"action_attributes":{"affects_deck":true,"target":"none","script_path":"","draw_cards":2}
-	},    {
-		"card_id": 6,
-		"card_name": "Stone Rain",
-		"card_type": 0,
-		"card_description": "rains stones in an area, surivors caught in that area have a chance to be injured ",
-		"rarity": 2,
-		"cost": 3,
-		"image_path":"",
-		"in_shop":true,
-		"action_attributes":{"affects_world":true,"target":"area","radius":3,"script_path":"","area_effect":"Injury"}
-	},    {
-		"card_id": 7,
-		"card_name": "Trash for Gold",
-		"card_type": 0,
-		"card_description": "Remove a card in your hand from the deck, gain energy equal to half its cost rounded down",
-		"rarity": 1,
-		"cost": 3,
-		"image_path":"",
-		"in_shop":true,
-		"action_attributes":{"affects_deck":true,"target":"hand","script_path":"","effect_on_hand":"remove"}
-	},    {
-		"card_id": 8,
-		"card_name": "Contagion",
-		"card_type": 0,
-		"card_description": "for the rest of the day,the area becomes infected.",
-		"rarity": 1,
-		"cost": 3,
-		"image_path":"",
-		"in_shop":true,
-		"action_attributes":{"affects_world":true,"target":"area","radius":2,"script_path":"","area_effect":"Infected"}
-	},    {
-		"card_id": 9,
-		"card_name": "Ancestral recall",
-		"card_type": 0,
-		"card_description": "Draw 3 cards",
-		"rarity": 3,
-		"cost": 7,
-		"image_path":"",
-		"in_shop":true,
-		"action_attributes":{"affects_deck":true,"target":"none","script_path":"","draw_cards":2}
-	},    {
-		"card_id": 10,
-		"card_name": "Earthbind",
-		"card_type": 0,
-		"card_description": "Target survivor becomes unable to move for 20 seconds.",
-		"rarity": 0,
-		"cost": 1,
-		"image_path":"",
-		"in_shop":true,
-		"action_attributes":{"affects_world":true,"target":"survivor","script_path":"","immobilise":20}
-	},
-	{
+    {
+        "card_id": 1,
+        "card_name": "Brainstorm",
+        "card_type": 0,
+        "card_description": "Draw 3 cards then discard 2",
+        "rarity": 2,
+        "cost": 3,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_deck": {
+                "draw_cards": 3,
+                "discard_cards": 2
+            },
+            "target": "none",
+            "script_path": "",
+            "draw_cards": 3,
+            "put_cards_back": 2
+        }
+    },
+    {
+        "card_id": 2,
+        "card_name": "Wall of Omens",
+        "card_type": 0,
+        "card_description": "place a wall on a tile, surrvivors can not move past it",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_world": {
+                "place_body": "wall",
+                "target": "tile"
+            },
+            "target": "tile",
+            "script_path": ""
+        }
+    },
+    {
+        "card_id": 3,
+        "card_name": "looting",
+        "card_type": 0,
+        "card_description": "Draw 2 cards then discard the 2 leftmost cards",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_deck": {
+                "draw_cards": 2,
+                "discard_cards": 2
+            },
+            "target": "none",
+            "script_path": ""
+        }
+    },
+    {
+        "card_id": 4,
+        "card_name": "Fireball",
+        "card_type": 0,
+        "card_description": "Immolate the area destroying all objects in the area and turning the tiles burned. Survivors in the area get the burned condition",
+        "rarity": 3,
+        "cost": 5,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_world": {
+                "area_effect": "Immolate",
+                "target": "area",
+                "radius": 5
+            },
+            "target": "area"
+        }
+    },
+    {
+        "card_id": 5,
+        "card_name": "Divination",
+        "card_type": 0,
+        "card_description": "Draw 2 cards",
+        "rarity": 3,
+        "cost": 5,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_deck": true,
+            "target": "none",
+            "script_path": "",
+            "draw_cards": 2
+        }
+    },
+    {
+        "card_id": 6,
+        "card_name": "Stone Rain",
+        "card_type": 0,
+        "card_description": "rains stones in an area, surivors caught in that area have a chance to be injured ",
+        "rarity": 2,
+        "cost": 3,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_world": {
+                "area_effect": "Injury",
+                "target": "area",
+                "radius": 3
+            }
+        }
+    },
+    {
+        "card_id": 7,
+        "card_name": "Trash",
+        "card_type": 0,
+        "card_description": "Remove a card in your hand from the deck",
+        "rarity": 1,
+        "cost": 3,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_deck": true,
+            "target": "none",
+            "script_path": "",
+            "effect_on_hand": "remove",
+            "remove": true
+        }
+    },
+    {
+        "card_id": 8,
+        "card_name": "Contagion",
+        "card_type": 0,
+        "card_description": "for the rest of the day,the area becomes infected.",
+        "rarity": 1,
+        "cost": 3,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_world": {
+                "area_effect": "Infected",
+                "target": "area",
+                "radius": 2
+            },
+            "target": "area"
+        }
+    },
+    {
+        "card_id": 9,
+        "card_name": "Ancestral recall",
+        "card_type": 0,
+        "card_description": "Draw 3 cards",
+        "rarity": 3,
+        "cost": 7,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_deck": true,
+            "target": "none",
+            "script_path": "",
+            "draw_cards": 2
+        }
+    },
+    {
+        "card_id": 10,
+        "card_name": "Earthbind",
+        "card_type": 0,
+        "card_description": "Target survivor becomes unable to move for 20 seconds.",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_world": {
+                "target": "survivor",
+                "immobilise": 20
+            },
+            "target": "survivor"
+        }
+    },
+    {
         "card_id": 11,
         "card_name": "Heat",
         "card_type": 1,
@@ -111,7 +184,10 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["hot"],"resource_gain":1
+            "attribues": [
+                "hot"
+            ],
+            "resource_gain": 1
         }
     },
     {
@@ -124,7 +200,10 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["cold"],"resource_gain":1
+            "attribues": [
+                "cold"
+            ],
+            "resource_gain": 1
         }
     },
     {
@@ -137,7 +216,10 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["windy"],"resource_gain":1
+            "attribues": [
+                "windy"
+            ],
+            "resource_gain": 1
         }
     },
     {
@@ -150,7 +232,10 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["humid"],"resource_gain":1
+            "attribues": [
+                "humid"
+            ],
+            "resource_gain": 1
         }
     },
     {
@@ -163,7 +248,10 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["dry"],"resource_gain":1
+            "attribues": [
+                "dry"
+            ],
+            "resource_gain": 1
         }
     },
     {
@@ -176,20 +264,32 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["wet","cold","windy"],"resource_gain":0
+            "attribues": [
+                "wet",
+                "cold",
+                "windy"
+            ],
+            "resource_gain": 0
         }
     },
     {
         "card_id": 17,
         "card_name": "Storm",
         "card_type": 1,
-        "card_desc  ription": "Create a storm in the area for 1 minute.",
+        "card_description": "Create a storm in the area for 1 minute.",
         "rarity": 1,
         "cost": 1,
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["wet","wet","cold","windy","moist"],"resource_gain":-1
+            "attribues": [
+                "wet",
+                "wet",
+                "cold",
+                "windy",
+                "moist"
+            ],
+            "resource_gain": -1
         }
     },
     {
@@ -202,7 +302,14 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["wet","wet","windy","windy","windy"],"resource_gain":-1
+            "attribues": [
+                "wet",
+                "wet",
+                "windy",
+                "windy",
+                "windy"
+            ],
+            "resource_gain": -1
         }
     },
     {
@@ -215,7 +322,14 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["moist","moist","moist","wet","wet"],"resource_gain":0
+            "attribues": [
+                "moist",
+                "moist",
+                "moist",
+                "wet",
+                "wet"
+            ],
+            "resource_gain": 0
         }
     },
     {
@@ -228,7 +342,15 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["cold","cold","cold","wet","wet","wet"],"resource_gain":0
+            "attribues": [
+                "cold",
+                "cold",
+                "cold",
+                "wet",
+                "wet",
+                "wet"
+            ],
+            "resource_gain": 0
         }
     },
     {
@@ -240,9 +362,7 @@
         "cost": 1,
         "image_path": "",
         "in_shop": false,
-        "static_attributes": {
-
-        }
+        "static_attributes": {}
     },
     {
         "card_id": 22,
@@ -253,9 +373,7 @@
         "cost": 1,
         "image_path": "",
         "in_shop": false,
-        "static_attributes": {
-
-        }
+        "static_attributes": {}
     },
     {
         "card_id": 23,
@@ -267,7 +385,12 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["fish","fish","fish"],"resource_gain":3
+            "attribues": [
+                "fish",
+                "fish",
+                "fish"
+            ],
+            "resource_gain": 3
         }
     },
     {
@@ -280,7 +403,11 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["fertile_soil","fertile_soil"],"resource_gain":3
+            "attribues": [
+                "fertile_soil",
+                "fertile_soil"
+            ],
+            "resource_gain": 3
         }
     },
     {
@@ -293,7 +420,11 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["!fertile_soil","!fertile_soil"],"resource_gain":0
+            "attribues": [
+                "!fertile_soil",
+                "!fertile_soil"
+            ],
+            "resource_gain": 0
         }
     },
     {
@@ -325,8 +456,8 @@
         "static_attributes": {
             "ephemeral": "true",
             "target": "tile",
-            "creates_object":"volcano",
-            "trigger":"drawn"
+            "creates_object": "volcano",
+            "trigger": "drawn"
         }
     },
     {
@@ -341,8 +472,8 @@
         "static_attributes": {
             "ephemeral": "false",
             "target": "tile",
-            "creates_object":"med-kit",
-            "trigger":"drawn"
+            "creates_object": "med-kit",
+            "trigger": "drawn"
         }
     },
     {
@@ -355,7 +486,10 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["day_rest"],"resource_gain":0
+            "attribues": [
+                "day_rest"
+            ],
+            "resource_gain": 0
         }
     },
     {
@@ -368,7 +502,10 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues":["night_work"],"resource_gain":0
+            "attribues": [
+                "night_work"
+            ],
+            "resource_gain": 0
         }
     }
 ]

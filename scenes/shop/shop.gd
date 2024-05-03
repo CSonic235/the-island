@@ -50,7 +50,6 @@ func _on_show_shop_pressed():
 func pick_a_card():
 	var rng = RandomNumberGenerator.new()
 	var index =rng.randi_range(0, cards_possible.size()-1)
-	print(cards_possible[index].get_class)
 	return cards_possible[index]
 func create_possible_cards():
 	var file = "res://data/cards.json"
