@@ -30,7 +30,8 @@ func create_shop():
 	add_child(shopinstance)
 	$next_day_button.show()
 	return shopinstance
-
+func get_cards_bought():
+	return get_node("shop/shop_panel").get_cards_bought()
 func _on_button_pressed():
 	if hand_showed:
 		hand.hide()

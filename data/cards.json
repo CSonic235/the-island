@@ -184,7 +184,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "hot"
             ],
             "resource_gain": 1
@@ -200,7 +200,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "cold"
             ],
             "resource_gain": 1
@@ -216,7 +216,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "windy"
             ],
             "resource_gain": 1
@@ -232,7 +232,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "humid"
             ],
             "resource_gain": 1
@@ -248,7 +248,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "dry"
             ],
             "resource_gain": 1
@@ -264,7 +264,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "wet",
                 "cold",
                 "windy"
@@ -282,7 +282,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "wet",
                 "wet",
                 "cold",
@@ -302,7 +302,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "wet",
                 "wet",
                 "windy",
@@ -322,7 +322,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "moist",
                 "moist",
                 "moist",
@@ -342,7 +342,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "cold",
                 "cold",
                 "cold",
@@ -385,7 +385,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "fish",
                 "fish",
                 "fish"
@@ -403,7 +403,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "fertile_soil",
                 "fertile_soil"
             ],
@@ -420,7 +420,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "!fertile_soil",
                 "!fertile_soil"
             ],
@@ -486,7 +486,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "day_rest"
             ],
             "resource_gain": 0
@@ -502,7 +502,7 @@
         "image_path": "",
         "in_shop": true,
         "static_attributes": {
-            "attribues": [
+            "attributes": [
                 "night_work"
             ],
             "resource_gain": 0
