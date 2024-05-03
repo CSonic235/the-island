@@ -29,7 +29,7 @@ func _ready():
 	play_area.shuffle()
 	print("shuffled deck, deck is,", str(play_area.cards_in_deck))
 	play_area.shuffle()
-	print("shuffled deck, deck is,", str(play_area.cards_in_deck)) '''
+	print("shuffled deck, deck is,", str(play_area.cards_in_deck))  '''
 
 func _on_affects_deck(d:Dictionary):
 	for x in d:
