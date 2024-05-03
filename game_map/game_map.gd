@@ -36,7 +36,9 @@ func _on_day_ended():
 	create_shop()
 
 func _on_button_pressed():
-	print(UI_layer.get_children())
+	var cards_bought = UI_layer.get_cards_bought()
+	$cards_handler.night_actions(cards_bought)
+
 	UI_layer.get_node("shop").queue_free()
 	$day_night_cycle.unpause()
 	UI_layer.get_node("next_day_button").hide()

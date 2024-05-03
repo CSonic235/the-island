@@ -6,7 +6,8 @@ extends Panel
 var display_card = preload("res://scenes/shop/shop_card.tscn")
 var energy:int =5
 var cards_possible:Array = create_possible_cards()
-var cards_bought:Array 
+var cards_bought:Array =[]
+signal buy_cards(l:Array)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	show_shop_button.hide()
@@ -36,7 +37,8 @@ func buy_card(card_bought:shop_card):
 		print("can't buy")
 
 
-
+func get_cards_bought():
+	return cards_bought
 
 func _on_hide_button_pressed():
 	self.hide()
