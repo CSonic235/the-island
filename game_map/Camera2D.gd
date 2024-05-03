@@ -21,10 +21,8 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.is_action_pressed("zoom_in"):
 			zoom_level *= zoom_speed
-			print("zooming in")
 		elif event.is_action_pressed("zoom_out"):
 			zoom_level /= zoom_speed
-			print("zooming out")
 		elif InputEventMouseButton and event.pressed and event.button_index == 2:
 			initial_camera_pos = position
 			drag_start = get_viewport().get_mouse_position()
