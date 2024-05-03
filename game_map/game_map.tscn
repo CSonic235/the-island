@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://byspa4s7forer"]
+[gd_scene load_steps=9 format=3 uid="uid://byspa4s7forer"]
 
 [ext_resource type="Script" path="res://game_map/game_map.gd" id="1_dvoc4"]
 [ext_resource type="Script" path="res://scripts/handler/SurvivorHandler.gd" id="2_gxx8l"]
 [ext_resource type="Script" path="res://game_map/Camera2D.gd" id="3_nrnae"]
 [ext_resource type="Script" path="res://UI/UI.gd" id="4_x7lqh"]
+[ext_resource type="PackedScene" uid="uid://cq0vs6kvkt1lu" path="res://scenes/CardHand/card_hand.tscn" id="5_5blew"]
 [ext_resource type="Script" path="res://scripts/handler/cards_handler.gd" id="5_vwk5h"]
 [ext_resource type="Script" path="res://scripts/handler/card_player.gd" id="6_f3l8h"]
 [ext_resource type="Script" path="res://classes/daynightcycle.gd" id="7_wlesv"]
@@ -35,12 +36,6 @@ offset_right = 97.0
 offset_bottom = 649.0
 text = "Show Hand"
 
-[node name="hand" type="Panel" parent="Camera2D/UI"]
-offset_left = 168.0
-offset_top = 455.0
-offset_right = 1058.0
-offset_bottom = 651.0
-
 [node name="Time" type="Label" parent="Camera2D/UI"]
 offset_left = 605.0
 offset_top = 3.0
@@ -55,6 +50,13 @@ offset_right = 1041.0
 offset_bottom = 452.0
 text = "next day
 "
+
+[node name="CardHand" parent="Camera2D/UI" instance=ExtResource("5_5blew")]
+offset_left = 71.0
+offset_top = 388.0
+offset_right = -173.0
+offset_bottom = -63.0
+scale = Vector2(1.30799, 1.30799)
 
 [node name="cards_handler" type="Node2D" parent="."]
 script = ExtResource("5_vwk5h")

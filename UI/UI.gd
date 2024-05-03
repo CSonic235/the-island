@@ -2,7 +2,7 @@ extends CanvasLayer
 
 var survivorUI = preload("res://UI/survivorPanel.tscn")
 var window = survivorUI.instantiate()
-@onready var hand = $hand
+@onready var hand = $CardHand
 var hand_showed:bool = false
 
 var survivor_info_displayed:bool = false
