@@ -8,9 +8,8 @@ func _ready():
 	for x in range(10):
 		temp_deck.append(pick_a_card())
 	play_area = play_cards.new(temp_deck) 
-''' 
-	just a bunch of functcalled methods to test that the code is working
-	print(play_area.cards_in_deck)
+
+''' 	print(play_area.cards_in_deck)
 	play_area.draw()
 	play_area.draw()
 	play_area.draw()
@@ -22,7 +21,7 @@ func _ready():
 	play_area.shuffle()
 	print("shuffled deck, deck is,", str(play_area.cards_in_deck))
 	play_area.shuffle()
-	print("shuffled deck, deck is,", str(play_area.cards_in_deck)) '''
+	print("shuffled deck, deck is,", str(play_area.cards_in_deck))  '''
 
 func create_possible_cards():
 	var file = "res://data/cards.json"

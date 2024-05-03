@@ -18,7 +18,7 @@ func draw():
 	if card_drawn ==null:
 		reshuffle()
 		card_drawn = cards_in_deck.pop_back ()
-	if card_drawn ==null:
+	if card_drawn !=null:
 		hand.append(card_drawn)
 
 func reshuffle():
