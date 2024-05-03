@@ -1,5 +1,6 @@
 extends Node
-
+signal affects_deck
+signal affects_world
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,5 +12,6 @@ func play_card(c:card):
 	if c.card_type==0:
 		var attributes = c.action_attributes
 		if c.action_attributes.get("affects_deck"):
-				if c.action_attributes.get("affects_deck"):
-					pass
+				affects_deck.emit(attributes)
+		elif  c.action_attributes.get( "affects_world"):
+				affects_world.emit(attributes)

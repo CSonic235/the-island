@@ -45,3 +45,8 @@ func add_card_to_deck(c:card):
 func reset_deck():
 	cards_in_deck.append_array (hand)
 	cards_in_deck.append_array (discard_pile)
+
+func discard(i:int):
+	for x in range(i):
+		var card_played:card = hand.pop_at(0)
+		discard_pile.push_back(card_played)
