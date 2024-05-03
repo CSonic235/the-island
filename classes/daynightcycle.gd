@@ -4,9 +4,10 @@ class_name DayNightCycle
 signal day_ends
 
 var time_passed = 0
-var one_day_duration = 60.0  
+var one_day_duration = 60
 var is_night = false
-var dayingame=0
+var dayingame=1
+var pause:bool = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,11 +16,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	time_passed += delta
-	if time_passed >= one_day_duration:
-		time_passed = 0
-		dayingame += 1
-		entershop()
+	if !pause:
+		time_passed += delta
+		if time_passed >= one_day_duration :
+			time_passed = 0
+			dayingame += 1
+			
+			pause = true
+			entershop()
 	
 func timer():
 	return one_day_duration-time_passed
@@ -31,8 +35,12 @@ func get_dayornight():
 	return is_night
 
 func totalgametime():
-	return dayingame+"m"+time_passed+"s"
+	if !pause:
+		return "day "+str(dayingame)+" \n"+str(round(time_passed))+"s"
+	else:
+		return "day "+str(dayingame)+" \n"+"night"
 
 func entershop():
 	day_ends.emit()
-
+func unpause():
+	pause = false

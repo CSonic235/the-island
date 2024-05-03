@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://byspa4s7forer"]
+[gd_scene load_steps=8 format=3 uid="uid://byspa4s7forer"]
 
 [ext_resource type="Script" path="res://game_map/game_map.gd" id="1_dvoc4"]
 [ext_resource type="Script" path="res://scripts/handler/SurvivorHandler.gd" id="2_gxx8l"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://UI/UI.gd" id="4_x7lqh"]
 [ext_resource type="Script" path="res://scripts/handler/cards_handler.gd" id="5_vwk5h"]
 [ext_resource type="Script" path="res://scripts/handler/card_player.gd" id="6_f3l8h"]
+[ext_resource type="Script" path="res://classes/daynightcycle.gd" id="7_wlesv"]
 
 [node name="GameMap" type="Node2D"]
 script = ExtResource("1_dvoc4")
@@ -40,10 +41,29 @@ offset_top = 455.0
 offset_right = 1058.0
 offset_bottom = 651.0
 
+[node name="Time" type="Label" parent="Camera2D/UI"]
+offset_left = 605.0
+offset_top = 3.0
+offset_right = 673.0
+offset_bottom = 42.0
+text = "Time"
+
+[node name="next_day_button" type="Button" parent="Camera2D/UI"]
+offset_left = 953.0
+offset_top = 421.0
+offset_right = 1041.0
+offset_bottom = 452.0
+text = "next day
+"
+
 [node name="cards_handler" type="Node2D" parent="."]
 script = ExtResource("5_vwk5h")
 
 [node name="card_player" type="Node2D" parent="cards_handler"]
 script = ExtResource("6_f3l8h")
 
+[node name="day_night_cycle" type="Node" parent="."]
+script = ExtResource("7_wlesv")
+
 [connection signal="pressed" from="Camera2D/UI/show_hand_button" to="Camera2D/UI" method="_on_button_pressed"]
+[connection signal="pressed" from="Camera2D/UI/next_day_button" to="." method="_on_button_pressed"]

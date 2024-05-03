@@ -36,7 +36,7 @@ func _on_affects_deck(d:Dictionary):
 		if x =="draw_cards":
 			var cards_drawn:int = d.get(x)
 			draw_cards(cards_drawn)
-			print("drew cards, hand is",play_area.hand)
+
 		elif x =="discard_cards":
 			play_area.discard(d.get(x))
 			print("discard cards, hand is",play_area.hand)
