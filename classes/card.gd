@@ -10,6 +10,7 @@ var cost:int
 var card_id:int
 var image_path:String
 var in_shop:bool
+var time:int
 
 func _init(info:Dictionary):
 	self.card_name = info.get("card_name")
