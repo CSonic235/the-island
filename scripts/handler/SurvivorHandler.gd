@@ -40,7 +40,6 @@ func create_survivor(survivor):
 		return survivor_instance
 func display_survivor_info(survivor :Survivor):
 	show_survivor_panel.emit(survivor)
-	print("signal sent")
 		
 
 func set_has_screen():

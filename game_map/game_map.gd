@@ -6,10 +6,9 @@ var number_of_survivors:int = 8
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_node("SurvivorHandler").show_survivor_panel.connect(_on_survivor_handler_show_survivor_panel)
+	get_node("cards_handler").card_effect.connect(_on_affects_world)
 	create_shop()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+
 
 func set_number_of_survivors(amount:int):
 	number_of_survivors = amount
@@ -23,5 +22,7 @@ func create_shop():
 
 
 func _on_survivor_handler_show_survivor_panel(s:Survivor):
-	print("signal recieved")
 	UI_layer.display_survivor_info(s)
+
+func _on_affects_world(d:Dictionary):
+	print("signal recieved",d)

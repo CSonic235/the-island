@@ -11,9 +11,5 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-func _init(name:String):
-	condition_name = name
+func _init(n:String):
+	self.condition_name = n
