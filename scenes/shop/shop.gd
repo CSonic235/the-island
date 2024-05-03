@@ -21,6 +21,8 @@ func _ready():
 			card_instance.move_local_x(n*220) 
 			card_instance.move_local_y(x*290+10) 
 			self.add_child(card_instance)
+	self.hide()
+	show_shop_button.show()
 
 func buy_card(card_bought:shop_card):
 	var cost:int = card_bought.cost

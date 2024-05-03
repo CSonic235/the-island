@@ -16,21 +16,23 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -296.0
-offset_top = 12.0
-offset_right = -167.0
-offset_bottom = 35.0
+offset_left = -516.0
+offset_top = 1.0
+offset_right = -114.0
+offset_bottom = 70.0
 grow_horizontal = 2
-scale = Vector2(5.19443, 5.19443)
+scale = Vector2(2.61704, 2.7931)
+theme_override_font_sizes/font_size = 50
 text = "The Island Game"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 391.0
-offset_top = 227.0
-offset_right = 487.0
-offset_bottom = 258.0
-scale = Vector2(4.32489, 4.32489)
+offset_left = 374.0
+offset_top = 295.0
+offset_right = 655.0
+offset_bottom = 372.0
+scale = Vector2(1.27361, 1.27361)
+theme_override_font_sizes/font_size = 50
 text = "Start Game"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
