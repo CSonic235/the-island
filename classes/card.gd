@@ -10,7 +10,8 @@ var cost:int
 var card_id:int
 var image_path:String
 var in_shop:bool
-var time:int
+var times:int
+var action_attributes: Dictionary
 
 func _init(info:Dictionary):
 	self.card_name = info.get("card_name")
@@ -21,6 +22,8 @@ func _init(info:Dictionary):
 	cost = info.get("cost")
 	in_shop = info.get("in_shop")
 	card_id = info.get("card_id")
+	if card_type == 0:
+		action_attributes = info.get("action_attributes")
 
 func _to_string():
 	return card_name

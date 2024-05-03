@@ -34,6 +34,7 @@ func put_card_on_bottom(place_card:card):
 func play_card(hand_index:int):
 	var card_played:card = hand.pop_at(hand_index)
 	discard_pile.push_back(card_played)
+	return card_played
 
 func add_card(c:card):
 	discard_pile.push_back(c)
@@ -44,3 +45,13 @@ func add_card_to_deck(c:card):
 func reset_deck():
 	cards_in_deck.append_array (hand)
 	cards_in_deck.append_array (discard_pile)
+
+func discard(i:int):
+	for x in range(i):
+		var card_played:card = hand.pop_front()
+		discard_pile.push_back(card_played)
+		print("discarded")
+func remove(i:int):
+	for x in range(i):
+		hand.remove_at (0)
+

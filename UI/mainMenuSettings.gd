@@ -7,9 +7,6 @@ func _ready():
 	number_of_survivors_button.select (4)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 
 
