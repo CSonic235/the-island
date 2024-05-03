@@ -72,8 +72,11 @@ func pick_a_card():
 func display_cards_in_deck():
 	print(play_area.cards_in_deck)
 
-func night_actions():
+func night_actions(cards_bought:Array):
+	for c in cards_bought:
+		play_area.add_card(c)
 	play_area.reset_deck()
+	display_cards_in_deck()
 func draw_cards(x:int):
 	for times_repeated in range(x):
 		play_area.draw()
