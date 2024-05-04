@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://byspa4s7forer"]
+
+[ext_resource type="Script" path="res://game_map/game_map.gd" id="1_dvoc4"]
+[ext_resource type="Script" path="res://scripts/handler/SurvivorHandler.gd" id="2_gxx8l"]
+[ext_resource type="Script" path="res://game_map/Camera2D.gd" id="3_nrnae"]
+[ext_resource type="Script" path="res://game_map/UI.gd" id="4_x7lqh"]
+[ext_resource type="PackedScene" uid="uid://cq0vs6kvkt1lu" path="res://scenes/CardHand/card_hand.tscn" id="5_mx8n8"]
+[ext_resource type="Script" path="res://scripts/handler/cards_handler.gd" id="5_vwk5h"]
+
+[node name="GameMap" type="Node2D"]
+script = ExtResource("1_dvoc4")
+
+[node name="SurvivorHandler" type="Control" parent="."]
+visibility_layer = 2
+layout_mode = 3
+anchors_preset = 0
+offset_left = 614.0
+offset_top = 346.0
+offset_right = 614.0
+offset_bottom = 346.0
+script = ExtResource("2_gxx8l")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 326)
+script = ExtResource("3_nrnae")
+
+[node name="UI" type="CanvasLayer" parent="Camera2D"]
+script = ExtResource("4_x7lqh")
+
+[node name="open_hand_button" type="Button" parent="Camera2D/UI"]
+offset_left = 79.0
+offset_top = 499.0
+offset_right = 213.0
+offset_bottom = 551.0
+text = "Open Hand"
+
+[node name="hide_hand_button" type="Button" parent="Camera2D/UI"]
+offset_left = 79.0
+offset_top = 558.0
+offset_right = 211.0
+offset_bottom = 608.0
+text = "Hide Hand"
+
+[node name="open_deck" type="Button" parent="Camera2D/UI"]
+offset_left = 975.0
+offset_top = 497.0
+offset_right = 1087.0
+offset_bottom = 553.0
+text = "Card Deck"
+
+[node name="CardHand" parent="Camera2D/UI" instance=ExtResource("5_mx8n8")]
+offset_left = 178.0
+offset_right = -139.0
+offset_bottom = -15.0
+
+[node name="cards_handler" type="Node2D" parent="."]
+script = ExtResource("5_vwk5h")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="TimeLabel" type="Label" parent="CanvasModulate"]
+custom_minimum_size = Vector2(160, 50)
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 836.0
+offset_top = 4.0
+offset_right = 837.0
+offset_bottom = 27.0
+grow_horizontal = 2
+
+[connection signal="pressed" from="Camera2D/UI/open_hand_button" to="." method="_on_open_hand_button_pressed"]
+[connection signal="pressed" from="Camera2D/UI/hide_hand_button" to="." method="_on_hide_hand_button_pressed"]
