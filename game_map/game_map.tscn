@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://byspa4s7forer"]
+[gd_scene load_steps=10 format=3 uid="uid://byspa4s7forer"]
 
 [ext_resource type="Script" path="res://game_map/game_map.gd" id="1_dvoc4"]
 [ext_resource type="Script" path="res://scripts/handler/SurvivorHandler.gd" id="2_gxx8l"]
@@ -8,19 +8,10 @@
 [ext_resource type="Script" path="res://scripts/handler/cards_handler.gd" id="5_vwk5h"]
 [ext_resource type="Script" path="res://scripts/handler/card_player.gd" id="6_f3l8h"]
 [ext_resource type="Script" path="res://classes/daynightcycle.gd" id="7_wlesv"]
+[ext_resource type="PackedScene" uid="uid://qyxd0t3xor3t" path="res://tilemap.tscn" id="9_a1sfs"]
 
 [node name="GameMap" type="Node2D"]
 script = ExtResource("1_dvoc4")
-
-[node name="SurvivorHandler" type="Control" parent="."]
-visibility_layer = 7
-layout_mode = 3
-anchors_preset = 0
-offset_left = 614.0
-offset_top = 346.0
-offset_right = 614.0
-offset_bottom = 346.0
-script = ExtResource("2_gxx8l")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 326)
@@ -58,14 +49,26 @@ offset_right = -173.0
 offset_bottom = -63.0
 scale = Vector2(1.30799, 1.30799)
 
+[node name="SurvivorHandler" type="Control" parent="."]
+visibility_layer = 7
+layout_mode = 3
+anchors_preset = 0
+offset_left = 614.0
+offset_top = 346.0
+offset_right = 614.0
+offset_bottom = 346.0
+script = ExtResource("2_gxx8l")
+
+[node name="day_night_cycle" type="Node" parent="."]
+script = ExtResource("7_wlesv")
+
 [node name="cards_handler" type="Node2D" parent="."]
 script = ExtResource("5_vwk5h")
 
 [node name="card_player" type="Node2D" parent="cards_handler"]
 script = ExtResource("6_f3l8h")
 
-[node name="day_night_cycle" type="Node" parent="."]
-script = ExtResource("7_wlesv")
+[node name="TileMap" parent="." instance=ExtResource("9_a1sfs")]
 
 [connection signal="pressed" from="Camera2D/UI/show_hand_button" to="Camera2D/UI" method="_on_button_pressed"]
 [connection signal="pressed" from="Camera2D/UI/next_day_button" to="." method="_on_button_pressed"]
