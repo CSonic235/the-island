@@ -3,102 +3,509 @@
         "card_id": 1,
         "card_name": "Brainstorm",
         "card_type": 0,
-        "card_description": "Draw 3 cards then put 2 back on top of your deck, if one of them was a rain card,the weather becomes storm.",
+        "card_description": "Draw 3 cards then discard 2",
         "rarity": 2,
         "cost": 3,
-        "image_path":"",
-        "in_shop":true,
-        "action_attributes":{"target":"none","script_path":""}
-    }
-    ,    {
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_deck": {
+                "draw_cards": 3,
+                "discard_cards": 2
+            },
+            "target": "none",
+            "script_path": "",
+            "draw_cards": 3,
+            "put_cards_back": 2
+        }
+    },
+    {
         "card_id": 2,
         "card_name": "Wall of Omens",
         "card_type": 0,
-        "card_description": "Draw 3 cards then put 2 back on top of your deck, if one of them was a rain card,the weather becomes storm.",
+        "card_description": "place a wall on a tile, surrvivors can not move past it",
         "rarity": 0,
         "cost": 1,
-        "image_path":"",
-        "in_shop":true,
-        "action_attributes":{"target":"tile","script_path":""}
-    },    {
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_world": {
+                "place_body": "wall",
+                "target": "tile"
+            },
+            "target": "tile",
+            "script_path": ""
+        }
+    },
+    {
         "card_id": 3,
         "card_name": "looting",
         "card_type": 0,
-        "card_description": "Draw 2 cards then discard 2",
-        "rarity": 1,
-        "cost": 2,
-        "image_path":"",
-        "in_shop":true,
-        "action_attributes":{"target":"none","script_path":""}
-    },    {
+        "card_description": "Draw 2 cards then discard the 2 leftmost cards",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_deck": {
+                "draw_cards": 2,
+                "discard_cards": 2
+            },
+            "target": "none",
+            "script_path": ""
+        }
+    },
+    {
         "card_id": 4,
         "card_name": "Fireball",
         "card_type": 0,
         "card_description": "Immolate the area destroying all objects in the area and turning the tiles burned. Survivors in the area get the burned condition",
         "rarity": 3,
         "cost": 5,
-        "image_path":"",
-        "in_shop":true,
-        "action_attributes":{"target":"area", "radius":5, "script_path":""}
-    },    {
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_world": {
+                "area_effect": "Immolate",
+                "target": "area",
+                "radius": 5
+            },
+            "target": "area"
+        }
+    },
+    {
         "card_id": 5,
         "card_name": "Divination",
         "card_type": 0,
-        "card_description": "lose 2 energy. Draw 2 cards",
-        "rarity": 1,
-        "cost": 3,
-        "image_path":"",
-        "in_shop":true,
-        "action_attributes":{"target":"none","script_path":""}
-    },    {
+        "card_description": "Draw 2 cards",
+        "rarity": 3,
+        "cost": 5,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_deck": true,
+            "target": "none",
+            "script_path": "",
+            "draw_cards": 2
+        }
+    },
+    {
         "card_id": 6,
         "card_name": "Stone Rain",
         "card_type": 0,
         "card_description": "rains stones in an area, surivors caught in that area have a chance to be injured ",
         "rarity": 2,
         "cost": 3,
-        "image_path":"",
-        "in_shop":true,
-        "action_attributes":{"target":"area","radius":3,"script_path":""}
-    },    {
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_world": {
+                "area_effect": "Injury",
+                "target": "area",
+                "radius": 3
+            }
+        }
+    },
+    {
         "card_id": 7,
-        "card_name": "Trash for Gold",
+        "card_name": "Trash",
         "card_type": 0,
-        "card_description": "Remove a card in your hand from the deck, gain energy equal to half its cost rounded down",
+        "card_description": "Remove a card in your hand from the deck",
         "rarity": 1,
         "cost": 3,
-        "image_path":"",
-        "in_shop":true,
-        "action_attributes":{"target":"none","script_path":""}
-    },    {
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_deck": true,
+            "target": "none",
+            "script_path": "",
+            "effect_on_hand": "remove",
+            "remove": true
+        }
+    },
+    {
         "card_id": 8,
         "card_name": "Contagion",
         "card_type": 0,
         "card_description": "for the rest of the day,the area becomes infected.",
         "rarity": 1,
         "cost": 3,
-        "image_path":"",
-        "in_shop":true,
-        "action_attributes":{"target":"area","radius":2,"script_path":""}
-    },    {
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_world": {
+                "area_effect": "Infected",
+                "target": "area",
+                "radius": 2
+            },
+            "target": "area"
+        }
+    },
+    {
         "card_id": 9,
-        "card_name": "Infernal Tutor",
+        "card_name": "Ancestral recall",
         "card_type": 0,
-        "card_description": "Discard your hand, then search your deck for a card and put it into your hand.",
-        "rarity": 2,
-        "cost": 5,
-        "image_path":"",
-        "in_shop":true,
-        "action_attributes":{"target":"none","script_path":""}
-    },    {
+        "card_description": "Draw 3 cards",
+        "rarity": 3,
+        "cost": 7,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_deck": true,
+            "target": "none",
+            "script_path": "",
+            "draw_cards": 2
+        }
+    },
+    {
         "card_id": 10,
         "card_name": "Earthbind",
         "card_type": 0,
         "card_description": "Target survivor becomes unable to move for 20 seconds.",
         "rarity": 0,
         "cost": 1,
-        "image_path":"",
-        "in_shop":true,
-        "action_attributes":{"target":"survivor","script_path":""}
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_world": {
+                "target": "survivor",
+                "immobilise": 20
+            },
+            "target": "survivor"
+        }
+    },
+    {
+        "card_id": 11,
+        "card_name": "Heat",
+        "card_type": 1,
+        "card_description": "Heat up the area for 1 minute.",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "hot"
+            ],
+            "resource_gain": 1
+        }
+    },
+    {
+        "card_id": 12,
+        "card_name": "Cold",
+        "card_type": 1,
+        "card_description": "Cool down the area for 1 minute.",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "cold"
+            ],
+            "resource_gain": 1
+        }
+    },
+    {
+        "card_id": 13,
+        "card_name": "Windy",
+        "card_type": 1,
+        "card_description": "Make the area windy for 1 minute.",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "windy"
+            ],
+            "resource_gain": 1
+        }
+    },
+    {
+        "card_id": 14,
+        "card_name": "Moist",
+        "card_type": 1,
+        "card_description": "Make the area wet for 1 minute.",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "humid"
+            ],
+            "resource_gain": 1
+        }
+    },
+    {
+        "card_id": 15,
+        "card_name": "Arid",
+        "card_type": 1,
+        "card_description": "Make the area dehydrate for 1 minute.",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "dry"
+            ],
+            "resource_gain": 1
+        }
+    },
+    {
+        "card_id": 16,
+        "card_name": "Rain",
+        "card_type": 1,
+        "card_description": "Make the area rain for 1 minute.",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "wet",
+                "cold",
+                "windy"
+            ],
+            "resource_gain": 0
+        }
+    },
+    {
+        "card_id": 17,
+        "card_name": "Storm",
+        "card_type": 1,
+        "card_description": "Create a storm in the area for 1 minute.",
+        "rarity": 1,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "wet",
+                "wet",
+                "cold",
+                "windy",
+                "moist"
+            ],
+            "resource_gain": -1
+        }
+    },
+    {
+        "card_id": 18,
+        "card_name": "Cyclone",
+        "card_type": 1,
+        "card_description": "Create a Cyclone in the area for 1 minute.",
+        "rarity": 1,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "wet",
+                "wet",
+                "windy",
+                "windy",
+                "windy"
+            ],
+            "resource_gain": -1
+        }
+    },
+    {
+        "card_id": 19,
+        "card_name": "Fog",
+        "card_type": 1,
+        "card_description": "Make the area foggy for 1 minute.",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "moist",
+                "moist",
+                "moist",
+                "wet",
+                "wet"
+            ],
+            "resource_gain": 0
+        }
+    },
+    {
+        "card_id": 20,
+        "card_name": "Snow",
+        "card_type": 1,
+        "card_description": "Make the area snow for 1 minute.",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "cold",
+                "cold",
+                "cold",
+                "wet",
+                "wet",
+                "wet"
+            ],
+            "resource_gain": 0
+        }
+    },
+    {
+        "card_id": 21,
+        "card_name": "Supply drop",
+        "card_type": 2,
+        "card_description": "Drop supply on the island",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": false,
+        "static_attributes": {}
+    },
+    {
+        "card_id": 22,
+        "card_name": "Spawn resources",
+        "card_type": 2,
+        "card_description": "Spawn some nature resouces on the island",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": false,
+        "static_attributes": {}
+    },
+    {
+        "card_id": 23,
+        "card_name": "Fishing productivity",
+        "card_type": 1,
+        "card_description": "Increased fish population around the island",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "fish",
+                "fish",
+                "fish"
+            ],
+            "resource_gain": 3
+        }
+    },
+    {
+        "card_id": 24,
+        "card_name": "Soil fertilize",
+        "card_type": 1,
+        "card_description": "Fertilize the soil, decrease the time for crops growing",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "fertile_soil",
+                "fertile_soil"
+            ],
+            "resource_gain": 3
+        }
+    },
+    {
+        "card_id": 25,
+        "card_name": "soil degradation",
+        "card_type": 1,
+        "card_description": "Make the soil impoverished, increase the time for crops growing",
+        "rarity": 0,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "!fertile_soil",
+                "!fertile_soil"
+            ],
+            "resource_gain": 0
+        }
+    },
+    {
+        "card_id": 26,
+        "card_name": "Earth quake",
+        "card_type": 0,
+        "card_description": "All the surivors become unalble to move for 5 seconds",
+        "rarity": 0,
+        "cost": 2,
+        "image_path": "",
+        "in_shop": true,
+        "action_attributes": {
+            "affects_world": true,
+            "target": "all_survivors",
+            "radius": 2,
+            "script_path": "",
+            "immobilise": 5
+        }
+    },
+    {
+        "card_id": 27,
+        "card_name": "volcano",
+        "card_type": 2,
+        "card_description": "spawns a volcano when drawn",
+        "rarity": 3,
+        "cost": 4,
+        "image_path": "",
+        "in_shop": false,
+        "static_attributes": {
+            "ephemeral": "true",
+            "target": "tile",
+            "creates_object": "volcano",
+            "trigger": "drawn"
+        }
+    },
+    {
+        "card_id": 28,
+        "card_name": "Med-kit",
+        "card_type": 2,
+        "card_description": "Med-kit washes up on shore",
+        "rarity": 2,
+        "cost": 0,
+        "image_path": "",
+        "in_shop": false,
+        "static_attributes": {
+            "ephemeral": "false",
+            "target": "tile",
+            "creates_object": "med-kit",
+            "trigger": "drawn"
+        }
+    },
+    {
+        "card_id": 29,
+        "card_name": "solar eclipse",
+        "card_type": 2,
+        "card_description": "Moon blocks sun, casting shadow on Earth, darkening sky for one day.",
+        "rarity": 3,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "day_rest"
+            ],
+            "resource_gain": 0
+        }
+    },
+    {
+        "card_id": 30,
+        "card_name": "lunar eclipse",
+        "card_type": 1,
+        "card_description": "Earth's shadow falls on moon, giving it reddish appearance",
+        "rarity": 3,
+        "cost": 1,
+        "image_path": "",
+        "in_shop": true,
+        "static_attributes": {
+            "attributes": [
+                "night_work"
+            ],
+            "resource_gain": 0
+        }
     }
 ]

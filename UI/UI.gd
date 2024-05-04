@@ -2,17 +2,15 @@ extends CanvasLayer
 
 var survivorUI = preload("res://UI/survivorPanel.tscn")
 var window = survivorUI.instantiate()
+@onready var hand = $CardHand
+var hand_showed:bool = false
 
 var survivor_info_displayed:bool = false
 var shop = preload("res://scenes/shop/shop.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	hand.hide()
+	$next_day_button.hide()
 
 func display_survivor_info(survivor :Survivor):
 	print("displaying survivor info")
@@ -30,3 +28,17 @@ func display_survivor_info(survivor :Survivor):
 func create_shop():
 	var shopinstance = shop.instantiate()
 	add_child(shopinstance)
+	$next_day_button.show()
+	return shopinstance
+func get_cards_bought():
+	return get_node("shop/shop_panel").get_cards_bought()
+func _on_button_pressed():
+	if hand_showed:
+		hand.hide()
+		hand_showed = false
+		$show_hand_button.text = "Show Hand"
+		
+	else:
+		hand.show()
+		hand_showed = true
+		$show_hand_button.text = "Hide Hand"
