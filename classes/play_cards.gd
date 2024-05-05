@@ -14,12 +14,17 @@ func shuffle():
 	cards_in_deck.shuffle()
 
 func draw():
+
 	var card_drawn:card = cards_in_deck.pop_back ()
 	if card_drawn ==null:
 		reshuffle()
 		card_drawn = cards_in_deck.pop_back ()
-	if card_drawn !=null:
-		hand.append(card_drawn)
+
+	if hand.size()<7:
+		if card_drawn !=null:
+			hand.append(card_drawn)
+	else:
+		discard_pile.append(card_drawn)	
 
 func reshuffle():
 	cards_in_deck.append_array(discard_pile)

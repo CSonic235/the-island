@@ -2,17 +2,18 @@ extends Control
 @onready var display_text = $Panel/display
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	test(5) # Replace with function body.
 	hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-func update(discard_array):
+func update(cards:play_cards):
+	var discard_array = cards.discard_pile
 	display_text.clear()
 	for c in discard_array:
 		display_text.add_text(str(c)+"\n")
+	display_text.add_text(str(cards.cards_in_deck.size()))
 
 
 func create_possible_cards():

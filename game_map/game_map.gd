@@ -46,4 +46,4 @@ func _on_button_pressed():
 
 func _on_card_player_changed(cards:play_cards):
 	$Camera2D/UI/CardHand.update_hand(cards.hand)
-	$Camera2D/UI/discard_pile.update(cards.discard_pile)
+	$Camera2D/UI/discard_pile.update(cards)

@@ -24,8 +24,8 @@ offset_bottom = 475.0
 layout_mode = 0
 offset_left = 17.0
 offset_top = 16.0
-offset_right = 1050.0
-offset_bottom = 559.0
+offset_right = 254.0
+offset_bottom = 386.0
 text = "asasdadasdadasd"
 
 [node name="Button" type="Button" parent="."]

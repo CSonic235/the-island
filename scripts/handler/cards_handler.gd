@@ -1,6 +1,7 @@
 extends Node2D
 @onready var cards_possible = create_possible_cards()
 @onready var play_area :play_cards
+@onready var player =$card_player
 signal card_effect(attribute:Dictionary)
 signal cards_changed(cards :play_cards)
 
@@ -40,11 +41,12 @@ func _on_affects_deck(d:Dictionary):
 
 		elif x =="discard_cards":
 			play_area.discard(d.get(x))
-			print("discard cards, hand is",play_area.hand)
+
 		elif x ==  "remove":
 			play_area.remove(0)
-			print("discard cards, hand is",play_area.hand)
-	print("signal recieved",d)
+
+	cards_changed.emit(play_area)
+	print("affects deck signal recieved",d)
 
 
 func _on_affects_world(d:Dictionary):
@@ -58,7 +60,7 @@ func create_possible_cards():
 
 	var possible_cards:Array = []
 	for c in json_as_dict:
-		if c.in_shop==true:
+		if c.card_type==0:
 			var rarity:int = c.rarity
 			var card_to_add:card = card.new(c)
 			for i in 4-rarity:
@@ -84,12 +86,20 @@ func draw_cards(x:int):
 
 func play_card(i:int):
 	var card_played:card = play_area.play_card(i)
-	$card_player.play_card(card_played)
+	player.play_card(card_played)
 	return card_played
 
 func get_card_in_hand(index:int):
 	if index <play_area.hand.size():
 		return play_area.hand[index]
 
-func get_hand():
-	return play_area.hand
+func _on_draw_pressed():
+	draw_cards(1)
+	cards_changed.emit(play_area)
+
+
+func _on_play_pressed():
+	play_card(0)
+	cards_changed.emit(play_area)
+
+
