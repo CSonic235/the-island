@@ -136,13 +136,19 @@ scale = Vector2(0.863577, 0.863577)
 metadata/_edit_use_anchors_ = true
 
 [node name="card_description" type="RichTextLabel" parent="color/ColorRect"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0488913
+anchor_top = -0.0786068
+anchor_right = 19.6903
+anchor_bottom = 21.2214
 offset_left = 1.1245
 offset_top = 0.786068
 offset_right = 188.124
 offset_bottom = 82.7861
-scale = Vector2(0.112387, 0.112387)
+scale = Vector2(0.0365531, 0.0365531)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
 text = "card description"
 tab_size = 2
 metadata/_edit_use_anchors_ = true

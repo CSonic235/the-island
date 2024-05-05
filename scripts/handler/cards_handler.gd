@@ -2,6 +2,7 @@ extends Node2D
 @onready var cards_possible = create_possible_cards()
 @onready var play_area :play_cards
 signal card_effect(attribute:Dictionary)
+signal cards_changed(cards :play_cards)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

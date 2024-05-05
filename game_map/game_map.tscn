@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://byspa4s7forer"]
+[gd_scene load_steps=11 format=3 uid="uid://byspa4s7forer"]
 
 [ext_resource type="Script" path="res://game_map/game_map.gd" id="1_dvoc4"]
 [ext_resource type="Script" path="res://scripts/handler/SurvivorHandler.gd" id="2_gxx8l"]
 [ext_resource type="Script" path="res://game_map/Camera2D.gd" id="3_nrnae"]
 [ext_resource type="Script" path="res://UI/UI.gd" id="4_x7lqh"]
 [ext_resource type="PackedScene" uid="uid://cq0vs6kvkt1lu" path="res://scenes/CardHand/card_hand.tscn" id="5_5blew"]
+[ext_resource type="PackedScene" uid="uid://ciqg2mbqappu6" path="res://scenes/DeckDisplay/discard_pile.tscn" id="5_731rd"]
 [ext_resource type="Script" path="res://scripts/handler/cards_handler.gd" id="5_vwk5h"]
 [ext_resource type="Script" path="res://scripts/handler/card_player.gd" id="6_f3l8h"]
 [ext_resource type="Script" path="res://classes/daynightcycle.gd" id="7_wlesv"]
@@ -49,6 +50,19 @@ offset_right = -173.0
 offset_bottom = -63.0
 scale = Vector2(1.30799, 1.30799)
 
+[node name="discard_pile" parent="Camera2D/UI" instance=ExtResource("5_731rd")]
+offset_left = -25.0
+offset_top = -26.0
+offset_right = -25.0
+offset_bottom = -26.0
+
+[node name="show_discard_button" type="Button" parent="Camera2D/UI"]
+offset_left = 1.0
+offset_top = 588.0
+offset_right = 90.0
+offset_bottom = 616.0
+text = "show Discard"
+
 [node name="SurvivorHandler" type="Control" parent="."]
 visibility_layer = 7
 layout_mode = 3
@@ -72,3 +86,4 @@ script = ExtResource("6_f3l8h")
 
 [connection signal="pressed" from="Camera2D/UI/show_hand_button" to="Camera2D/UI" method="_on_button_pressed"]
 [connection signal="pressed" from="Camera2D/UI/next_day_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Camera2D/UI/show_discard_button" to="Camera2D/UI/discard_pile" method="_on_show_discard_button_pressed"]

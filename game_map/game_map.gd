@@ -9,6 +9,7 @@ func _ready():
 	get_node("SurvivorHandler").show_survivor_panel.connect(_on_survivor_handler_show_survivor_panel)
 	get_node("cards_handler").card_effect.connect(_on_affects_world)
 	get_node("day_night_cycle").day_ends.connect(_on_day_ended)
+	get_node("cards_handler").cards_changed.connect(_on_card_player_changed)
 	
 
 func _process(_delta):
@@ -42,3 +43,7 @@ func _on_button_pressed():
 	UI_layer.get_node("shop").queue_free()
 	$day_night_cycle.unpause()
 	UI_layer.get_node("next_day_button").hide()
+
+func _on_card_player_changed(cards:play_cards):
+	$Camera2D/UI/CardHand.update_hand(cards.hand)
+	$Camera2D/UI/discard_pile.update(cards.discard_pile)
