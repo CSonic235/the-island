@@ -45,6 +45,13 @@ func _on_affects_deck(d:Dictionary):
 			print("discard cards, hand is",play_area.hand)
 	print("signal recieved",d)
 
+func count_enviornent(d:Dictionary):
+	for x in d: 
+		match x:
+			{"attributes":"wet"}:
+				$classes/card.wet_count+=1
+		
+		return 0
 
 func _on_affects_world(d:Dictionary):
 	print("signal recieved",d)

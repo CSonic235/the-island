@@ -12,6 +12,9 @@ var image_path:String
 var in_shop:bool
 var times:int
 var action_attributes: Dictionary
+var static_attributes: Dictionary
+
+var wet_count=0
 
 func _init(info:Dictionary):
 	self.card_name = info.get("card_name")
