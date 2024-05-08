@@ -20,6 +20,6 @@ func _on_button_pressed():
 	var game_instance = game.instantiate()
 	game_instance.set_number_of_survivors(number_of_survivors)
 	get_tree().root.add_child(game_instance)
-	get_tree().change_scene_to_packed(game_instance)
+
 	print("starting game with ",number_of_survivors," survivors"  )
 	self.get_parent().queue_free()

@@ -2,38 +2,34 @@
 
 [ext_resource type="Script" path="res://scenes/DeckDisplay/discard_pile.gd" id="1_716bx"]
 
-[node name="discard_pile" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -691.0
-offset_bottom = -98.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("1_716bx")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 58.0
-offset_top = 42.0
-offset_right = 384.0
-offset_bottom = 475.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 327.0
+offset_bottom = 435.0
 
 [node name="display" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
-offset_left = 17.0
-offset_top = 16.0
-offset_right = 254.0
-offset_bottom = 386.0
+offset_left = 47.0
+offset_top = 39.0
+offset_right = 284.0
+offset_bottom = 409.0
 text = "asasdadasdadasd"
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 332.0
-offset_top = 47.0
-offset_right = 381.0
-offset_bottom = 78.0
+offset_left = 274.0
+offset_top = 5.0
+offset_right = 323.0
+offset_bottom = 36.0
 text = "hide"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
