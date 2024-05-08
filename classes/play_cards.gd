@@ -28,6 +28,7 @@ func draw():
 
 func reshuffle():
 	cards_in_deck.append_array(discard_pile)
+	discard_pile.clear()
 	self.shuffle()
 
 func put_card_on_top(place_card:card):
@@ -50,6 +51,8 @@ func add_card_to_deck(c:card):
 func reset_deck():
 	cards_in_deck.append_array (hand)
 	cards_in_deck.append_array (discard_pile)
+	hand.clear()
+	discard_pile.clear()
 
 func discard(i:int):
 	for x in range(i):

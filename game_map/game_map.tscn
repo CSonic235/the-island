@@ -45,17 +45,17 @@ text = "next day
 "
 
 [node name="CardHand" parent="Camera2D/UI" instance=ExtResource("5_5blew")]
-offset_left = 71.0
-offset_top = 388.0
-offset_right = -173.0
-offset_bottom = -63.0
+offset_left = 114.0
+offset_top = 458.0
+offset_right = -283.0
+offset_bottom = -48.0
 scale = Vector2(1.30799, 1.30799)
 
 [node name="discard_pile" parent="Camera2D/UI" instance=ExtResource("5_731rd")]
-offset_left = -25.0
-offset_top = -26.0
-offset_right = -25.0
-offset_bottom = -26.0
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 11.0
+offset_bottom = 10.0
 
 [node name="show_discard_button" type="Button" parent="Camera2D/UI"]
 offset_left = 1.0
