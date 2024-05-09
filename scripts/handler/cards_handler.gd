@@ -48,9 +48,20 @@ func _on_affects_deck(d:Dictionary):
 func count_enviornent(d:Dictionary):
 	for x in d: 
 		match x:
+			{"attributes":"hot"}:
+				$classes/card.hot_count+=1
+			{"attributes":"cold"}:
+				$classes/card.cold_count+=1
+			{"attributes":"windy"}:
+				$classes/card.windy_count+=1
+			{"attributes":"humid"}:
+				$classes/card.humid_count+=1
+			{"attributes":"dry"}:
+				$classes/card.dry_count+=1
 			{"attributes":"wet"}:
-				$classes/card.wet_count+=1
-		
+				$classes/card.hot_count+=1
+			{"attributes":"hot"}:
+				$classes/card.hot_count+=1
 		return 0
 
 func _on_affects_world(d:Dictionary):
