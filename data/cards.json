@@ -421,8 +421,8 @@
 		"in_shop": true,
 		"static_attributes": {
 			"attributes": [
-				"!fertile_soil",
-				"!fertile_soil"
+				"infertile_soil",
+				"infertile_soil"
 			],
 			"resource_gain": 0
 		}

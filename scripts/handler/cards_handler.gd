@@ -60,8 +60,12 @@ func count_enviornent(d:Dictionary):
 				$classes/card.dry_count+=1
 			{"attributes":"wet"}:
 				$classes/card.hot_count+=1
-			{"attributes":"hot"}:
-				$classes/card.hot_count+=1
+			{"attributes":"fish"}:
+				$classes/card.fish_count+=1
+			{"attributes":"fertile_soil"}:
+				$classes/card.fertile_soil_count+=1
+			{"attributes":"infertile_soil"}:
+				$classes/card.infertile_soil_count+=1
 		return 0
 
 func _on_affects_world(d:Dictionary):

@@ -20,8 +20,9 @@ var windy_count=0
 var humid_count=0
 var dry_count=0
 var wet_count=0
-
-
+var fish_count=0
+var fertile_soil_count=0
+var infertile_soil_count=0
 
 func _init(info:Dictionary):
 	self.card_name = info.get("card_name")
