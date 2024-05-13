@@ -89,22 +89,6 @@ script = ExtResource("6_f3l8h")
 
 [node name="TileMap" parent="." instance=ExtResource("9_a1sfs")]
 
-[node name="draw" type="Button" parent="."]
-offset_left = 374.0
-offset_top = 118.0
-offset_right = 454.0
-offset_bottom = 150.0
-text = "draw"
-
-[node name="play" type="Button" parent="."]
-offset_left = 373.0
-offset_top = 167.0
-offset_right = 453.0
-offset_bottom = 203.0
-text = "play"
-
 [connection signal="pressed" from="Camera2D/UI/show_hand_button" to="Camera2D/UI" method="_on_button_pressed"]
 [connection signal="pressed" from="Camera2D/UI/next_day_button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Camera2D/UI/show_discard_button" to="Camera2D/UI/discard_pile" method="_on_show_discard_button_pressed"]
-[connection signal="pressed" from="draw" to="cards_handler" method="_on_draw_pressed"]
-[connection signal="pressed" from="play" to="cards_handler" method="_on_play_pressed"]
