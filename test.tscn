@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxom42b7evxib"]
+
+[ext_resource type="Script" path="res://scenes/CardHand/card.gd" id="1_8l66a"]
+
+[node name="card" type="Node2D"]
+script = ExtResource("1_8l66a")
+
+[node name="color" type="ColorRect" parent="."]
+offset_right = 233.0
+offset_bottom = 258.0
+color = Color(0.164706, 0.705882, 0.411765, 1)
+
+[node name="card_name" type="RichTextLabel" parent="color"]
+layout_mode = 0
+offset_right = 82.0
+offset_bottom = 28.0
+text = "cardname"
+
+[node name="ColorRect" type="ColorRect" parent="color"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 96.0
+offset_right = 74.0
+offset_bottom = 136.0
+scale = Vector2(3.72917, 3.72917)
+
+[node name="card_description" type="RichTextLabel" parent="color/ColorRect"]
+layout_mode = 0
+offset_right = 258.0
+offset_bottom = 259.0
+scale = Vector2(0.154546, 0.154546)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "asdasdaws"

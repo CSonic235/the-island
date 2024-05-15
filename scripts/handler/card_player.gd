@@ -13,9 +13,9 @@ func play_card(c:card):
 		var attributes = c.action_attributes
 		if attributes.get("affects_deck"):
 				affects_deck.emit(attributes.get("affects_deck"))
-				print("signal sent")
+				print("affects_deck signal sent")
 		elif  attributes.get("affects_world"):
 				print(attributes.get("affects_world"))
 				affects_world.emit(attributes.get("affects_world"))
-				print("signal sent")
+				print(" affects_world signal sent")
 
