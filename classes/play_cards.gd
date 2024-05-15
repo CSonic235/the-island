@@ -14,15 +14,21 @@ func shuffle():
 	cards_in_deck.shuffle()
 
 func draw():
+
 	var card_drawn:card = cards_in_deck.pop_back ()
 	if card_drawn ==null:
 		reshuffle()
 		card_drawn = cards_in_deck.pop_back ()
-	if card_drawn !=null:
-		hand.append(card_drawn)
+
+	if hand.size()<7:
+		if card_drawn !=null:
+			hand.append(card_drawn)
+	else:
+		discard_pile.append(card_drawn)	
 
 func reshuffle():
 	cards_in_deck.append_array(discard_pile)
+	discard_pile.clear()
 	self.shuffle()
 
 func put_card_on_top(place_card:card):
@@ -45,6 +51,8 @@ func add_card_to_deck(c:card):
 func reset_deck():
 	cards_in_deck.append_array (hand)
 	cards_in_deck.append_array (discard_pile)
+	hand.clear()
+	discard_pile.clear()
 
 func discard(i:int):
 	for x in range(i):

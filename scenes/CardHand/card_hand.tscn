@@ -8,58 +8,65 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 157.0
-offset_top = 440.0
-offset_right = -87.0
-offset_bottom = -11.0
+offset_left = 50.0
+offset_top = 478.0
+offset_right = -379.0
+offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.35022, 1.35022)
 script = ExtResource("1_cd4ui")
 
 [node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 54.0
-offset_right = 756.0
-offset_bottom = 204.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -107.0
-offset_right = -4.0
-offset_bottom = -107.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -412.884
+offset_top = -42.3752
+offset_right = -412.884
+offset_bottom = -42.3752
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 
 [node name="CardContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 alignment = 1
 
 [node name="card" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(150, 16)
+position = Vector2(100, 16)
 scale = Vector2(4, 4)
 
 [node name="card2" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(250, 16)
+position = Vector2(200, 16)
 scale = Vector2(4, 4)
 
 [node name="card3" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(350, 16)
+position = Vector2(300, 16)
 scale = Vector2(4, 4)
 
 [node name="card4" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(450, 17)
+position = Vector2(400, 16)
 scale = Vector2(4, 4)
 
 [node name="card5" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(550, 17)
+position = Vector2(500, 16)
 scale = Vector2(4, 4)
 
 [node name="card6" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(650, 16)
+position = Vector2(600, 16)
+scale = Vector2(4, 4)
+
+[node name="card7" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
+position = Vector2(700, 16)
 scale = Vector2(4, 4)

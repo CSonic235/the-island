@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciqg2mbqappu6"]
+
+[ext_resource type="Script" path="res://scenes/DeckDisplay/discard_pile.gd" id="1_716bx"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 329.0
+offset_bottom = 439.0
+script = ExtResource("1_716bx")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 327.0
+offset_bottom = 435.0
+
+[node name="display" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 39.0
+offset_right = 284.0
+offset_bottom = 409.0
+text = "asasdadasdadasd"
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 5.0
+offset_right = 323.0
+offset_bottom = 36.0
+text = "hide"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

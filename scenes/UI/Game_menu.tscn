@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgrhwg2br2q3c"]
+
+[ext_resource type="Script" path="res://scenes/UI/game_menu.gd" id="1_ycp4l"]
+
+[node name="Game_menu" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ycp4l")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -127.0
+offset_right = 149.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="exit_game_button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 78.0
+offset_right = 189.0
+offset_bottom = 109.0
+text = "Exit game"
+
+[node name="resume_game_button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 125.0
+offset_right = 186.0
+offset_bottom = 156.0
+text = "Continue"
+
+[connection signal="pressed" from="Panel/exit_game_button" to="." method="_on_exit_game_button_pressed"]
+[connection signal="pressed" from="Panel/resume_game_button" to="." method="_on_resume_game_button_pressed"]
