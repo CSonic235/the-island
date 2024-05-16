@@ -13,7 +13,7 @@ func count_static_attributes(cards: Array[Card], card_id_to_count: int):
 		"fish": 0,
 		"fertile_soil": 0,
 		"infertile_soil": 0
-	}
+	}	
 
 	for card in cards:
 		if card.card_id == card_id_to_count:

@@ -485,6 +485,7 @@
 		"cost": 1,
 		"image_path": "",
 		"in_shop": true,
+		"in_starter":true,
 		"static_attributes": {
 			"attributes": [
 				"day_rest"
@@ -495,7 +496,7 @@
 	{
 		"card_id": 30,
 		"card_name": "lunar eclipse",
-		"card_type": 1,
+		"card_type": 2,
 		"card_description": "Earth's shadow falls on moon, giving it reddish appearance",
 		"rarity": 3,
 		"cost": 1,

@@ -10,6 +10,7 @@ var cost:int
 var card_id:int
 var image_path:String
 var in_shop:bool
+var in_starter:bool
 var times:int
 var action_attributes: Dictionary
 var static_attributes: Dictionary
@@ -22,6 +23,7 @@ func _init(info:Dictionary):
 	rarity = info.get("rarity")
 	cost = info.get("cost")
 	in_shop = info.get("in_shop")
+	in_starter = info.get("in_starter")
 	card_id = info.get("card_id")
 	
 	match card_type:
