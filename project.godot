@@ -23,6 +23,10 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="the island game"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+
 [input]
 
 zoom_in={
