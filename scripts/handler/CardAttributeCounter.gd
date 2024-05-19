@@ -1,8 +1,10 @@
 extends Node
 
+@onready var play_area : play_cards
+
 signal static_attributes_counted(attributes_count: Dictionary)
 
-func count_static_attributes(cards: Array[Card], card_id_to_count: int):
+func count_static_attributes(cards: Array, card_id_to_count: int):
 	var attributes_count = {
 		"cold": 0,
 		"wet": 0,
@@ -26,3 +28,10 @@ func count_static_attributes(cards: Array[Card], card_id_to_count: int):
 
 	emit_signal("static_attributes_counted", attributes_count)
 
+func _ready():
+	var player_hand = play_area.get_hand()	
+	count_static_attributes(player_hand, 1)
+	
+func update_static_attributes(card_id_to_count: int):
+	var player_hand = play_area.get_hand()
+	count_static_attributes(player_hand, card_id_to_count)
