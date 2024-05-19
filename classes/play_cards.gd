@@ -1,8 +1,6 @@
 extends Node
 class_name play_cards
 
-
-
 var cards_in_deck:Array[card] =[]
 var discard_pile:Array[card] =[]
 var hand:Array[card] =[]
