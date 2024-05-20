@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqh11442q8pp"
-path="res://.godot/imported/Waterfull.png-f3bad9d56f44b36bca89e0f4e7e79d93.ctex"
+uid="uid://64bphxss17mm"
+path="res://.godot/imported/Waterfull.png-a2dc0943b32e09eee0e5be0fb7b8b063.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://island_tiles/Waterfull.png"
-dest_files=["res://.godot/imported/Waterfull.png-f3bad9d56f44b36bca89e0f4e7e79d93.ctex"]
+source_file="res://tiles/Waterfull.png"
+dest_files=["res://.godot/imported/Waterfull.png-a2dc0943b32e09eee0e5be0fb7b8b063.ctex"]
 
 [params]
 

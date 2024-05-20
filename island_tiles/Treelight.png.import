@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjwpdw2h0ikxn"
-path="res://.godot/imported/Grass.png-61317a2979cd27dcf668ca92ae865ee7.ctex"
+uid="uid://bg5q30k40ls2u"
+path="res://.godot/imported/Treelight.png-0cccfa8d720576a22283541dc310e33e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/Grass.png"
-dest_files=["res://.godot/imported/Grass.png-61317a2979cd27dcf668ca92ae865ee7.ctex"]
+source_file="res://tiles/Treelight.png"
+dest_files=["res://.godot/imported/Treelight.png-0cccfa8d720576a22283541dc310e33e.ctex"]
 
 [params]
 
