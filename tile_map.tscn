@@ -1,0 +1,110 @@
+[gd_scene load_steps=25 format=3 uid="uid://by4s870bshuxo"]
+
+[ext_resource type="Texture2D" uid="uid://c0j48r4cgq6es" path="res://tiles/Treedark.png" id="1_hw10i"]
+[ext_resource type="Texture2D" uid="uid://cjwpdw2h0ikxn" path="res://tiles/Grass.png" id="1_x4uw1"]
+[ext_resource type="Texture2D" uid="uid://mno161cbuxqg" path="res://tiles/TreeGreen.png" id="2_7tx22"]
+[ext_resource type="Texture2D" uid="uid://comde8ow3vnf5" path="res://tiles/flower.png" id="2_41asn"]
+[ext_resource type="Texture2D" uid="uid://d1m8q6jj5kuyg" path="res://tiles/Grassfull.png" id="2_uxrxn"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="3_as2ud"]
+[ext_resource type="Texture2D" uid="uid://cr3dquefyrfqg" path="res://tiles/TreeOrange.png" id="3_j2215"]
+[ext_resource type="Texture2D" uid="uid://dntbtgp1efhtu" path="res://tiles/rock2.png" id="4_7sckr"]
+[ext_resource type="Texture2D" uid="uid://dcvei2hj8r64a" path="res://tiles/Ground.png" id="5_rv0fl"]
+[ext_resource type="Texture2D" uid="uid://64bphxss17mm" path="res://tiles/Waterfull.png" id="6_dxctw"]
+[ext_resource type="Texture2D" uid="uid://bfucdpb7ylq8c" path="res://tiles/Water.png" id="7_l7bpj"]
+[ext_resource type="Texture2D" uid="uid://bg5q30k40ls2u" path="res://tiles/Treelight.png" id="11_mslui"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6as3r"]
+texture = ExtResource("1_hw10i")
+margins = Vector2i(12, 12)
+texture_region_size = Vector2i(89, 65)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v1h78"]
+texture = ExtResource("2_7tx22")
+texture_region_size = Vector2i(89, 65)
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cagsv"]
+texture = ExtResource("3_j2215")
+texture_region_size = Vector2i(89, 65)
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei51w"]
+texture = ExtResource("2_41asn")
+texture_region_size = Vector2i(89, 65)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_imgxf"]
+texture = ExtResource("1_x4uw1")
+texture_region_size = Vector2i(89, 65)
+0:0/next_alternative_id = 3
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lidsq"]
+texture = ExtResource("2_uxrxn")
+texture_region_size = Vector2i(89, 65)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m8kmf"]
+texture = ExtResource("4_7sckr")
+margins = Vector2i(17, 16)
+texture_region_size = Vector2i(89, 65)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yff2o"]
+texture = ExtResource("5_rv0fl")
+texture_region_size = Vector2i(89, 65)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ytmeq"]
+texture = ExtResource("6_dxctw")
+texture_region_size = Vector2i(89, 65)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bjauw"]
+texture = ExtResource("7_l7bpj")
+texture_region_size = Vector2i(89, 65)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tq4bi"]
+texture = ExtResource("11_mslui")
+margins = Vector2i(18, 16)
+texture_region_size = Vector2i(89, 65)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_oe5wp"]
+tile_shape = 3
+tile_offset_axis = 1
+tile_size = Vector2i(89, 65)
+sources/3 = SubResource("TileSetAtlasSource_imgxf")
+sources/4 = SubResource("TileSetAtlasSource_lidsq")
+sources/2 = SubResource("TileSetAtlasSource_ei51w")
+sources/6 = SubResource("TileSetAtlasSource_yff2o")
+sources/7 = SubResource("TileSetAtlasSource_ytmeq")
+sources/8 = SubResource("TileSetAtlasSource_bjauw")
+sources/5 = SubResource("TileSetAtlasSource_m8kmf")
+sources/0 = SubResource("TileSetAtlasSource_6as3r")
+sources/1 = SubResource("TileSetAtlasSource_v1h78")
+sources/9 = SubResource("TileSetAtlasSource_tq4bi")
+sources/10 = SubResource("TileSetAtlasSource_cagsv")
+
+[node name="TileMap" type="TileMap"]
+position = Vector2(21, -102)
+rotation = -1.5708
+tile_set = SubResource("TileSet_oe5wp")
+format = 2
+layer_0/name = "Grond"
+layer_0/tile_data = PackedInt32Array(-5, 4, 0, 65531, 4, 0, 131067, 4, 0, 196603, 4, 0, 262139, 4, 0, 327675, 7, 0, 393211, 7, 0, 65532, 4, 0, 131068, 4, 0, 262140, 4, 0, 327676, 4, 0, 393212, 4, 0, 65533, 4, 0, -3, 4, 0, 131069, 4, 0, 196605, 4, 0, 262141, 4, 0, 65534, 4, 0, 131070, 4, 0, -2, 4, 0, 65535, 4, 0, -1, 4, 0, 131071, 4, 0, 196606, 4, 0, 65536, 4, 0, 0, 4, 0, 262142, 4, 0, 196607, 4, 0, 262143, 4, 0, 327678, 4, 0, 327679, 4, 0, 393215, 4, 0, 458751, 4, 0, 524287, 4, 0, 589823, 4, 0, 393214, 4, 0, 327677, 4, 0, 393213, 4, 0, 458750, 4, 0, 524286, 4, 0, 458749, 7, 0, 524285, 7, 0, 589822, 7, 0, 655358, 7, 0, 655359, 7, 0, 458748, 7, 0, 524284, 7, 0, 589821, 7, 0, 589820, 7, 0, 655356, 7, 0, 655357, 7, 0, 196604, 4, 0, 458747, 7, 0, 524283, 7, 0, 589819, 7, 0, 655355, 7, 0, 131072, 4, 0, 196608, 4, 0, 262144, 4, 0, 327680, 4, 0, 262145, 4, 0, 196609, 4, 0, -4, 4, 0, -65539, 4, 0, -65540, 4, 0, -65541, 4, 0, -131075, 4, 0, -65538, 4, 0, -131074, 4, 0, -131076, 4, 0, -131077, 4, 0, -196613, 4, 0, -196611, 4, 0, -196612, 4, 0, 393216, 4, 0, 393217, 4, 0, 327681, 4, 0, 393218, 4, 0, 327682, 4, 0, 262146, 4, 0, 196610, 4, 0, 65538, 4, 0, 131074, 4, 0, 131073, 4, 0, 65537, 4, 0, 2, 4, 0, 1, 4, 0, -65534, 4, 0, -65535, 4, 0, -131070, 4, 0, -131071, 4, 0, -65536, 4, 0, -196606, 4, 0, -196607, 4, 0, -131072, 4, 0, -65537, 4, 0, -131073, 4, 0, -196608, 4, 0, -262143, 4, 0, -262142, 4, 0, -327678, 4, 0, -327679, 4, 0, -393215, 4, 0, -327680, 4, 0, -262144, 4, 0, -196609, 4, 0, -196610, 4, 0, -262145, 4, 0, -327681, 3, 0, -327682, 3, 0, -262146, 3, 0, -262147, 4, 0, -262148, 4, 0, -327683, 4, 0, -327684, 4, 0, -393221, 4, 0, -327686, 4, 0, -327685, 4, 0, -262149, 4, 0, -393214, 4, 0, -458751, 3, 0, -393216, 3, 0, -393217, 3, 0, -393213, 4, 0, -327677, 4, 0, -262141, 4, 0, -196605, 4, 0, -131069, 4, 0, -65533, 4, 0, 3, 4, 0, 65539, 4, 0, 131075, 4, 0, 196611, 4, 0, 262147, 4, 0, 327683, 4, 0, 458754, 4, 0, 458752, 4, 0, -393219, 4, 0, -393218, 3, 0, -458753, 3, 0, -524288, 6, 0, -458752, 3, 0, -524287, 3, 0, -524289, 3, 0, -458754, 3, 0, -524291, 4, 0, -458756, 4, 0, -458755, 4, 0, -393220, 4, 0, -524290, 3, 0, -524292, 4, 0, -524293, 4, 0, -589827, 4, 0, -458758, 4, 0, -458757, 4, 0, -393222, 4, 0, -262150, 4, 0, -196614, 4, 0, -131078, 4, 0, -65542, 4, 0, -6, 4, 0, 65530, 4, 0, 131066, 4, 0, 196602, 7, 0, -458759, 3, 0, -393223, 3, 0, -327687, 3, 0, -262151, 3, 0, -196615, 3, 0, -131079, 3, 0, -65543, 3, 0, -7, 3, 0, 262138, 7, 0, 327674, 7, 0, 393210, 7, 0, 458746, 7, 0, 65529, 8, 0, 131065, 8, 0, 196601, 8, 0, 262137, 8, 0, 327673, 8, 0, 393209, 8, 0, 458745, 8, 0, 524281, 8, 0, 589817, 8, 0, 655353, 8, 0, 524282, 7, 0, 589818, 7, 0, 655354, 7, 0, 589824, 4, 0, 524288, 4, 0, 458753, 4, 0, 524289, 4, 0, 589825, 4, 0, 589826, 4, 0, 524290, 4, 0, 393219, 4, 0, 458755, 4, 0, 524291, 4, 0, 589827, 4, 0, -589828, 4, 0, -589829, 4, 0, -655365, 4, 0, -589830, 4, 0, -524294, 4, 0, -589831, 3, 0, -524295, 3, 0, -589825, 3, 0, -655361, 6, 0, -589826, 3, 0, -655362, 3, 0, -655360, 6, 0, -589824, 6, 0, -655363, 4, 0, -655364, 4, 0, -655366, 4, 0, -655367, 3, 0, -589823, 3, 0, -655359, 3, 0, -458750, 6, 0, -524286, 6, 0, -589822, 6, 0, -524285, 3, 0, -589821, 3, 0, -720895, 4, 0, -720896, 4, 0, -720894, 4, 0, -720893, 4, 0, -655357, 4, 0, -458749, 4, 0, -655358, 4, 0)
+layer_1/name = "other"
+layer_1/tile_data = PackedInt32Array(262140, 2, 0, 327678, 2, 0, 131069, 2, 0, 458750, 2, 0, 65532, 2, 0, 131070, 2, 0, -327679, 2, 0, -196609, 2, 0, 131074, 2, 0, -458757, 2, 0, -262148, 2, 0, -589830, 2, 0, -131078, 2, 0, -327683, 5, 0, 65530, 5, 0, -524292, 5, 0, -262142, 5, 0, 458751, 5, 0, 131071, 5, 0, -262150, 5, 0, 262146, 0, 0, 196609, 9, 0, 262145, 0, 0, 196608, 0, 0, 131072, 9, 0, 1, 0, 0, 65539, 0, 0, 524290, 9, 0, 458753, 0, 0, 393216, 9, 0, -262147, 0, 0, -327685, 9, 0, -458758, 0, 0, 131068, 0, 0, 262144, 9, 0, 393217, 9, 0, 196610, 9, 0, -196614, 9, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+position = Vector2(-243.002, 575.999)
+script = ExtResource("3_as2ud")
