@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr3dquefyrfqg"
-path="res://.godot/imported/TreeOrange.png-7f37487bf54dc041025737006175660c.ctex"
+path="res://.godot/imported/TreeOrange.png-34e4dcc43bbe92bf64dfc21c8f33daaa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/TreeOrange.png"
-dest_files=["res://.godot/imported/TreeOrange.png-7f37487bf54dc041025737006175660c.ctex"]
+source_file="res://island_tiles/TreeOrange.png"
+dest_files=["res://.godot/imported/TreeOrange.png-34e4dcc43bbe92bf64dfc21c8f33daaa.ctex"]
 
 [params]
 

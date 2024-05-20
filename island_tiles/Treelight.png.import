@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bg5q30k40ls2u"
-path="res://.godot/imported/Treelight.png-0cccfa8d720576a22283541dc310e33e.ctex"
+path="res://.godot/imported/Treelight.png-0bc219fba149090e50d02a29f43e327e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/Treelight.png"
-dest_files=["res://.godot/imported/Treelight.png-0cccfa8d720576a22283541dc310e33e.ctex"]
+source_file="res://island_tiles/Treelight.png"
+dest_files=["res://.godot/imported/Treelight.png-0bc219fba149090e50d02a29f43e327e.ctex"]
 
 [params]
 

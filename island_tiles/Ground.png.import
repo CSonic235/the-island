@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcvei2hj8r64a"
-path="res://.godot/imported/Ground.png-66555c1185333a2e0e16d6435d1d08b4.ctex"
+path="res://.godot/imported/Ground.png-3e3057b0a97d59858dcea76073773922.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/Ground.png"
-dest_files=["res://.godot/imported/Ground.png-66555c1185333a2e0e16d6435d1d08b4.ctex"]
+source_file="res://island_tiles/Ground.png"
+dest_files=["res://.godot/imported/Ground.png-3e3057b0a97d59858dcea76073773922.ctex"]
 
 [params]
 

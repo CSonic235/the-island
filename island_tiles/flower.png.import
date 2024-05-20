@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://comde8ow3vnf5"
-path="res://.godot/imported/flower.png-87ee4ec611448a2ceb14b7321146484c.ctex"
+path="res://.godot/imported/flower.png-045ebf23a4ac0e5dbafbff2fe1035477.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/flower.png"
-dest_files=["res://.godot/imported/flower.png-87ee4ec611448a2ceb14b7321146484c.ctex"]
+source_file="res://island_tiles/flower.png"
+dest_files=["res://.godot/imported/flower.png-045ebf23a4ac0e5dbafbff2fe1035477.ctex"]
 
 [params]
 
