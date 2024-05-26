@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6vw554hiwgn0"]
+
+[ext_resource type="Script" path="res://scenes/Objects/tree.gd" id="1_6h3v0"]
+[ext_resource type="Texture2D" uid="uid://mno161cbuxqg" path="res://island_tiles/TreeGreen.png" id="1_tww3c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7jufd"]
+radius = 30.0
+
+[node name="tree" type="AnimatableBody2D"]
+script = ExtResource("1_6h3v0")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(99, 82)
+shape = SubResource("CircleShape2D_7jufd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(98, 83)
+rotation = -1.56778
+scale = Vector2(0.653325, 0.615837)
+texture = ExtResource("1_tww3c")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 98.0
+offset_top = 46.0
+offset_right = 177.0
+offset_bottom = 84.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "Tree"
