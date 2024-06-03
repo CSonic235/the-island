@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://grhe0wg7ev0h"]
+
+[ext_resource type="Texture2D" uid="uid://dboahjl0r1fp7" path="res://temp/temple.png" id="1_7wxsm"]
+[ext_resource type="Script" path="res://scenes/Objects/temple.gd" id="1_qkw1l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0eogr"]
+radius = 30.0
+
+[node name="temple" type="AnimatableBody2D"]
+script = ExtResource("1_qkw1l")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0eogr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.57628e-07, -5.96046e-08)
+rotation = 0.00352955
+scale = Vector2(0.112081, 0.0980038)
+texture = ExtResource("1_7wxsm")
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = -39.0
+offset_right = 79.0
+offset_bottom = -1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 108.0
+offset_bottom = 43.0
+scale = Vector2(0.753549, 0.753549)
+text = "temple"
+metadata/_edit_use_anchors_ = true
+
+[node name="harvest_panel" type="Panel" parent="."]
+offset_left = -12.0
+offset_right = 15.0
+offset_bottom = 17.0
+metadata/_edit_use_anchors_ = true
+
+[node name="harvest percentage" type="RichTextLabel" parent="harvest_panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 49.0
+offset_bottom = 33.0
+scale = Vector2(0.517351, 0.517351)
+text = "100%"
+metadata/_edit_use_anchors_ = true

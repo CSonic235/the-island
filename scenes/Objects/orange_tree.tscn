@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://b01o16neitd3g"]
+
+[ext_resource type="Script" path="res://scenes/Objects/orange_tree.gd" id="1_0mxbd"]
+[ext_resource type="Texture2D" uid="uid://cr3dquefyrfqg" path="res://island_tiles/TreeOrange.png" id="1_xrxv4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kwqdo"]
+radius = 30.0
+
+[node name="orange_tree" type="AnimatableBody2D"]
+script = ExtResource("1_0mxbd")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kwqdo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.77636e-15, 0)
+rotation = -1.56778
+scale = Vector2(0.653325, 0.615837)
+texture = ExtResource("1_xrxv4")
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = -39.0
+offset_right = 79.0
+offset_bottom = -1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 12.0
+offset_right = 92.0
+offset_bottom = 47.0
+scale = Vector2(0.822787, 0.848124)
+text = "Orange Tree"
+
+[node name="harvest_panel" type="Panel" parent="."]
+offset_left = -12.0
+offset_right = 15.0
+offset_bottom = 17.0
+
+[node name="harvest percentage" type="RichTextLabel" parent="harvest_panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 49.0
+offset_bottom = 33.0
+scale = Vector2(0.517351, 0.517351)
+text = "100%"

@@ -2,21 +2,21 @@ extends GameObject
 
 
 func _ready():
-	$Panel.hide()
-	$harvest_panel.hide()
-	type  =object_type.ROCK
+	
+	print("is tree")
+	type  =object_type.TREE
 	resource_amount = 5
-	harvest_type = "rock"
-	time_to_harvest = 20.0
+	print(resource_amount)
 	$Panel.hide()
 	is_collidable = true
+	$harvest_panel.hide()
+	time_to_harvest = 20.0
 	super()
 
 func display_info():
 	$Panel.show()
 func hide_info():
 	$Panel.hide()
-
 func display_harvest_percentage():
 	$harvest_panel.show()
 	var percentage_text_box:RichTextLabel = get_node("harvest_panel/harvest percentage")

@@ -4,12 +4,12 @@ extends GameObject
 func _ready():
 	$Panel.hide()
 	$harvest_panel.hide()
-	type  =object_type.ROCK
-	resource_amount = 5
-	harvest_type = "rock"
-	time_to_harvest = 20.0
+	type  =object_type.TREE
+	resource_amount = 3
+	harvest_type = "Apple"
 	$Panel.hide()
 	is_collidable = true
+	time_to_harvest = 20.0
 	super()
 
 func display_info():

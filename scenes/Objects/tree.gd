@@ -9,8 +9,10 @@ func _ready():
 	print(resource_amount)
 	$Panel.hide()
 	is_collidable = true
-	super()
 	$harvest_panel.hide()
+	time_to_harvest = 15.0
+	super()
+
 func display_info():
 	$Panel.show()
 func hide_info():

@@ -2,7 +2,7 @@ extends AnimatableBody2D
 class_name GameObject
 var resource_amount:int
 var is_harvestable:bool
-enum object_type  {TREE,ROCK,BUSH}
+enum object_type  {TREE,ROCK,BUSH,FLOWER,WELL,TEMPLE}
 var type:object_type
 var harvest_type:String
 var is_collidable:bool = true
@@ -43,10 +43,10 @@ func display_info():
 func hide_info():
 	#"abstract method does nothing unless overrided(gdscript does not have interfaces)"
 	pass
+func display_harvest_percentage():
+	#"abstract method does nothing unless overrided(gdscript does not have interfaces)"
+	pass
 
 func harvest():
 	harvesting = true
 
-func display_harvest_percentage():
-	#"abstract method does nothing unless overrided(gdscript does not have interfaces)"
-	pass

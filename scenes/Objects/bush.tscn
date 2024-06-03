@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3rrybext1mww"]
 
 [ext_resource type="Script" path="res://scenes/Objects/bush.gd" id="1_sw6o5"]
-[ext_resource type="Texture2D" uid="uid://comde8ow3vnf5" path="res://island_tiles/flower.png" id="2_pq600"]
+[ext_resource type="Texture2D" uid="uid://dxrrkb3uf3esx" path="res://temp/Berry_Bush.png" id="2_5wta3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lgi7t"]
 radius = 30.0
@@ -13,10 +13,10 @@ script = ExtResource("1_sw6o5")
 shape = SubResource("CircleShape2D_lgi7t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(3.48154, 5.09001)
-rotation = -1.56778
-scale = Vector2(0.767471, 0.723433)
-texture = ExtResource("2_pq600")
+position = Vector2(1.19209e-07, 4.76837e-07)
+rotation = -3.13645
+scale = Vector2(-0.0843605, -0.0822594)
+texture = ExtResource("2_5wta3")
 
 [node name="Panel" type="Panel" parent="."]
 offset_top = -39.0

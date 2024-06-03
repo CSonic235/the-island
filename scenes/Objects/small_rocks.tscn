@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://wy5bihai4ist"]
+
+[ext_resource type="Script" path="res://scenes/Objects/small_rocks.gd" id="1_5bavq"]
+[ext_resource type="Texture2D" uid="uid://dntbtgp1efhtu" path="res://island_tiles/rock2.png" id="1_7p6xi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m2drs"]
+radius = 30.0
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+script = ExtResource("1_5bavq")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_m2drs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-9, -10)
+rotation = -1.57097
+scale = Vector2(0.457112, 0.433808)
+texture = ExtResource("1_7p6xi")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-21.8837, 43.7941)
+texture = ExtResource("1_7p6xi")
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = -39.0
+offset_right = 79.0
+offset_bottom = -1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 109.0
+offset_bottom = 35.0
+scale = Vector2(0.706197, 0.704208)
+text = "Small Rocks"
+
+[node name="harvest_panel" type="Panel" parent="."]
+offset_left = -12.0
+offset_right = 15.0
+offset_bottom = 17.0
+
+[node name="harvest percentage" type="RichTextLabel" parent="harvest_panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 49.0
+offset_bottom = 33.0
+scale = Vector2(0.517351, 0.517351)
+text = "100%"

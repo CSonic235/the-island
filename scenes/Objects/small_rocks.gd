@@ -5,9 +5,9 @@ func _ready():
 	$Panel.hide()
 	$harvest_panel.hide()
 	type  =object_type.ROCK
-	resource_amount = 5
+	resource_amount = 2
 	harvest_type = "rock"
-	time_to_harvest = 20.0
+	time_to_harvest = 10.0
 	$Panel.hide()
 	is_collidable = true
 	super()

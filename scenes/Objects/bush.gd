@@ -5,11 +5,12 @@ func _ready():
 	$Panel.hide()
 	$harvest_panel.hide()
 	type  =object_type.BUSH
-	resource_amount = 3
+	resource_amount = 5
 	harvest_type = "berry"
 	$Panel.hide()
 	is_collidable = true
 	super()
+	time_to_harvest = 10.0
 
 func display_info():
 	$Panel.show()
