@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://48g0lc1824ah" path="res://UI_assets/button3.png" id="6_nlxd7"]
 [ext_resource type="Script" path="res://game_map/daynightcycle.gd" id="7_wlesv"]
 [ext_resource type="PackedScene" uid="uid://qyxd0t3xor3t" path="res://tilemap.tscn" id="9_a1sfs"]
+[ext_resource type="Script" path="res://scripts/handler/ObjectHandler.gd" id="12_lts7c"]
 [ext_resource type="Texture2D" uid="uid://6waalodhist2" path="res://UI_assets/time_frame.png" id="13_hfi8k"]
 [ext_resource type="Texture2D" uid="uid://euwp2riicjwe" path="res://UI_assets/moon.png" id="14_ysmr3"]
 [ext_resource type="Texture2D" uid="uid://cfs7x0rs3snh3" path="res://UI_assets/sun_icon.png" id="15_dr0mg"]
@@ -169,7 +170,9 @@ script = ExtResource("6_f3l8h")
 
 [node name="TileMap" parent="." instance=ExtResource("9_a1sfs")]
 
-[connection signal="pressed" from="Camera2D/UI/DrawCardButton" to="cards_handler" method="_on_draw_pressed"]
+[node name="ObjectHandler" type="Node" parent="."]
+script = ExtResource("12_lts7c")
+
 [connection signal="pressed" from="Camera2D/UI/show_hand_button" to="Camera2D/UI" method="_on_button_pressed"]
 [connection signal="pressed" from="Camera2D/UI/next_day_button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Camera2D/UI/show_discard_button" to="Camera2D/UI/discard_pile" method="_on_show_discard_button_pressed"]
