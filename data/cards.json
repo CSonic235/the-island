@@ -538,5 +538,281 @@
 			],
 			"resource_gain": 0
 		}
+	},
+	{
+		"card_id": 31,
+		"card_name": "Purify",
+		"card_type": 0,
+		"card_description": "Remove all negative conditions from a survivor.",
+		"rarity": 0,
+		"cost": 1,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter":true,
+		"static_attributes": {
+			"attributes": [
+			],
+			"resource_gain": 0
+		}
+	},
+	{
+		"card_id": 32,
+		"card_name": "Distract",
+		"card_type": 0,
+		"card_description": "survivor wander around for no reason for 1 day",
+		"rarity": 0,
+		"cost": 1,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter":true,
+		"static_attributes": {
+			"attributes": [
+			],
+			"resource_gain": 0
+		}
+	},
+	{
+		"card_id": 33,
+		"card_name": "starv",
+		"card_type": 0,
+		"card_description": "surivior consume food non stop",
+		"rarity": 0,
+		"cost": 1,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter":true,
+		"static_attributes": {
+			"attributes": [
+			],
+			"resource_gain": 0
+		}
+	},
+	{
+		"card_id": 34,
+		"card_name": "starv",
+		"card_type": 0,
+		"card_description": "surivior consume food non stop",
+		"rarity": 0,
+		"cost": 1,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter":true,
+		"static_attributes": {
+			"attributes": [
+			],
+			"resource_gain": 0
+		}
+	},
+	{
+		"card_id": 35,
+		"card_name": "Mental breakdown ",
+		"card_type": 0,
+		"card_description": "surivior sleep and do nothing ",
+		"rarity": 0,
+		"cost": 1,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter":true,
+		"static_attributes": {
+			"attributes": [
+			],
+			"resource_gain": 0
+		}
+	},
+	{
+		"card_id": 36,
+		"card_name": "Mental breakdown ",
+		"card_type": 0,
+		"card_description": "surivior sleep and do nothing ",
+		"rarity": 0,
+		"cost": 1,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter":true,
+		"static_attributes": {
+			"attributes": [
+			],
+			"resource_gain": 0
+		}
+	},
+	{
+		"card_id": 37,
+		"card_name": "Resource Surge",
+		"card_type": 2,
+		"card_description": "An abundance of resources is found on the island.",
+		"rarity": 0,
+		"cost": 2,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter": true,
+		"static_attributes": {
+			"attributes": ["resource_boost"],
+			"resource_gain": 5
+		}
+	},
+	{
+		"card_id": 38,
+		"card_name": "Drought",
+		"card_type": 2,
+		"card_description": "Water dry up, affecting the survivors.",
+		"rarity": 1,
+		"cost": 2,
+		"image_path": "",
+		"in_shop": false,
+		"in_starter": true,
+		"static_attributes": {
+			"attributes": ["drought"],
+			"resource_gain":0
+		}
+	},
+	{
+		"card_id": 39,
+		"card_name": "Wildfire",
+		"card_type": 2,
+		"card_description": "A wildfire spreads across the island, burning vegetation.",
+		"rarity": 2,
+		"cost": 3,
+		"image_path": "",
+		"in_shop": false,
+		"in_starter": true,
+		"static_attributes": {
+			"attributes": ["wildfire"],
+			"resource_gain": 0
+		}
+	},
+	{
+		"card_id": 40,
+		"card_name": "Meteor Shower",
+		"card_type": 2,
+		"card_description": "Meteors rain down on the island, causing chaos.",
+		"rarity": 2,
+		"cost": 4,
+		"image_path": "",
+		"in_shop": false,
+		"in_starter": true,
+		"static_attributes": {
+			"attributes": ["meteor_shower"],
+			"resource_gain": 0
+		}
+	},
+	{
+		"card_id": 41,
+		"card_name": "Disease Outbreak",
+		"card_type": 0,
+		"card_description": "A contagious disease spreads among the survivors, reducing their health over time.",
+		"rarity": 3,
+		"cost": 4,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter": true,
+		"action_attributes": {
+			"affects_survivors": {
+				"condition": "Disease",
+				"duration": 30
+			},
+			"target": "all_survivors"
+		}
+	},
+	{
+		"card_id": 42,
+		"card_name": "Tsunami",
+		"card_type": 2,
+		"card_description": "A giant wave crashes onto the shore, destroying structures.",
+		"rarity": 3,
+		"cost": 5,
+		"image_path": "",
+		"in_shop": false,
+		"in_starter": true,
+		"static_attributes": {
+			"attributes": ["tsunami"],
+			"resource_gain": 3
+		}
+	},
+	{
+		"card_id": 43,
+		"card_name": "Earthquake",
+		"card_type": 2,
+		"card_description": "A powerful earthquake shakes the island, causing damage.",
+		"rarity": 2,
+		"cost": 4,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter": true,
+		"static_attributes": {
+			"attributes": ["earthquake"],
+			"resource_gain": 0
+		}
+	},
+	{
+		"card_id": 44,
+		"card_name": "Sandstorm",
+		"card_type": 2,
+		"card_description": "A severe sandstorm reduces visibility and affects movement.",
+		"rarity": 0,
+		"cost": 2,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter": true,
+		"static_attributes": {
+			"attributes": ["sandstorm"],
+			"resource_gain": 0
+		}
+	},
+	{
+		"card_id": 45,
+		"card_name": "Sandstorm",
+		"card_type": 2,
+		"card_description": "A sandstorm reduces visibility and slows down survivors' movements.",
+		"rarity": 1,
+		"cost": 3,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter": true,
+		"action_attributes": {
+			"affects_world": {
+				"area_effect": "Sandstorm",
+				"target": "area",
+				"duration": 20
+			},
+			"target": "survivors",
+			"movement_penalty": "high"
+		}
+	},
+	{
+		"card_id": 46,
+		"card_name": "Food Spoilage",
+		"card_type": 0,
+		"card_description": "A significant portion of the food supply spoils, reducing available rations.",
+		"rarity": 2,
+		"cost": 2,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter": true,
+		"action_attributes": {
+			"affects_resources": {
+				"resource_loss": 10,
+				"target": "food"
+			},
+			"target": "resources"
+		}
+	},
+	{
+		"card_id": 47,
+		"card_name": "Faith",
+		"card_type": 2,
+		"card_description": "All survivors gain increased movement speed for one day.",
+		"rarity": 2,
+		"cost": 0,
+		"image_path": "",
+		"in_shop": true,
+		"in_starter": true,
+		"action_attributes": {
+		"affects_survivors": {
+			"movement_speed_bonus": 1.5,
+			"duration": 10,
+			"target": "all_survivors"
+		},
+		"target": "survivors"
+	}
 	}
 ]

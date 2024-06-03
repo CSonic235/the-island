@@ -53,6 +53,7 @@ func _on_affects_world(d:Dictionary):
 	print("signal recieved",d)
 	card_effect.emit(d)
 	print("signal sent")
+
 func create_possible_cards():
 	var file = "res://data/cards.json"
 	var json_as_text = FileAccess.get_file_as_string(file)
