@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://game_map/game_map.gd" id="1_dvoc4"]
 [ext_resource type="Script" path="res://scripts/handler/SurvivorHandler.gd" id="2_gxx8l"]
 [ext_resource type="Script" path="res://game_map/Camera2D.gd" id="3_nrnae"]
-[ext_resource type="Script" path="res://game_map/UI.gd" id="4_x7lqh"]
+[ext_resource type="Script" path="res://UI/UI.gd" id="4_x7lqh"]
 [ext_resource type="PackedScene" uid="uid://cq0vs6kvkt1lu" path="res://scenes/CardHand/card_hand.tscn" id="5_mx8n8"]
 [ext_resource type="Script" path="res://scripts/handler/cards_handler.gd" id="5_vwk5h"]
 
