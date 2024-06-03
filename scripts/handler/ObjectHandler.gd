@@ -16,7 +16,8 @@ func _ready():
 		var y_position:int = rng.randi_range ( -3000, 3000)
 		var position = (Vector2(x_position, y_position))
 		var map_coordinates = map.local_to_map(position)
-		if map_coordinates not in spawn_objects:
+		var tile_is_not_water:bool = map.get_cell_source_id(0,map_coordinates) !=3 #to make sure no spwans are on top of a water cell
+		if map_coordinates not in spawn_objects and tile_is_not_water:
 			spawn_objects.append(map_coordinates)
 			self.add_child(object_instance)
 			object_instance.set_position( map.map_to_local ( map_coordinates )   )
