@@ -48,10 +48,12 @@ var current_task: Task = null
 func _ready():
     input_pickable = true
     $AnimatedSprite2D.play("front_idle")
-    
-    # Load the goals from the goals script
-    goals = GoalsScript.goals
-    pass # Replace with function body.
+
+    # Instance and load the goals from the goals script
+    var goals_instance = GoalsScript.new()
+    add_child(goals_instance)
+    goals_instance._ready()  # Manually call _ready to ensure goals are set up
+    goals = goals_instance.goals
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -176,7 +178,7 @@ func evaluate_goals():
         return
 
     # Sort goals by priority (higher priority first)
-    goals.sort_custom(self, "_compare_goals")
+    goals.sort_custom(Callable(self, "_compare_goals"))
     current_goal = goals[0]
     select_next_task()
 

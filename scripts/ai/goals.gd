@@ -1,11 +1,12 @@
 extends Node
 
 # Import the task and goal scripts
-const FishingTask = preload("res://scripts/ai/fishing_task.gd")
+const FishingTaskScript = preload("res://scripts/ai/fishing_task.gd")
 
 # Define a list of goals
 var goals: Array = []
 
 # Initialize the goals
 func _ready():
-    goals.append(FishingTask.gather_food_goal)
+    var fishing_task_instance = FishingTaskScript.new()
+    goals.append(fishing_task_instance.gather_food_goal)
