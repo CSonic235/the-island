@@ -1,7 +1,11 @@
 extends Resource
 class_name Task
 
-func _init(name: String, prerequisites: Array, action: Callable):
-    self.name = name
-    self.prerequisites = prerequisites
-    self.action = action
+@export var task_name: String
+@export var prerequisites: Array = []
+@export var action: Callable
+
+func initialize(task_name: String, prerequisites_list: Array, task_action: Callable):
+    self.task_name = task_name
+    self.prerequisites = prerequisites_list
+    self.action = task_action

@@ -1,7 +1,7 @@
 [gd_scene load_steps=45 format=3 uid="uid://c83u3nmc43dyc"]
 
 [ext_resource type="Texture2D" uid="uid://dy5ae5nblht7g" path="res://temp/player.png" id="1_p508p"]
-[ext_resource type="Script" path="res://scripts/survivor.gd" id="1_s245k"]
+[ext_resource type="Script" path="res://scripts/ai/survivor.gd" id="1_s245k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lkpl3"]
 radius = 13.0384
