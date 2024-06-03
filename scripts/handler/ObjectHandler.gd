@@ -16,11 +16,10 @@ func _ready():
 		var y_position:int = rng.randi_range ( -3000, 3000)
 		var position = (Vector2(x_position, y_position))
 		var map_coordinates = map.local_to_map(position)
-		spawn_objects.append(map_coordinates)
-		print(map.local_to_map(Vector2(x_position, y_position)))
-		self.add_child(object_instance)
-		object_instance.set_position( Vector2(x_position, y_position)   )
-	load_all_objects()
+		if map_coordinates not in spawn_objects:
+			spawn_objects.append(map_coordinates)
+			self.add_child(object_instance)
+			object_instance.set_position( map.map_to_local ( map_coordinates )   )
 
 func load_all_objects():
 	var file = "res://scenes/Objects/all_objects.json"
