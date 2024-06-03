@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://byspa4s7forer"]
+[gd_scene load_steps=17 format=3 uid="uid://byspa4s7forer"]
 
 [ext_resource type="Script" path="res://game_map/game_map.gd" id="1_dvoc4"]
 [ext_resource type="Script" path="res://scripts/handler/SurvivorHandler.gd" id="2_gxx8l"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cq0vs6kvkt1lu"]
 
 [ext_resource type="Script" path="res://scenes/CardHand/card_hand.gd" id="1_cd4ui"]
-[ext_resource type="Texture2D" uid="uid://bytn48v8hh0ng" path="res://UI assets/frame.png" id="2_kp4hp"]
+[ext_resource type="Texture2D" uid="uid://bytn48v8hh0ng" path="res://UI_assets/frame.png" id="2_kp4hp"]
 [ext_resource type="PackedScene" uid="uid://b0pkhpj3p5oos" path="res://scenes/CardHand/card.tscn" id="2_pknc3"]
 
 [node name="CardHand" type="Control"]
