@@ -1,33 +1,43 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0hliweytvvps"]
+[gd_scene load_steps=5 format=3 uid="uid://b0hliweytvvps"]
 
 [ext_resource type="Script" path="res://UI/mainMenuSettings.gd" id="1_bk1b8"]
+[ext_resource type="Texture2D" uid="uid://48g0lc1824ah" path="res://UI_assets/button3.png" id="2_aj1p8"]
+[ext_resource type="Texture2D" uid="uid://ca613ldrstsef" path="res://UI_assets/frame_small.png" id="2_n554n"]
+[ext_resource type="Texture2D" uid="uid://l5o0gb2u01aa" path="res://UI_assets/button3_pressed.png" id="4_517ft"]
 
 [node name="Panel" type="Panel"]
-offset_left = 263.0
-offset_top = 2.0
-offset_right = 384.0
-offset_bottom = 119.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 262.0
+offset_top = 54.0
+offset_right = 375.0
+offset_bottom = 156.0
 scale = Vector2(5.48053, 5.48053)
 script = ExtResource("1_bk1b8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -2.00711
+offset_top = -2.91943
+offset_right = 113.993
+offset_bottom = 104.081
+texture = ExtResource("2_n554n")
+expand_mode = 1
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = -0.901734
-offset_top = 3.19706
-offset_right = -0.901734
-offset_bottom = 3.19705
+offset_left = -7.28798
+offset_top = 5.56909
+offset_right = -7.28798
+offset_bottom = 5.56908
 grow_vertical = 2
 
 [node name="OptionButton" type="OptionButton" parent="Control"]
 layout_mode = 0
-offset_left = 96.513
-offset_top = 25.9972
-offset_right = 151.513
-offset_bottom = 56.9972
+offset_left = 93.776
+offset_top = 27.4569
+offset_right = 148.776
+offset_bottom = 58.4569
 scale = Vector2(0.403629, 0.42462)
 item_count = 7
 popup/item_0/text = "1"
@@ -47,44 +57,52 @@ popup/item_6/id = 6
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
-offset_left = 3.27377
-offset_top = 23.8076
-offset_right = 520.274
-offset_bottom = 165.808
+offset_left = 8.01783
+offset_top = 28.3692
+offset_right = 525.018
+offset_bottom = 170.369
 scale = Vector2(0.155471, 0.155471)
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
 text = "Number of survivors"
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="TextureButton" parent="."]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -96.0024
-offset_top = -26.3153
-offset_right = 173.998
-offset_bottom = 50.6847
-grow_horizontal = 0
-grow_vertical = 0
+offset_left = 29.1943
+offset_top = 73.7155
+offset_right = 117.194
+offset_bottom = 32.7155
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.282934, 0.282934)
-theme_override_font_sizes/font_size = 50
-text = "start game"
+texture_normal = ExtResource("2_aj1p8")
+texture_pressed = ExtResource("4_517ft")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 31.7927
+offset_top = 11.9849
+offset_right = 141.792
+offset_bottom = 34.9849
+scale = Vector2(1.4, 1.4)
+text = "Start Game"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -31.3057
-offset_right = 197.694
-offset_bottom = 83.0
+offset_left = -25.8389
+offset_top = 3.10189
+offset_right = 207.161
+offset_bottom = 86.1019
 grow_horizontal = 2
 scale = Vector2(0.245447, 0.245447)
 theme_override_font_sizes/normal_font_size = 60
-text = "settings"
+text = "Settings"
 fit_content = true
 autowrap_mode = 0
 

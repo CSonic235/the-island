@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://bixl7prdj6orh" path="res://temp/banana_tree.png" id="1_37uvu"]
 [ext_resource type="Script" path="res://scenes/Objects/banana_tree.gd" id="2_bvfts"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_v1ilv"]
-radius = 30.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l7keo"]
+size = Vector2(60, 60)
 
 [node name="banana_tree" type="AnimatableBody2D"]
 script = ExtResource("2_bvfts")
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_v1ilv")
+shape = SubResource("RectangleShape2D_l7keo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3.57628e-07, -5.96046e-08)

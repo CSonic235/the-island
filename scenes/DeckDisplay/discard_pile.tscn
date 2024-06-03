@@ -1,35 +1,56 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciqg2mbqappu6"]
+[gd_scene load_steps=4 format=3 uid="uid://ciqg2mbqappu6"]
 
 [ext_resource type="Script" path="res://scenes/DeckDisplay/discard_pile.gd" id="1_716bx"]
+[ext_resource type="Texture2D" uid="uid://bv3k6gw3lpubk" path="res://UI_assets/frame_big.png" id="2_vm4r4"]
+[ext_resource type="Texture2D" uid="uid://vg4yvb5t57c1" path="res://UI_assets/button2.png" id="3_rptti"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 329.0
-offset_bottom = 439.0
+offset_left = -21.0
+offset_top = -6.0
+offset_right = 308.0
+offset_bottom = 433.0
 script = ExtResource("1_716bx")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 2.0
-offset_right = 327.0
-offset_bottom = 435.0
+offset_left = 24.0
+offset_top = 7.0
+offset_right = 928.0
+offset_bottom = 643.0
+texture = ExtResource("2_vm4r4")
 
 [node name="display" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
-offset_left = 47.0
-offset_top = 39.0
-offset_right = 284.0
-offset_bottom = 409.0
-text = "asasdadasdadasd"
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="Panel"]
+[node name="BoxContainer" type="BoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.977
+anchor_bottom = 0.85
+offset_left = 29.0
+offset_top = 26.0
+offset_right = -13.3361
+offset_bottom = 4.0
+
+[node name="Button" type="TextureButton" parent="Panel"]
 layout_mode = 0
-offset_left = 274.0
-offset_top = 5.0
-offset_right = 323.0
-offset_bottom = 36.0
-text = "hide"
+offset_left = 730.0
+offset_top = 552.0
+offset_right = 843.0
+offset_bottom = 592.0
+texture_normal = ExtResource("3_rptti")
+
+[node name="Label" type="Label" parent="Panel/Button"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 6.0
+offset_right = 74.0
+offset_bottom = 29.0
+scale = Vector2(1.2, 1.2)
+text = "Close"
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

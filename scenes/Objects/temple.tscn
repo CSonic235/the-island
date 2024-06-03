@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://dboahjl0r1fp7" path="res://temp/temple.png" id="1_7wxsm"]
 [ext_resource type="Script" path="res://scenes/Objects/temple.gd" id="1_qkw1l"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0eogr"]
-radius = 30.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2v25"]
+size = Vector2(60, 60)
 
 [node name="temple" type="AnimatableBody2D"]
 script = ExtResource("1_qkw1l")
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_0eogr")
+shape = SubResource("RectangleShape2D_s2v25")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3.57628e-07, -5.96046e-08)

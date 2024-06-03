@@ -1,0 +1,108 @@
+[gd_scene load_steps=5 format=3 uid="uid://dckdfdkkya34a"]
+
+[ext_resource type="Script" path="res://scenes/DeckDisplay/dis_card.gd" id="1_ay0gp"]
+[ext_resource type="Texture2D" uid="uid://drhplkb7xqjb6" path="res://UI assets/card_frame.png" id="2_s1apo"]
+[ext_resource type="Texture2D" uid="uid://csj4807inqm0h" path="res://icon.svg" id="2_xhjr4"]
+[ext_resource type="Texture2D" uid="uid://vg4yvb5t57c1" path="res://UI assets/button2.png" id="4_30cuw"]
+
+[node name="DeckCard" type="Node2D"]
+position = Vector2(128, 119)
+scale = Vector2(8.23813, 8.83873)
+script = ExtResource("1_ay0gp")
+
+[node name="label" type="Label" parent="."]
+offset_left = -8.49708
+offset_top = -2.60218
+offset_right = 47.5029
+offset_bottom = 20.3978
+scale = Vector2(0.294212, 0.294212)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "In deck"
+metadata/_edit_use_anchors_ = true
+
+[node name="color" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(20, 20)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.9439
+offset_top = -13.9346
+offset_right = 11.0561
+offset_bottom = 14.0654
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s1apo")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="card_name" type="RichTextLabel" parent="color"]
+layout_mode = 0
+offset_left = 1.99018
+offset_top = 0.24485
+offset_right = 90.9902
+offset_bottom = 17.2449
+scale = Vector2(0.246575, 0.246575)
+theme_override_font_sizes/normal_font_size = 12
+text = "card_name"
+scroll_active = false
+autowrap_mode = 0
+tab_size = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxContainer" type="BoxContainer" parent="color"]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 23.0
+offset_bottom = 22.0
+metadata/_edit_use_anchors_ = true
+
+[node name="card_art" type="Sprite2D" parent="color/BoxContainer"]
+position = Vector2(11.1912, 7.40437)
+rotation = 3.14159
+scale = Vector2(0.163652, -0.110977)
+texture = ExtResource("2_xhjr4")
+
+[node name="ColorRect" type="ColorRect" parent="color"]
+layout_mode = 0
+offset_left = 1.74741
+offset_top = 18.6864
+offset_right = 24.7474
+offset_bottom = 28.6864
+scale = Vector2(0.863577, 0.863577)
+color = Color(0.439216, 0.54902, 0.886275, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="card_description" type="RichTextLabel" parent="color/ColorRect"]
+layout_mode = 0
+offset_left = 1.68675
+offset_top = 0.524061
+offset_right = 188.686
+offset_bottom = 82.5241
+scale = Vector2(0.112387, 0.112387)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "card description"
+tab_size = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="add_button" type="TextureButton" parent="."]
+offset_left = -7.89014
+offset_top = 13.8029
+offset_right = 117.11
+offset_bottom = 53.8029
+scale = Vector2(0.12, 0.12)
+texture_normal = ExtResource("4_30cuw")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="add_button"]
+layout_mode = 0
+offset_left = 7.28321
+offset_top = 7.54256
+offset_right = 127.283
+offset_bottom = 30.5426
+text = "Add into Hand"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="add_button" to="." method="_on_button_pressed"]

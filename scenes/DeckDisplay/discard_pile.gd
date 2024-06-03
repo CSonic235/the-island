@@ -1,8 +1,19 @@
 extends Control
+
 @onready var display_text = $Panel/display
+var dis_card = preload("res://scenes/DeckDisplay/dis_card.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
+	var cards_data = create_possible_cards()
+	for x in range(2):
+		for n in range(3):
+			var card_to_add:card = pick_a_card(cards_data)
+			var card_instance = dis_card.instantiate()
+			card_instance.update_card_info(card_to_add)
+			card_instance.move_local_x(n*220) 
+			card_instance.move_local_y(x*290+10) 
+			self.add_child(card_instance)
 	hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

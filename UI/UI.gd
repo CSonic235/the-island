@@ -36,9 +36,14 @@ func _on_button_pressed():
 	if hand_showed:
 		hand.hide()
 		hand_showed = false
-		$show_hand_button.text = "Show Hand"
+		$show_hand_button/Label.text = "Show Hand"
+		$DrawCardButton.hide()
+		$DrawCardButton/Label.hide()
 		
 	else:
 		hand.show()
 		hand_showed = true
-		$show_hand_button.text = "Hide Hand"
+		$show_hand_button/Label.text = "Hide Hand"
+		$DrawCardButton.show()
+		$DrawCardButton/Label.show()
+		

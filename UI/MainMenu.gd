@@ -18,3 +18,6 @@ func _on_button_pressed():
 		has_window = true
 		settings_window.show()
 		
+
+func _on_exitbutton_pressed():
+	get_tree().quit()

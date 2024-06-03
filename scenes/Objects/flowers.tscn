@@ -3,14 +3,14 @@
 [ext_resource type="Script" path="res://scenes/Objects/flowers.gd" id="1_32i2b"]
 [ext_resource type="Texture2D" uid="uid://comde8ow3vnf5" path="res://island_tiles/flower.png" id="2_y3exi"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xnnje"]
-radius = 30.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8og6g"]
+size = Vector2(60, 60)
 
 [node name="flowers" type="AnimatableBody2D"]
 script = ExtResource("1_32i2b")
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_xnnje")
+shape = SubResource("RectangleShape2D_8og6g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.78381, 0.891907)

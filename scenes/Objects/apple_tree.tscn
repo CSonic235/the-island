@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://brw53fgdpnkk2" path="res://island_tiles/apple tree.png" id="1_i4105"]
 [ext_resource type="Script" path="res://scenes/Objects/apple_tree.gd" id="2_njs82"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_w3rhx"]
-radius = 30.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwoxp"]
+size = Vector2(60, 60)
 
 [node name="apple_tree" type="AnimatableBody2D"]
 script = ExtResource("2_njs82")
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_w3rhx")
+shape = SubResource("RectangleShape2D_bwoxp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 0.00352955
