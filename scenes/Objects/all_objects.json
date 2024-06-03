@@ -1,0 +1,12 @@
+[
+    "res://scenes/Objects/apple_tree.tscn",
+    "res://scenes/Objects/banana_tree.tscn",
+    "res://scenes/Objects/bush.tscn",
+    "res://scenes/Objects/bush.tscn",
+    "res://scenes/Objects/orange_tree.tscn",
+    "res://scenes/Objects/rock.tscn",
+    "res://scenes/Objects/small_rocks.tscn",
+    "res://scenes/Objects/temple.tscn",
+    "res://scenes/Objects/tree.tscn",
+    "res://scenes/Objects/well.tscn"
+]

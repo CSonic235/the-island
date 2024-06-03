@@ -88,10 +88,10 @@ script = ExtResource("5_vwk5h")
 [node name="card_player" type="Node2D" parent="cards_handler"]
 script = ExtResource("6_f3l8h")
 
-[node name="TileMap" parent="." instance=ExtResource("9_a1sfs")]
-
 [node name="ObjectHandler" type="Node" parent="."]
 script = ExtResource("12_lts7c")
+
+[node name="TileMap" parent="ObjectHandler" instance=ExtResource("9_a1sfs")]
 
 [connection signal="pressed" from="Camera2D/UI/show_hand_button" to="Camera2D/UI" method="_on_button_pressed"]
 [connection signal="pressed" from="Camera2D/UI/next_day_button" to="." method="_on_button_pressed"]
