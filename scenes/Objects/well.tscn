@@ -3,14 +3,14 @@
 [ext_resource type="Script" path="res://scenes/Objects/well.gd" id="1_nnhb8"]
 [ext_resource type="Texture2D" uid="uid://bwnr66b22a46o" path="res://temp/well.png" id="1_snwmu"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_l6eh4"]
-radius = 30.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qaag1"]
+size = Vector2(60, 60)
 
 [node name="Well" type="AnimatableBody2D"]
 script = ExtResource("1_nnhb8")
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_l6eh4")
+shape = SubResource("RectangleShape2D_qaag1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3.57628e-07, -5.96046e-08)

@@ -3,14 +3,14 @@
 [ext_resource type="Script" path="res://scenes/Objects/small_rocks.gd" id="1_5bavq"]
 [ext_resource type="Texture2D" uid="uid://dntbtgp1efhtu" path="res://island_tiles/rock2.png" id="1_7p6xi"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_m2drs"]
-radius = 30.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_edabl"]
+size = Vector2(60, 60)
 
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
 script = ExtResource("1_5bavq")
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_m2drs")
+shape = SubResource("RectangleShape2D_edabl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-9, -10)
