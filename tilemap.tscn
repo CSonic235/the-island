@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://qyxd0t3xor3t"]
 
-[ext_resource type="Texture2D" uid="uid://ddfahvw04778e" path="res://island_tiles/Grassfull.png" id="1_ni7ho"]
-[ext_resource type="Texture2D" uid="uid://bcrtg57ufjcp6" path="res://island_tiles/Sandfull.png" id="2_ebqp6"]
-[ext_resource type="Texture2D" uid="uid://bqh11442q8pp" path="res://island_tiles/Waterfull.png" id="3_bv3pp"]
+[ext_resource type="Texture2D" uid="uid://d1m8q6jj5kuyg" path="res://island_tiles/Grassfull.png" id="1_ni7ho"]
+[ext_resource type="Texture2D" uid="uid://b66rs15uqjjuv" path="res://island_tiles/Sandfull.png" id="2_ebqp6"]
+[ext_resource type="Texture2D" uid="uid://64bphxss17mm" path="res://island_tiles/Waterfull.png" id="3_bv3pp"]
 [ext_resource type="Texture2D" uid="uid://2uqseuj0rtsb" path="res://island_tiles/Mountainfull.png" id="4_27td1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xx3m4"]

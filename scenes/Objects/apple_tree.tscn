@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://poyt6mjc12rl"]
+
+[ext_resource type="Texture2D" uid="uid://brw53fgdpnkk2" path="res://island_tiles/apple tree.png" id="1_i4105"]
+[ext_resource type="Script" path="res://scenes/Objects/apple_tree.gd" id="2_njs82"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwoxp"]
+size = Vector2(60, 60)
+
+[node name="apple_tree" type="AnimatableBody2D"]
+script = ExtResource("2_njs82")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bwoxp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.00352955
+scale = Vector2(1.81957, 1.68763)
+texture = ExtResource("1_i4105")
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = -39.0
+offset_right = 79.0
+offset_bottom = -1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 86.0
+offset_bottom = 45.0
+scale = Vector2(0.841903, 0.841903)
+text = "Apple Tree"
+
+[node name="harvest_panel" type="Panel" parent="."]
+offset_left = -12.0
+offset_right = 15.0
+offset_bottom = 17.0
+
+[node name="harvest percentage" type="RichTextLabel" parent="harvest_panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 49.0
+offset_bottom = 33.0
+scale = Vector2(0.517351, 0.517351)
+text = "100%"

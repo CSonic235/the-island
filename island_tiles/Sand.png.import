@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjwpdw2h0ikxn"
-path="res://.godot/imported/Grass.png-5aec58c518a74086f117a6bf6f7a4df4.ctex"
+uid="uid://bvhcke4rkima6"
+path="res://.godot/imported/Sand.png-22f6811c0921b0e1e4d072f2b7951452.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://island_tiles/Grass.png"
-dest_files=["res://.godot/imported/Grass.png-5aec58c518a74086f117a6bf6f7a4df4.ctex"]
+source_file="res://island_tiles/Sand.png"
+dest_files=["res://.godot/imported/Sand.png-22f6811c0921b0e1e4d072f2b7951452.ctex"]
 
 [params]
 

@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://chj573ip1htpl"]
+
+[ext_resource type="Script" path="res://scenes/Objects/flowers.gd" id="1_32i2b"]
+[ext_resource type="Texture2D" uid="uid://comde8ow3vnf5" path="res://island_tiles/flower.png" id="2_y3exi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8og6g"]
+size = Vector2(60, 60)
+
+[node name="flowers" type="AnimatableBody2D"]
+script = ExtResource("1_32i2b")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8og6g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.78381, 0.891907)
+rotation = 0.00352955
+scale = Vector2(0.932038, 0.869419)
+texture = ExtResource("2_y3exi")
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = -39.0
+offset_right = 79.0
+offset_bottom = -1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 86.0
+offset_bottom = 45.0
+scale = Vector2(0.841903, 0.841903)
+text = "Flowers"
+
+[node name="harvest_panel" type="Panel" parent="."]
+offset_left = -12.0
+offset_right = 15.0
+offset_bottom = 17.0
+
+[node name="harvest percentage" type="RichTextLabel" parent="harvest_panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 49.0
+offset_bottom = 33.0
+scale = Vector2(0.517351, 0.517351)
+text = "100%"

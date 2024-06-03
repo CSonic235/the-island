@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://byspa4s7forer"]
+[gd_scene load_steps=13 format=3 uid="uid://byspa4s7forer"]
 
 [ext_resource type="Script" path="res://game_map/game_map.gd" id="1_dvoc4"]
 [ext_resource type="Script" path="res://scripts/handler/SurvivorHandler.gd" id="2_gxx8l"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://scripts/handler/card_player.gd" id="6_f3l8h"]
 [ext_resource type="Script" path="res://classes/daynightcycle.gd" id="7_wlesv"]
 [ext_resource type="PackedScene" uid="uid://qyxd0t3xor3t" path="res://tilemap.tscn" id="9_a1sfs"]
+[ext_resource type="Script" path="res://scripts/handler/ObjectHandler.gd" id="12_lts7c"]
 
 [node name="GameMap" type="Node2D"]
 script = ExtResource("1_dvoc4")
@@ -88,6 +89,9 @@ script = ExtResource("5_vwk5h")
 script = ExtResource("6_f3l8h")
 
 [node name="TileMap" parent="." instance=ExtResource("9_a1sfs")]
+
+[node name="ObjectHandler" type="Node" parent="."]
+script = ExtResource("12_lts7c")
 
 [connection signal="pressed" from="Camera2D/UI/show_hand_button" to="Camera2D/UI" method="_on_button_pressed"]
 [connection signal="pressed" from="Camera2D/UI/next_day_button" to="." method="_on_button_pressed"]

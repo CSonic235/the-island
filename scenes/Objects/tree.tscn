@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6vw554hiwgn0"]
+
+[ext_resource type="Script" path="res://scenes/Objects/tree.gd" id="1_6h3v0"]
+[ext_resource type="Texture2D" uid="uid://mno161cbuxqg" path="res://island_tiles/TreeGreen.png" id="1_tww3c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mijuj"]
+size = Vector2(60, 60)
+
+[node name="tree" type="AnimatableBody2D"]
+collision_layer = 0
+script = ExtResource("1_6h3v0")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mijuj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -7.62939e-06)
+rotation = -1.56778
+scale = Vector2(0.653325, 0.615837)
+texture = ExtResource("1_tww3c")
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = -39.0
+offset_right = 79.0
+offset_bottom = -1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "Tree"
+
+[node name="harvest_panel" type="Panel" parent="."]
+offset_left = -12.0
+offset_right = 15.0
+offset_bottom = 17.0
+
+[node name="harvest percentage" type="RichTextLabel" parent="harvest_panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 49.0
+offset_bottom = 33.0
+scale = Vector2(0.517351, 0.517351)
+text = "100%"

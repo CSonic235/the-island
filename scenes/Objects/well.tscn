@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://4nqd5vtew6iw"]
+
+[ext_resource type="Script" path="res://scenes/Objects/well.gd" id="1_nnhb8"]
+[ext_resource type="Texture2D" uid="uid://bwnr66b22a46o" path="res://temp/well.png" id="1_snwmu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qaag1"]
+size = Vector2(60, 60)
+
+[node name="Well" type="AnimatableBody2D"]
+script = ExtResource("1_nnhb8")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qaag1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.57628e-07, -5.96046e-08)
+rotation = 0.00352955
+scale = Vector2(0.146031, 0.0930531)
+texture = ExtResource("1_snwmu")
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = -39.0
+offset_right = 79.0
+offset_bottom = -1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 86.0
+offset_bottom = 45.0
+scale = Vector2(0.841903, 0.841903)
+text = "Well"
+
+[node name="harvest_panel" type="Panel" parent="."]
+offset_left = -12.0
+offset_right = 15.0
+offset_bottom = 17.0
+
+[node name="harvest percentage" type="RichTextLabel" parent="harvest_panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 49.0
+offset_bottom = 33.0
+scale = Vector2(0.517351, 0.517351)
+text = "100%"
