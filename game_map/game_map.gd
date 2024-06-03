@@ -3,18 +3,20 @@ extends Node2D
 var number_of_survivors:int = 8
 @onready var UI_layer  = $Camera2D/UI
 var time:String
+@onready var day_night_cycle = $Camera2D/World/day_night_cycle
+@onready var night_color = $Camera2D/World/night_color
 @onready var time_label = $Camera2D/UI/Time
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_node("SurvivorHandler").show_survivor_panel.connect(_on_survivor_handler_show_survivor_panel)
 	get_node("cards_handler").card_effect.connect(_on_affects_world)
-	get_node("day_night_cycle").day_ends.connect(_on_day_ended)
+	get_node("Camera2D/World/day_night_cycle").day_ends.connect(_on_day_ended)
 	get_node("cards_handler").cards_changed.connect(_on_card_player_changed)
 	get_node("Camera2D/pause_UI/Game_menu").quit_game.connect(_on_game_quit)
-	
+	night_color.visible = false
 
 func _process(_delta):
-	time = $day_night_cycle.totalgametime()
+	time = day_night_cycle.totalgametime()
 	time_label.text = time
 	
 func set_number_of_survivors(amount:int):
@@ -35,6 +37,10 @@ func _on_affects_world(d:Dictionary):
 	print("signal recieved",d)
 
 func _on_day_ended():
+	if day_night_cycle.get_dayornight():
+		night_color.show()
+	else:
+		night_color.hide()
 	create_shop()
 
 func _on_button_pressed():
@@ -42,7 +48,7 @@ func _on_button_pressed():
 	$cards_handler.night_actions(cards_bought)
 
 	UI_layer.get_node("shop").queue_free()
-	$day_night_cycle.unpause()
+	$Camera2D/World/day_night_cycle.unpause()
 	UI_layer.get_node("next_day_button").hide()
 
 func _on_card_player_changed(cards:play_cards):

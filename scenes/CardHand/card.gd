@@ -1,8 +1,8 @@
 extends Node2D
 
 
-@onready var name_box = $color/card_name
-@onready var description_box = $color/ColorRect/card_description
+@onready var name_box = $CardFrame/card_name
+@onready var description_box = $CardFrame/ColorRect/card_description
 
 var card_name: String = "card_name"
 var description: String = "description"
@@ -32,12 +32,4 @@ func change_display():
 	description_box.clear()
 	description_box.add_text(description)
 	name_box.text = card_name
-
-
-''' func _on_Area2D_mouse_entered():
-	animation_player.play("Select")
-
-
-func _on_Area2D_mouse_exited():
-	animation_player.play("DeSelect") '''
 

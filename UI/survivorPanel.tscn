@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3h3bn2flhts2"]
+[gd_scene load_steps=3 format=3 uid="uid://c3h3bn2flhts2"]
 
 [ext_resource type="Script" path="res://UI/survivorpanel.gd" id="1_xfweo"]
+[ext_resource type="Texture2D" uid="uid://vg4yvb5t57c1" path="res://UI assets/button2.png" id="3_pm701"]
 
 [node name="Control" type="CanvasLayer"]
 
@@ -32,18 +33,27 @@ autowrap_mode = 0
 
 [node name="info" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
-offset_left = 12.5
-offset_top = 148.5
-offset_right = 370.5
-offset_bottom = 482.5
+offset_left = -7.5
+offset_top = 133.5
+offset_right = 350.5
+offset_bottom = 467.5
 
-[node name="Button" type="Button" parent="Panel"]
+[node name="Button" type="TextureButton" parent="Panel"]
 layout_mode = 0
-offset_left = 400.5
-offset_top = 0.5
-offset_right = 417.5
-offset_bottom = 31.5
-scale = Vector2(4.26667, 2.6718)
-text = "x"
+offset_left = 357.5
+offset_top = 7.5
+offset_right = 470.5
+offset_bottom = 47.5
+texture_normal = ExtResource("3_pm701")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Panel/Button"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 7.0
+offset_right = 73.0
+offset_bottom = 30.0
+scale = Vector2(1.2, 1.2)
+text = "Close"
 
 [connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed"]

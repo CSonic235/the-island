@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cq0vs6kvkt1lu"]
+[gd_scene load_steps=4 format=3 uid="uid://cq0vs6kvkt1lu"]
 
 [ext_resource type="Script" path="res://scenes/CardHand/card_hand.gd" id="1_cd4ui"]
+[ext_resource type="Texture2D" uid="uid://bytn48v8hh0ng" path="res://UI assets/frame.png" id="2_kp4hp"]
 [ext_resource type="PackedScene" uid="uid://b0pkhpj3p5oos" path="res://scenes/CardHand/card.tscn" id="2_pknc3"]
 
 [node name="CardHand" type="Control"]
@@ -17,13 +18,19 @@ grow_vertical = 2
 scale = Vector2(1.35022, 1.35022)
 script = ExtResource("1_cd4ui")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 36.2904
+offset_top = -37.031
+offset_right = 36.2904
+offset_bottom = -37.031
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_kp4hp")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -44,29 +51,25 @@ layout_mode = 2
 alignment = 1
 
 [node name="card" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(100, 16)
+position = Vector2(181.733, 12.553)
 scale = Vector2(4, 4)
 
 [node name="card2" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(200, 16)
+position = Vector2(294.307, 11.0718)
 scale = Vector2(4, 4)
 
 [node name="card3" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(300, 16)
+position = Vector2(403.919, 11.8124)
 scale = Vector2(4, 4)
 
 [node name="card4" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(400, 16)
+position = Vector2(508.347, 10.3312)
 scale = Vector2(4, 4)
 
 [node name="card5" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(500, 16)
+position = Vector2(616.477, 11.0718)
 scale = Vector2(4, 4)
 
 [node name="card6" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(600, 16)
-scale = Vector2(4, 4)
-
-[node name="card7" parent="MarginContainer/CardContainer" instance=ExtResource("2_pknc3")]
-position = Vector2(700, 16)
+position = Vector2(720.905, 10.3312)
 scale = Vector2(4, 4)
