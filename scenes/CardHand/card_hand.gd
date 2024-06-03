@@ -5,17 +5,6 @@ var card_scene = preload("res://scenes/CardHand/card.tscn")
 @onready var margin_container = $MarginContainer
 func _ready():
 	update_hand([])
-''' 	var cards_data = create_possible_cards()
-	var cards_in_hand = cards_container.get_children()
-	print(cards_in_hand)
-	for c in cards_in_hand:
-		print(c)
-		var card_to_add: card = pick_a_card(cards_data) 
-		c.update_card_info(card_to_add) '''
-''' 			margin_container.add_child(card_instance)
-			card_position.x += 100 
-			self.add_child(card_instance) '''
-
 
 func pick_a_card(cards_data):
 	var rng = RandomNumberGenerator.new()

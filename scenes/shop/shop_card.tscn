@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxmaml3wms6c"]
+[gd_scene load_steps=5 format=3 uid="uid://bxmaml3wms6c"]
 
 [ext_resource type="Script" path="res://scenes/shop/shop_card.gd" id="1_wu8yf"]
+[ext_resource type="Texture2D" uid="uid://drhplkb7xqjb6" path="res://UI_assets/card_frame.png" id="2_nrgwi"]
 [ext_resource type="Texture2D" uid="uid://csj4807inqm0h" path="res://icon.svg" id="2_ycktv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w442a"]
-size = Vector2(23.0016, 27.9346)
+size = Vector2(21.9401, 26.2994)
 
 [node name="ShopCard" type="Node2D"]
 position = Vector2(128, 119)
@@ -37,7 +38,7 @@ scale = Vector2(0.294212, 0.294212)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "card bought"
 
-[node name="color" type="ColorRect" parent="."]
+[node name="color" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(20, 20)
 anchors_preset = 8
 anchor_left = 0.5
@@ -50,8 +51,8 @@ offset_right = 11.0561
 offset_bottom = 14.0654
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
-color = Color(0.164706, 0.705882, 0.411765, 1)
+texture = ExtResource("2_nrgwi")
+expand_mode = 1
 
 [node name="card_name" type="RichTextLabel" parent="color"]
 layout_mode = 0
@@ -96,6 +97,7 @@ offset_top = 18.6864
 offset_right = 23.7763
 offset_bottom = 28.6864
 scale = Vector2(0.863577, 0.863577)
+color = Color(0.439216, 0.54902, 0.886275, 1)
 
 [node name="card_description" type="RichTextLabel" parent="color/ColorRect"]
 layout_mode = 0
