@@ -4,7 +4,7 @@ class_name DayNightCycle
 signal day_ends
 
 var time_passed = 0
-var one_day_duration = 1
+var one_day_duration = 5
 var is_night = false
 var dayingame=1
 var pause:bool = false
@@ -22,7 +22,7 @@ func _process(delta):
 		if time_passed >= one_day_duration :
 			time_passed = 0
 			dayingame += 1
-			is_night = !is_night 
+			is_night = true
 			pause = true
 			entershop()
 	
@@ -45,4 +45,5 @@ func entershop():
 	day_ends.emit()
 func unpause():
 	pause = false
+	is_night = false
 
