@@ -326,7 +326,6 @@ animations = [{
 
 [node name="Survivor" type="CharacterBody2D"]
 z_index = 1
-position = Vector2(216, 101)
 script = ExtResource("1_s245k")
 
 [node name="survorCollision" type="CollisionShape2D" parent="."]

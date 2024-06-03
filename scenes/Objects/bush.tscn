@@ -1,23 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6vw554hiwgn0"]
+[gd_scene load_steps=4 format=3 uid="uid://c3rrybext1mww"]
 
-[ext_resource type="Script" path="res://scenes/Objects/tree.gd" id="1_6h3v0"]
-[ext_resource type="Texture2D" uid="uid://mno161cbuxqg" path="res://island_tiles/TreeGreen.png" id="1_tww3c"]
+[ext_resource type="Script" path="res://scenes/Objects/bush.gd" id="1_sw6o5"]
+[ext_resource type="Texture2D" uid="uid://comde8ow3vnf5" path="res://island_tiles/flower.png" id="2_pq600"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7jufd"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_lgi7t"]
 radius = 30.0
 
-[node name="tree" type="AnimatableBody2D"]
-collision_layer = 0
-script = ExtResource("1_6h3v0")
+[node name="Node2D" type="AnimatableBody2D"]
+script = ExtResource("1_sw6o5")
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_7jufd")
+shape = SubResource("CircleShape2D_lgi7t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -7.62939e-06)
+position = Vector2(3.48154, 5.09001)
 rotation = -1.56778
-scale = Vector2(0.653325, 0.615837)
-texture = ExtResource("1_tww3c")
+scale = Vector2(0.767471, 0.723433)
+texture = ExtResource("2_pq600")
 
 [node name="Panel" type="Panel" parent="."]
 offset_top = -39.0
@@ -28,7 +27,7 @@ offset_bottom = -1.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-text = "Tree"
+text = "Bush"
 
 [node name="harvest_panel" type="Panel" parent="."]
 offset_left = -12.0
