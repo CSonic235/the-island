@@ -1,9 +1,6 @@
-[gd_scene load_steps=59 format=3 uid="uid://bska1tluwq6jd"]
+[gd_scene load_steps=58 format=3 uid="uid://bhgknq8i4x3ld"]
 
 [ext_resource type="Texture2D" uid="uid://cub30d8shgiqw" path="res://temp/survivor2.png" id="1_eoe2v"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_k1vvj"]
-radius = 38.0132
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yviux"]
 atlas = ExtResource("1_eoe2v")
@@ -428,13 +425,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="survivor2" type="CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
-shape = SubResource("CircleShape2D_k1vvj")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -8)
+[node name="survivor2" type="AnimatedSprite2D"]
+position = Vector2(-1.90735e-06, -1.90735e-06)
+scale = Vector2(0.46875, 0.46875)
 sprite_frames = SubResource("SpriteFrames_cqx3i")
-animation = &"front_idle"
+animation = &"front_walk"
+frame_progress = 0.947376

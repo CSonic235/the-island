@@ -9,27 +9,28 @@ var backstory:String = ""
 var conditions:Array = []
 var is_dead :bool = false
 var working:bool = false
-
+@onready var sprite = $AnimatedSprite2D
 var has_screen = false
 var speed:int = 30
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	input_pickable = true
-	$AnimatedSprite2D.play("front_idle")
+	pick_a_sprite()
+	sprite.play("front_idle")
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(_delta):
 	check_conditions()
 	if not is_dead:
 		move_and_slide()
 		if velocity == Vector2(0,0):
-			$AnimatedSprite2D.play("front_idle")
+			sprite.play("front_idle")
 	else:
 		$AnimatedSprite2D.play("dying")
-		if $AnimatedSprite2D.get_frame() == 5:
-			$AnimatedSprite2D.pause()
+		if sprite.get_frame() == 5:
+			sprite.pause()
 		
 
 
@@ -41,7 +42,7 @@ func _on_input_event(_viewport:Node, event:InputEvent, _shape_idx:int):
 		
 
 func move( direction: String):
-	var anim = $AnimatedSprite2D
+	var anim = sprite
 	match direction:
 		"Left":
 				velocity.x = -base_movement_speed
@@ -103,4 +104,17 @@ func check_conditions():
 				movement_multiplier = 0.75*x.stack_count
 			"arm_wound":
 				carry_multiplier = 0.75*x.stack_count
-				
+
+func pick_a_sprite():
+	var rng = RandomNumberGenerator.new()
+	var sprite_number = rng.randi_range(0,3)
+	var sprite2 = load("res://survivor_2.tscn")
+	var sprite3 = load("res://survivor_3.tscn")
+	var sprite4 = load("res://survivor_4.tscn")
+	var spritearray = [null,sprite2,sprite3,sprite4]
+	if sprite_number >=1:
+		var current_sprite = spritearray[sprite_number]
+		var sprite_instance = current_sprite.instantiate()
+		add_child(sprite_instance)
+		sprite.queue_free()
+		sprite = sprite_instance

@@ -1,9 +1,6 @@
-[gd_scene load_steps=57 format=3 uid="uid://036pel16qncp"]
+[gd_scene load_steps=56 format=3 uid="uid://d4fjrp41kpllt"]
 
 [ext_resource type="Texture2D" uid="uid://cu0r4tlr1xxl5" path="res://temp/survivor4.png" id="1_2mhy4"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_p1sev"]
-radius = 35.0571
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nnpps"]
 atlas = ExtResource("1_2mhy4")
@@ -414,11 +411,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="survivor_4" type="CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_p1sev")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+scale = Vector2(0.589844, 0.589844)
 sprite_frames = SubResource("SpriteFrames_61wyf")
 animation = &"working"

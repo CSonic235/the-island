@@ -7,6 +7,7 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xx3m4"]
 texture = ExtResource("1_ni7ho")
+margins = Vector2i(14, 0)
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -14,6 +15,7 @@ texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pxsds"]
 texture = ExtResource("2_ebqp6")
+margins = Vector2i(14, 5)
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -21,6 +23,7 @@ texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xoip8"]
 texture = ExtResource("3_bv3pp")
+margins = Vector2i(15, 0)
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
