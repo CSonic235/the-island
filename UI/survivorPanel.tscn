@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3h3bn2flhts2"]
+[gd_scene load_steps=5 format=3 uid="uid://c3h3bn2flhts2"]
 
 [ext_resource type="Script" path="res://UI/survivorpanel.gd" id="1_xfweo"]
-[ext_resource type="Texture2D" uid="uid://vg4yvb5t57c1" path="res://UI assets/button2.png" id="3_pm701"]
+[ext_resource type="Texture2D" uid="uid://ca613ldrstsef" path="res://UI_assets/frame_small.png" id="2_ulnmc"]
+[ext_resource type="Texture2D" uid="uid://vg4yvb5t57c1" path="res://UI_assets/button2.png" id="3_pm701"]
+[ext_resource type="Texture2D" uid="uid://deyovcf0u38bm" path="res://UI_assets/button2_pressed.png" id="4_ebx2p"]
 
 [node name="Control" type="CanvasLayer"]
 
@@ -12,39 +14,59 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -237.5
-offset_top = -265.5
-offset_right = 237.5
-offset_bottom = 265.5
+offset_left = -237.0
+offset_top = -290.0
+offset_right = 136.0
+offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xfweo")
 
-[node name="name" type="RichTextLabel" parent="Panel"]
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.079
+anchor_bottom = 1.061
+offset_left = -2.0
+offset_top = -8.0
+offset_right = -28.467
+offset_bottom = -19.67
+texture = ExtResource("2_ulnmc")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="Panel"]
+anchors_preset = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 376.0
+offset_bottom = 482.0
+
+[node name="name" type="RichTextLabel" parent="Panel/Control"]
 layout_mode = 0
-offset_left = 6.5
-offset_top = 60.5
-offset_right = 118.5
-offset_bottom = 100.5
+offset_left = 16.0
+offset_top = 44.0
+offset_right = 128.0
+offset_bottom = 84.0
 scale = Vector2(3.19454, 2.65432)
 text = "survivor name"
 fit_content = true
 autowrap_mode = 0
 
-[node name="info" type="RichTextLabel" parent="Panel"]
+[node name="info" type="RichTextLabel" parent="Panel/Control"]
 layout_mode = 0
-offset_left = -7.5
-offset_top = 133.5
-offset_right = 350.5
-offset_bottom = 467.5
+offset_left = 47.0
+offset_top = 121.0
+offset_right = 337.0
+offset_bottom = 444.0
 
 [node name="Button" type="TextureButton" parent="Panel"]
 layout_mode = 0
-offset_left = 357.5
-offset_top = 7.5
-offset_right = 470.5
-offset_bottom = 47.5
+offset_left = 247.0
+offset_top = 12.0
+offset_right = 360.0
+offset_bottom = 52.0
 texture_normal = ExtResource("3_pm701")
+texture_pressed = ExtResource("4_ebx2p")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Panel/Button"]

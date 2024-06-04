@@ -17,17 +17,17 @@ func show_panel():
 	self.show()
 	is_hidden = false
 func change_name(newName:String):
-	var nameBox = get_child(0)
+	var nameBox = $Control/name
 	nameBox.clear()
 	nameBox.append_text(newName)
 func panel_is_hidden():
 	return is_hidden
 
 func update_info(survivor:Survivor):
-	var name_box = get_child(0)
-	var info_box = get_child(1)
+	var name_box = $Control/name
+	var info_box = $Control/info
 	name_box.clear()
 	info_box.clear()
 	name_box.append_text(survivor.get_survivor_name())
-	info_box.append_text("movement_speed: "+str(survivor.base_movement_speed))
-	info_box.append_text("\ncarrying_capacity: "+str(survivor.carrying_capacity))
+	info_box.append_text("Movement speed: "+str(survivor.base_movement_speed))
+	info_box.append_text("\nCarrying capacity: "+str(survivor.carrying_capacity))
