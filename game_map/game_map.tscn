@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://byspa4s7forer"]
+[gd_scene load_steps=18 format=3 uid="uid://byspa4s7forer"]
 
 [ext_resource type="Script" path="res://game_map/game_map.gd" id="1_dvoc4"]
 [ext_resource type="Script" path="res://scripts/handler/SurvivorHandler.gd" id="2_gxx8l"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://6waalodhist2" path="res://UI_assets/time_frame.png" id="13_hfi8k"]
 [ext_resource type="Texture2D" uid="uid://euwp2riicjwe" path="res://UI_assets/moon.png" id="14_ysmr3"]
 [ext_resource type="Texture2D" uid="uid://cfs7x0rs3snh3" path="res://UI_assets/sun_icon.png" id="15_dr0mg"]
+[ext_resource type="Script" path="res://scripts/handler/Weather_handler.gd" id="17_3uyek"]
 
 [node name="GameMap" type="Node2D"]
 script = ExtResource("1_dvoc4")
@@ -172,6 +173,9 @@ script = ExtResource("6_f3l8h")
 
 [node name="ObjectHandler" type="Node" parent="."]
 script = ExtResource("12_lts7c")
+
+[node name="weather_handler" type="Node" parent="."]
+script = ExtResource("17_3uyek")
 
 [connection signal="pressed" from="Camera2D/UI/show_hand_button" to="Camera2D/UI" method="_on_button_pressed"]
 [connection signal="pressed" from="Camera2D/UI/next_day_button" to="." method="_on_button_pressed"]
