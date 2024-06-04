@@ -39,6 +39,8 @@ func _on_affects_world(d:Dictionary):
 func _on_day_ended():
 	if day_night_cycle.get_dayornight():
 		night_color.show()
+		$Camera2D/UI/Moon.show()
+		$Camera2D/UI/SunIcon.hide()
 	else:
 		night_color.hide()
 	create_shop()
@@ -50,6 +52,9 @@ func _on_button_pressed():
 	UI_layer.get_node("shop").queue_free()
 	$Camera2D/World/day_night_cycle.unpause()
 	UI_layer.get_node("next_day_button").hide()
+	night_color.hide()
+	$Camera2D/UI/Moon.hide()
+	$Camera2D/UI/SunIcon.show()
 
 func _on_card_player_changed(cards:play_cards):
 	$Camera2D/UI/CardHand.update_hand(cards.hand)

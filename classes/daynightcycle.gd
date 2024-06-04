@@ -4,7 +4,7 @@ class_name DayNightCycle
 signal day_ends
 
 var time_passed = 0
-var one_day_duration = 1
+var one_day_duration = 20
 var is_night = false
 var dayingame=1
 var pause:bool = false
