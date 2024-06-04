@@ -3,10 +3,8 @@ extends GameObject
 
 func _ready():
 	
-	print("is tree")
 	type  =object_type.TREE
 	resource_amount = 3
-	print(resource_amount)
 	$Panel.hide()
 	is_collidable = true
 	$harvest_panel.hide()
