@@ -4,6 +4,7 @@ var survivorUI = preload("res://UI/survivorPanel.tscn")
 var window = survivorUI.instantiate()
 @onready var hand = $CardHand
 var hand_showed:bool = false
+@onready var weather_label = $weather_panel/Label
 
 var survivor_info_displayed:bool = false
 var shop = preload("res://scenes/shop/shop.tscn")
@@ -46,4 +47,6 @@ func _on_button_pressed():
 		$show_hand_button/Label.text = "Hide Hand"
 		$DrawCardButton.show()
 		$DrawCardButton/Label.show()
+func change_weather(new_weather:String):
+	weather_label.text = new_weather
 		

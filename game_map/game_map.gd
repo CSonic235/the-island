@@ -6,7 +6,8 @@ var time:String
 @onready var day_night_cycle = $Camera2D/World/day_night_cycle
 @onready var night_color = $Camera2D/World/night_color
 @onready var time_label = $Camera2D/UI/Time
-# Called when the node enters the scene tree for the first time.
+@onready var weather = $weather_handler
+
 func _ready():
 	get_node("SurvivorHandler").show_survivor_panel.connect(_on_survivor_handler_show_survivor_panel)
 	get_node("cards_handler").card_effect.connect(_on_affects_world)
@@ -37,13 +38,16 @@ func _on_affects_world(d:Dictionary):
 	print("signal recieved",d)
 
 func _on_day_ended():
-	if day_night_cycle.get_dayornight():
+	if day_night_cycle.get_dayornight(): ## returns true if night
 		night_color.show()
 		$Camera2D/UI/Moon.show()
 		$Camera2D/UI/SunIcon.hide()
 	else:
 		night_color.hide()
 	create_shop()
+	weather.calculate_weather()
+	var weather_as_string = weather.get_weather()
+	UI_layer.change_weather(weather_as_string)
 
 func _on_button_pressed():
 	var cards_bought = UI_layer.get_cards_bought()

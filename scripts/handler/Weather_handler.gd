@@ -54,3 +54,19 @@ func calculate_weather():
 	else:
 		current_weather = weather.SUNNY
 		print("error weather_distribution is empty")
+	print(current_weather)
+
+func get_weather():
+	match current_weather:
+		weather.SUNNY:
+			return "Sunny"
+		weather.CLOUDY:
+			return "Cloudy"
+		weather.STORM:
+			return "storm"
+		weather.RAIN:
+			return "rain"
+		weather.HARSHSUN:
+			return "Harsh Sun"
+		weather.POURINGRAIN:
+			return "Pouring Rain"
