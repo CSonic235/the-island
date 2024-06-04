@@ -32,6 +32,7 @@ func _init(info:Dictionary):
 		CardType.static_card:
 			static_attributes = info.get("static_attributes")
 		CardType.event_card:
+			action_attributes = info.get("action_attributes")
 			pass
 		
 	'''if card_type == 0:

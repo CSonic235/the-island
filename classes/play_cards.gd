@@ -1,8 +1,6 @@
 extends Node
 class_name play_cards
 
-
-
 var cards_in_deck:Array[card] =[]
 var discard_pile:Array[card] =[]
 var hand:Array[card] =[]
@@ -14,17 +12,18 @@ func shuffle():
 	cards_in_deck.shuffle()
 
 func draw():
-
-	var card_drawn:card = cards_in_deck.pop_back ()
-	if card_drawn ==null:
+	var card_drawn:card = cards_in_deck.pop_back()
+	if card_drawn == null:
 		reshuffle()
-		card_drawn = cards_in_deck.pop_back ()
+		card_drawn = cards_in_deck.pop_back()
 
-	if hand.size()<7:
-		if card_drawn !=null:
+	if card_drawn != null:
+		if card_drawn.card_type == 2:
+			play_card_from_draw(card_drawn)
+		elif hand.size() < 7:
 			hand.append(card_drawn)
-	else:
-		discard_pile.append(card_drawn)	
+		else:
+			discard_pile.append(card_drawn)
 
 func reshuffle():
 	cards_in_deck.append_array(discard_pile)
@@ -62,4 +61,9 @@ func discard(i:int):
 func remove(i:int):
 	for x in range(i):
 		hand.remove_at (0)
-
+		
+func play_card_from_draw(card_to_play: card):
+	if card_to_play.card_type == 2:
+		var index = hand.find(card_to_play)
+		if index >= 0:
+			play_card(index)

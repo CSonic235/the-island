@@ -379,11 +379,18 @@
 		"card_type": 2,
 		"card_description": "Drop supply on the island",
 		"rarity": 0,
-		"cost": 1,
+		"cost": 0,
 		"image_path": "",
 		"in_shop": false,
 		"in_starter":true,
-		"static_attributes": {}
+		"action_attributes": {
+			"affects_world": {
+				"area_effect": "supply",
+				"target": "area",
+				"radius": 3
+			},
+			"target": "area"
+		}
 	},
 	{
 		"card_id": 22,
@@ -391,11 +398,18 @@
 		"card_type": 2,
 		"card_description": "Spawn some nature resouces on the island",
 		"rarity": 0,
-		"cost": 1,
+		"cost":0,
 		"image_path": "",
 		"in_shop": false,
 		"in_starter":true,
-		"static_attributes": {}
+		"action_attributes": {
+			"affects_world": {
+				"area_effect": "spawn_resource",
+				"target": "area",
+				"radius": 3
+			},
+			"target": "area"
+		}
 	},
 	{
 		"card_id": 23,
@@ -476,15 +490,17 @@
 		"card_type": 2,
 		"card_description": "spawns a volcano when drawn",
 		"rarity": 3,
-		"cost": 4,
+		"cost": 0,
 		"image_path": "",
 		"in_shop": false,
 		"in_starter":true,
-		"static_attributes": {
-			"ephemeral": "true",
-			"target": "tile",
-			"creates_object": "volcano",
-			"trigger": "drawn"
+		"action_attributes": {
+			"affects_world": {
+				"area_effect": "spawn_volcano",
+				"target": "point",
+				"radius": 3
+			},
+			"target": "point"
 		}
 	},
 	{
@@ -497,17 +513,19 @@
 		"image_path": "",
 		"in_shop": false,
 		"in_starter":true,
-		"static_attributes": {
-			"ephemeral": "false",
-			"target": "tile",
-			"creates_object": "med-kit",
-			"trigger": "drawn"
+		"action_attributes": {
+			"affects_world": {
+				"area_effect": "medkit",
+				"target": "area",
+				"radius": 4
+			},
+			"target": "point"
 		}
 	},
 	{
 		"card_id": 29,
 		"card_name": "solar eclipse",
-		"card_type": 2,
+		"card_type": 1,
 		"card_description": "Moon blocks sun, casting shadow on Earth, darkening sky for one day.",
 		"rarity": 3,
 		"cost": 1,
@@ -525,7 +543,7 @@
 	{
 		"card_id": 30,
 		"card_name": "lunar eclipse",
-		"card_type": 2,
+		"card_type": 1,
 		"card_description": "Earth's shadow falls on moon, giving it reddish appearance",
 		"rarity": 3,
 		"cost": 1,
@@ -549,10 +567,12 @@
 		"image_path": "",
 		"in_shop": true,
 		"in_starter":true,
-		"static_attributes": {
-			"attributes": [
-			],
-			"resource_gain": 0
+		"action_attributes": {
+			"affects_world": {
+				"target": "survivor",
+				"cure":10
+			},
+			"target": "survivor"
 		}
 	},
 	{
@@ -565,15 +585,17 @@
 		"image_path": "",
 		"in_shop": true,
 		"in_starter":true,
-		"static_attributes": {
-			"attributes": [
-			],
-			"resource_gain": 0
+		"action_attributes": {
+			"affects_world": {
+				"target": "survivor",
+				"wander":1
+			},
+			"target": "survivor"
 		}
 	},
 	{
 		"card_id": 33,
-		"card_name": "starv",
+		"card_name": "Starve",
 		"card_type": 0,
 		"card_description": "surivior consume food non stop",
 		"rarity": 0,
@@ -581,26 +603,12 @@
 		"image_path": "",
 		"in_shop": true,
 		"in_starter":true,
-		"static_attributes": {
-			"attributes": [
-			],
-			"resource_gain": 0
-		}
-	},
-	{
-		"card_id": 34,
-		"card_name": "starv",
-		"card_type": 0,
-		"card_description": "surivior consume food non stop",
-		"rarity": 0,
-		"cost": 1,
-		"image_path": "",
-		"in_shop": true,
-		"in_starter":true,
-		"static_attributes": {
-			"attributes": [
-			],
-			"resource_gain": 0
+		"action_attributes": {
+			"affects_world": {
+				"target": "survivor",
+				"hungry":1
+			},
+			"target": "survivor"
 		}
 	},
 	{
@@ -613,26 +621,12 @@
 		"image_path": "",
 		"in_shop": true,
 		"in_starter":true,
-		"static_attributes": {
-			"attributes": [
-			],
-			"resource_gain": 0
-		}
-	},
-	{
-		"card_id": 36,
-		"card_name": "Mental breakdown ",
-		"card_type": 0,
-		"card_description": "surivior sleep and do nothing ",
-		"rarity": 0,
-		"cost": 1,
-		"image_path": "",
-		"in_shop": true,
-		"in_starter":true,
-		"static_attributes": {
-			"attributes": [
-			],
-			"resource_gain": 0
+		"action_attributes": {
+			"affects_world": {
+				"target": "survivor",
+				"hungry":1
+			},
+			"target": "survivor"
 		}
 	},
 	{
@@ -641,13 +635,17 @@
 		"card_type": 2,
 		"card_description": "An abundance of resources is found on the island.",
 		"rarity": 0,
-		"cost": 2,
+		"cost": 0,
 		"image_path": "",
 		"in_shop": true,
 		"in_starter": true,
-		"static_attributes": {
-			"attributes": ["resource_boost"],
-			"resource_gain": 5
+		"action_attributes": {
+			"affects_world": {
+				"area_effect": "spawn_resource",
+				"target": "area",
+				"radius": 4
+			},
+			"target": "area"
 		}
 	},
 	{
@@ -656,43 +654,17 @@
 		"card_type": 2,
 		"card_description": "Water dry up, affecting the survivors.",
 		"rarity": 1,
-		"cost": 2,
+		"cost": 0,
 		"image_path": "",
 		"in_shop": false,
 		"in_starter": true,
-		"static_attributes": {
-			"attributes": ["drought"],
-			"resource_gain":0
-		}
-	},
-	{
-		"card_id": 39,
-		"card_name": "Wildfire",
-		"card_type": 2,
-		"card_description": "A wildfire spreads across the island, burning vegetation.",
-		"rarity": 2,
-		"cost": 3,
-		"image_path": "",
-		"in_shop": false,
-		"in_starter": true,
-		"static_attributes": {
-			"attributes": ["wildfire"],
-			"resource_gain": 0
-		}
-	},
-	{
-		"card_id": 40,
-		"card_name": "Meteor Shower",
-		"card_type": 2,
-		"card_description": "Meteors rain down on the island, causing chaos.",
-		"rarity": 2,
-		"cost": 4,
-		"image_path": "",
-		"in_shop": false,
-		"in_starter": true,
-		"static_attributes": {
-			"attributes": ["meteor_shower"],
-			"resource_gain": 0
+		"action_attributes": {
+			"affects_world": {
+				"area_effect": "dry",
+				"target": "area",
+				"radius": 4
+			},
+			"target": "area"
 		}
 	},
 	{
@@ -714,57 +686,12 @@
 		}
 	},
 	{
-		"card_id": 42,
-		"card_name": "Tsunami",
-		"card_type": 2,
-		"card_description": "A giant wave crashes onto the shore, destroying structures.",
-		"rarity": 3,
-		"cost": 5,
-		"image_path": "",
-		"in_shop": false,
-		"in_starter": true,
-		"static_attributes": {
-			"attributes": ["tsunami"],
-			"resource_gain": 3
-		}
-	},
-	{
-		"card_id": 43,
-		"card_name": "Earthquake",
-		"card_type": 2,
-		"card_description": "A powerful earthquake shakes the island, causing damage.",
-		"rarity": 2,
-		"cost": 4,
-		"image_path": "",
-		"in_shop": true,
-		"in_starter": true,
-		"static_attributes": {
-			"attributes": ["earthquake"],
-			"resource_gain": 0
-		}
-	},
-	{
-		"card_id": 44,
-		"card_name": "Sandstorm",
-		"card_type": 2,
-		"card_description": "A severe sandstorm reduces visibility and affects movement.",
-		"rarity": 0,
-		"cost": 2,
-		"image_path": "",
-		"in_shop": true,
-		"in_starter": true,
-		"static_attributes": {
-			"attributes": ["sandstorm"],
-			"resource_gain": 0
-		}
-	},
-	{
 		"card_id": 45,
 		"card_name": "Sandstorm",
 		"card_type": 2,
 		"card_description": "A sandstorm reduces visibility and slows down survivors' movements.",
 		"rarity": 1,
-		"cost": 3,
+		"cost": 0,
 		"image_path": "",
 		"in_shop": true,
 		"in_starter": true,
@@ -772,10 +699,11 @@
 			"affects_world": {
 				"area_effect": "Sandstorm",
 				"target": "area",
-				"duration": 20
+				"duration": 20,
+				"radius":10
 			},
 			"target": "survivors",
-			"movement_penalty": "high"
+			
 		}
 	},
 	{
