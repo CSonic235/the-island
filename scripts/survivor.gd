@@ -9,15 +9,21 @@ var backstory:String = ""
 var conditions:Array = []
 var is_dead :bool = false
 var working:bool = false
+var target:Node = null
+var at_target:bool = false
+var moved_x  = false
+var moved_y = false
 @onready var sprite = $AnimatedSprite2D
 var has_screen = false
 var speed:int = 30
+var harvesting = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	input_pickable = true
 	pick_a_sprite()
 	sprite.play("front_idle")
 	pass # Replace with function body.
+	move_a_place()
 
 
 
@@ -25,13 +31,37 @@ func _process(_delta):
 	check_conditions()
 	if not is_dead:
 		move_and_slide()
-		if velocity == Vector2(0,0):
+		if velocity == Vector2(0,0) and (harvesting == false):
 			sprite.play("front_idle")
 	else:
 		$AnimatedSprite2D.play("dying")
 		if sprite.get_frame() == 5:
 			sprite.pause()
-		
+	
+	if target != null and harvesting == false:
+		move_to_target()
+		if at_target ==true:
+			move("Stop")
+			harvest()
+			harvesting = true
+
+	if target == null:
+		moved_x = false
+		moved_y = false
+		at_target = false
+		harvesting = false		
+		if velocity.y<=5 and velocity.x<=5:
+			move_a_place()
+
+func harvest():
+	if target != null and at_target == true:
+		target.harvest()
+		sprite.play("working")
+	else:
+		moved_x = false
+		moved_y = false
+		at_target = false
+		harvesting = false		
 
 
 func _on_input_event(_viewport:Node, event:InputEvent, _shape_idx:int):
@@ -39,7 +69,22 @@ func _on_input_event(_viewport:Node, event:InputEvent, _shape_idx:int):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == 1:
 			get_parent().display_survivor_info(self)
-		
+
+func move_to_target():
+	if at_target == false:
+		if (target.global_position.x) <=self.global_position.x and moved_x == false :
+			move("Left")
+		elif (target.global_position.x) >=self.global_position.x :
+			move("Right")
+			moved_x = true
+		elif (target.global_position.y) >= self.global_position.y and moved_y == false:
+			move("Down")
+		elif (target.global_position.y) <= self.global_position.y:
+			move("Up")
+			moved_y = true
+		else:
+			at_target = true
+			
 
 func move( direction: String):
 	var anim = sprite
@@ -118,3 +163,32 @@ func pick_a_sprite():
 		add_child(sprite_instance)
 		sprite.queue_free()
 		sprite = sprite_instance
+func move_a_place():
+	var rng = RandomNumberGenerator.new()
+	var direction = rng.randi_range(0,3)
+	match direction:
+		0:
+			move("Left")
+		1:
+			move("Right")
+		2:
+			move("Up")
+		3:
+			move("Down")
+func _on_found_thing(body:Node2D):
+	if target == null:
+		target = body
+		print("here")
+		moved_x = false
+		moved_y = false
+		at_target = false
+		harvesting = false
+
+func _on_found_object_body_entered(body:Node2D):
+	at_target = true
+	target = body
+	print("found")
+	moved_x = false
+	moved_y = false	
+	harvesting = false
+

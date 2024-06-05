@@ -14,13 +14,11 @@ func _init(time_to_harvest:float):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if not timer_paused:
-		print(timer_paused)
 		time_elasped +=delta
 		harvest_progress =(total_harvest_time_in_seconds- time_elasped)/total_harvest_time_in_seconds
 		if harvest_progress <= 0:
 			pause_timer()
 			
-			print("emmited")
 			timer_ended.emit()
 			
 			

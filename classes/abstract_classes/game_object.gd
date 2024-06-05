@@ -12,6 +12,7 @@ var harvesting :bool = false
 signal object_harvested(resource_type:String,resource_amount:int)
 
 func _ready():
+	set_collision_layer_value(2,true)
 	input_pickable = true
 	self.mouse_entered.connect(_on_mouse_entered)
 	self.mouse_exited.connect(_on_mouse_exited)

@@ -415,4 +415,6 @@ animations = [{
 position = Vector2(4.76837e-07, 3.57628e-07)
 scale = Vector2(0.539063, 0.539063)
 sprite_frames = SubResource("SpriteFrames_y3pcu")
-animation = &"front_idle"
+animation = &"working"
+frame = 3
+frame_progress = 0.847066

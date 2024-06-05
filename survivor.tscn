@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://c83u3nmc43dyc"]
+[gd_scene load_steps=47 format=3 uid="uid://c83u3nmc43dyc"]
 
 [ext_resource type="Texture2D" uid="uid://dy5ae5nblht7g" path="res://temp/player.png" id="1_p508p"]
 [ext_resource type="Script" path="res://scripts/survivor.gd" id="1_s245k"]
@@ -324,8 +324,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_elwts"]
+radius = 567.631
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38jmt"]
+size = Vector2(60, 60)
+
 [node name="Survivor" type="CharacterBody2D"]
 z_index = 1
+collision_layer = 0
 script = ExtResource("1_s245k")
 
 [node name="survorCollision" type="CollisionShape2D" parent="."]
@@ -338,4 +345,22 @@ animation = &"back_walk"
 frame = 3
 frame_progress = 0.957946
 
+[node name="Node" type="Node" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="detection" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_elwts")
+
+[node name="found object" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="found object"]
+shape = SubResource("RectangleShape2D_38jmt")
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_found_thing"]
+[connection signal="body_entered" from="found object" to="." method="_on_found_object_body_entered"]
